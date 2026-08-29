@@ -1,0 +1,15 @@
+{
+  "source_id": "S37",
+  "source_name": "CVE.org record: CVE-2026-65400",
+  "cve_ids": [
+    "CVE-2026-65400"
+  ],
+  "url": "https://www.cve.org/CVERecord?id=CVE-2026-65400",
+  "extraction_status": "success",
+  "relevance": "cve-specific",
+  "char_count_raw": 416,
+  "char_count_clean": 416,
+  "filtered_lines": [],
+  "clean_text": "Required CVE Record Information\nUpdated:\nDescription\nAn authentication issue was addressed with improved state management. This issue is fixed in macOS Sequoia 15.7.9, macOS Sonoma 14.8.9, macOS Tahoe 26.6.1. An attacker on the network may be able to authenticate to Screen Sharing without valid credentials.\nThis container includes required additional information provided by the CVE Program for this vulnerability.",
+  "chunks": null
+}

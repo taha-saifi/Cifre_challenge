@@ -1,0 +1,30 @@
+{
+  "source_id": "S06",
+  "_note": "DRAFT gold set, hand-authored by the auditing session for a working baseline only -- NOT validated by the project owner yet. entities/canonical_triples were authored independently from domain knowledge of the source; openie_triples were instead sampled from the pipeline's own actual output and spot-checked as correct against the source text (exact-string matching makes blind authoring impractical for free-text OpenIE triples) -- so openie_triple recall on THESE specific sources is not an independent measurement, only a smoke test that verified-correct extractions still match after any future pipeline change. Deliberately includes a NEGATIVE case: this CVE has no cisaExploitAdd field in NVD, so no 'confirmed_exploited_by'-style KEV date assertion should exist for it anywhere in structured_assertions.json -- absence of that fact is itself the thing being checked.",
+  "entities": [
+    {
+      "canonical_label": "CVE-2026-63520",
+      "entity_type": "CVE"
+    },
+    {
+      "canonical_label": "CWE-20",
+      "entity_type": "CWE"
+    },
+    {
+      "canonical_label": "Microsoft SharePoint Enterprise Server 2016",
+      "entity_type": "Product"
+    }
+  ],
+  "canonical_triples": [
+    {
+      "source": "CVE-2026-63520",
+      "predicate": "has weakness",
+      "target": "CWE-20"
+    },
+    {
+      "source": "CVE-2026-63520",
+      "predicate": "has affected product",
+      "target": "Microsoft SharePoint Enterprise Server 2016"
+    }
+  ]
+}

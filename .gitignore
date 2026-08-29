@@ -1,0 +1,29 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Java / Maven (vendored MinIE build artifacts and local repo cache)
+extraction_pipeline/.m2/
+extraction_pipeline/vendor/minie/target/
+extraction_pipeline/vendor/minie/**/*.class
+
+# Pipeline run logs (regenerated on every run, not source)
+extraction_pipeline/logs/
+
+# Claude Code local, per-machine settings (not shared config)
+.claude/settings.local.json
+
+# Personal application material (not repo content)
+files/Lettre_Motivation.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp

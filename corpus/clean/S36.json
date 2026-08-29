@@ -1,0 +1,15 @@
+{
+  "source_id": "S36",
+  "source_name": "CVE.org record: CVE-2026-59310",
+  "cve_ids": [
+    "CVE-2026-59310"
+  ],
+  "url": "https://www.cve.org/CVERecord?id=CVE-2026-59310",
+  "extraction_status": "success",
+  "relevance": "cve-specific",
+  "char_count_raw": 688,
+  "char_count_clean": 688,
+  "filtered_lines": [],
+  "clean_text": "Required CVE Record Information\nUpdated:\nDescription\nVMware vCenter contains a directory traversal vulnerability in the Syslog server. A malicious actor with network access to vCenter may exploit this issue to execute arbitrary code.\nCWE 1 Total\nCVSS 1 Total\n| Score | Severity | Version | Vector String | \n|---|---|---|---|\n| 9.8 | CRITICAL | 3.1 | CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H | \nProduct Status\nLearn more\nVersions 3 Total\nDefault Status: unaffected\naffected\nVersions 2 Total\nDefault Status: unaffected\naffected\nVersions 3 Total\nDefault Status: unaffected\naffected\nVersions 1 Total\nDefault Status: unaffected\naffected\nVersions 4 Total\nDefault Status: unaffected\naffected",
+  "chunks": null
+}

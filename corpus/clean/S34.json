@@ -1,0 +1,15 @@
+{
+  "source_id": "S34",
+  "source_name": "CVE.org record: CVE-2026-55040",
+  "cve_ids": [
+    "CVE-2026-55040"
+  ],
+  "url": "https://www.cve.org/CVERecord?id=CVE-2026-55040",
+  "extraction_status": "success",
+  "relevance": "cve-specific",
+  "char_count_raw": 522,
+  "char_count_clean": 522,
+  "filtered_lines": [],
+  "clean_text": "Required CVE Record Information\nUpdated:\nDescription\nWeak authentication in Microsoft Office SharePoint allows an unauthorized attacker to bypass a security feature over a network.\nCVSS 1 Total\n| Score | Severity | Version | Vector String | \n|---|---|---|---|\n| 9.1 | CRITICAL | 3.1 | CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N/E:U/RL:O/RC:C | \nProduct Status\nLearn more\nVersions 1 Total\nDefault Status: unknown\naffected\nVersions 1 Total\nDefault Status: unknown\naffected\nVersions 1 Total\nDefault Status: unknown\naffected",
+  "chunks": null
+}

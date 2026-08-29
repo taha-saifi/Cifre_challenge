@@ -1,0 +1,13 @@
+{
+  "source_id": "S49",
+  "source_name": "FIRST CVSS v4.0: page principale",
+  "cve_ids": [],
+  "url": "https://www.first.org/cvss/v4.0/",
+  "extraction_status": "success",
+  "relevance": "framework",
+  "char_count_raw": 1759,
+  "char_count_clean": 1743,
+  "filtered_lines": [],
+  "clean_text": "Common Vulnerability Scoring System Version 4.0\nCVSS version 4.0 is the next generation of the Common Vulnerability Scoring System standard.\nSome of the changes incorporated into CVSS v4.0 include:\n- Reinforce the concept that CVSS it not just the Base score\n - New nomenclature has been added to identify combinations of Base (CVSS-B), Base + Threat (CVSS-BT), Base + Environmental (CVSS-BE), and Base + Threat + Environmental (CVSS-BTE)\n- Finer granularity through the addition of new Base metrics and values:\n - New Base metric: Attack Requirements (AT)\n - New Base metric values: User Interaction (UI): Passive (P) and Active (A)\n- Enhanced disclosure of impact metrics:\n - Scope retired\n - Explicit assessment of impact to Vulnerable System (VC, VI, VA) and Subsequent Systems (SC, SI, SA)\n- Temporal metric group renamed to Threat metric group\n - Threat metrics simplified and clarified\n - Remediation Level (RL) and Report Confidence (RC) retired\n - Exploit \"Code\" Maturity renamed to Exploit Maturity (E) with clearer values\n- New Supplemental Metric Group to convey additional extrinsic attributes of a vulnerability that do not affect the final CVSS-BTE score\n - Safety (S)\n - Automatable (A)\n - Recovery (R)\n - Value Density (V)\n - Vulnerability Response Effort (RE)\n - Provider Urgency (U)\n- Additional focus on OT/ICS/Safety\n - Consumer-assessed Safety (MSI:S, MSA:S)\n - Provider-assessed Safety through Safety (S) supplemental metric\nMore information about what's new in CVSS v4.0 is available in PDF format here.\nLinks on the left lead to CVSS version 4.0's specification and related resources.\nA self-paced on-line training course is available for CVSS v4.0. It explains the standard without assuming any prior CVSS experience.",
+  "chunks": null
+}

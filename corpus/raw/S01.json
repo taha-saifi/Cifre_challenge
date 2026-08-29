@@ -1,0 +1,27 @@
+{
+  "source_id": "S01",
+  "cve_ids": [
+    "CVE-2026-33824",
+    "CVE-2026-55040",
+    "CVE-2026-59310",
+    "CVE-2026-65400"
+  ],
+  "source_name": "CISA KEV Alert 2026-08-18",
+  "url": "https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+  "source_type": {
+    "primary_secondary": "primary",
+    "category": "official"
+  },
+  "date_accessed": "2026-08-28T16:01:21.381997+00:00",
+  "extraction_method": "html_trafilatura",
+  "extraction_method_used": "requests_trafilatura",
+  "extraction_status": "success",
+  "raw_text": "CISA Adds Four Known Exploited Vulnerabilities to Catalog\nCISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog, based on evidence of active exploitation.\n- CVE-2026-33824 Microsoft Internet Key Exchange (IKE) Service Extensions Double Free Vulnerability\n- CVE-2026-55040 Microsoft SharePoint Weak Authentication Vulnerability\n- CVE-2026-59310 Broadcom VMware vCenter Path Traversal Vulnerability\n- CVE-2026-65400 Apple macOS Improper Authentication Vulnerability\nThese types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise.\nBinding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied.\nWhile BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities. CISA will continue to add vulnerabilities to the catalog that meet the specified criteria.\nAware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form. Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.\nThis product is provided subject to this Notification and this Privacy & Use policy.",
+  "http_status": 200,
+  "fallback_used": false,
+  "original_url": null,
+  "replacement_url": null,
+  "replacement_reason": null,
+  "search_query_used": null,
+  "notes": ""
+}

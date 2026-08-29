@@ -1,0 +1,369 @@
+[
+  {
+    "id": "CVE-2026-33824",
+    "type": "CVE",
+    "attributes": {
+      "cvss_score": 9.8,
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "cvss_severity": "CRITICAL",
+      "ssvc_automatable": "yes",
+      "ssvc_technical_impact": "total",
+      "epss_score": 0.72695,
+      "epss_percentile": 0.99419,
+      "epss_date": "2026-08-28"
+    }
+  },
+  {
+    "id": "CWE-415",
+    "type": "CWE",
+    "attributes": {}
+  },
+  {
+    "id": "Windows 10 Version 1607 < 10.0.14393.9060",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows 10 Version 1809 < 10.0.17763.8644",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows 10 Version 21H2 < 10.0.19044.7184",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows 10 Version 22H2 < 10.0.19045.7184",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows 11 version 22H3 < 10.0.22631.6936",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows 11 Version 23H2 < 10.0.22631.6936",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows 11 Version 24H2 < 10.0.26100.8246",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows 11 Version 25H2 < 10.0.26200.8246",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows 11 version 26H1 < 10.0.28000.1836",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows Server 2016 < 10.0.14393.9060",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows Server 2016 (Server Core installation) < 10.0.14393.9060",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows Server 2019 < 10.0.17763.8644",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows Server 2019 (Server Core installation) < 10.0.17763.8644",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows Server 2022 < 10.0.20348.5020",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows Server 2022, 23H2 Edition (Server Core installation) < 10.0.25398.2274",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows Server 2025 < 10.0.26100.32690",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Windows Server 2025 (Server Core installation) < 10.0.26100.32690",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33824",
+    "type": "Advisory",
+    "attributes": {}
+  },
+  {
+    "id": "CISA-KEV",
+    "type": "KEV",
+    "attributes": {}
+  },
+  {
+    "id": "CVE-2026-55040",
+    "type": "CVE",
+    "attributes": {
+      "cvss_score": 9.1,
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "cvss_severity": "CRITICAL",
+      "ssvc_automatable": "yes",
+      "ssvc_technical_impact": "total",
+      "epss_score": 0.39652,
+      "epss_percentile": 0.98555,
+      "epss_date": "2026-08-28"
+    }
+  },
+  {
+    "id": "CWE-1390",
+    "type": "CWE",
+    "attributes": {}
+  },
+  {
+    "id": "Microsoft SharePoint Enterprise Server 2016 < 16.0.5561.1001",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Microsoft SharePoint Server 2019 < 16.0.10417.20175",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Microsoft SharePoint Server Subscription Edition < 16.0.19725.20434",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55040",
+    "type": "Advisory",
+    "attributes": {}
+  },
+  {
+    "id": "CVE-2026-59310",
+    "type": "CVE",
+    "attributes": {
+      "cvss_score": 9.8,
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "cvss_severity": "CRITICAL",
+      "ssvc_automatable": "yes",
+      "ssvc_technical_impact": "total",
+      "epss_score": 0.45878,
+      "epss_percentile": 0.98751,
+      "epss_date": "2026-08-28"
+    }
+  },
+  {
+    "id": "CWE-22",
+    "type": "CWE",
+    "attributes": {}
+  },
+  {
+    "id": "vCenter < 9.1.0.0300",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "VMware"
+    }
+  },
+  {
+    "id": "vCenter < 9.0.2.0100",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "VMware"
+    }
+  },
+  {
+    "id": "vCenter < 8.0 U3k",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "VMware"
+    }
+  },
+  {
+    "id": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017",
+    "type": "Advisory",
+    "attributes": {}
+  },
+  {
+    "id": "CVE-2026-65400",
+    "type": "CVE",
+    "attributes": {
+      "cvss_score": 9.8,
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "cvss_severity": "CRITICAL",
+      "ssvc_automatable": "yes",
+      "ssvc_technical_impact": "total",
+      "epss_score": 0.09905,
+      "epss_percentile": 0.95294,
+      "epss_date": "2026-08-28"
+    }
+  },
+  {
+    "id": "CWE-287",
+    "type": "CWE",
+    "attributes": {}
+  },
+  {
+    "id": "macOS < 14.8.9",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Apple"
+    }
+  },
+  {
+    "id": "macOS < 15.7.9",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Apple"
+    }
+  },
+  {
+    "id": "macOS < 26.6.1",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Apple"
+    }
+  },
+  {
+    "id": "https://support.apple.com/en-us/148170",
+    "type": "Advisory",
+    "attributes": {}
+  },
+  {
+    "id": "https://support.apple.com/en-us/148171",
+    "type": "Advisory",
+    "attributes": {}
+  },
+  {
+    "id": "https://support.apple.com/en-us/148172",
+    "type": "Advisory",
+    "attributes": {}
+  },
+  {
+    "id": "CVE-2026-63520",
+    "type": "CVE",
+    "attributes": {
+      "cvss_score": 8.1,
+      "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "cvss_severity": "HIGH",
+      "ssvc_automatable": "no",
+      "ssvc_technical_impact": "total",
+      "epss_score": 0.02893,
+      "epss_percentile": 0.85861,
+      "epss_date": "2026-08-28"
+    }
+  },
+  {
+    "id": "CWE-20",
+    "type": "CWE",
+    "attributes": {}
+  },
+  {
+    "id": "Microsoft SharePoint Enterprise Server 2016 < 16.0.5565.1001",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Microsoft SharePoint Server 2019 < 16.0.10417.20198",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "Microsoft SharePoint Server Subscription Edition < 16.0.19725.20522",
+    "type": "Product/Version",
+    "attributes": {
+      "vendor": "Microsoft"
+    }
+  },
+  {
+    "id": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63520",
+    "type": "Advisory",
+    "attributes": {}
+  },
+  {
+    "id": "BOD 26-04",
+    "type": "Advisory",
+    "attributes": {}
+  },
+  {
+    "id": "BOD 19-02",
+    "type": "Advisory",
+    "attributes": {}
+  },
+  {
+    "id": "BOD 22-01",
+    "type": "Advisory",
+    "attributes": {}
+  },
+  {
+    "id": "VMSA-2026-0006.2",
+    "type": "Advisory",
+    "attributes": {}
+  },
+  {
+    "id": "signal-S44-CVE-2026-59310",
+    "type": "Exploitation Signal",
+    "attributes": {
+      "reported_by": "DIESEC: VMware vCenter CVE-2026-59310",
+      "victim_count": 361,
+      "countries": 47
+    }
+  }
+]

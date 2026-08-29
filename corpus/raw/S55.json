@@ -1,0 +1,24 @@
+{
+  "source_id": "S55",
+  "cve_ids": [
+    "CVE-2026-65400"
+  ],
+  "source_name": "Apple security update 148171 (macOS Sequoia 15.7.9)",
+  "url": "https://support.apple.com/en-us/148171",
+  "source_type": {
+    "primary_secondary": "primary",
+    "category": "publisher"
+  },
+  "date_accessed": "2026-08-28T16:01:21.381997+00:00",
+  "extraction_method": "html_trafilatura",
+  "extraction_method_used": "requests_trafilatura",
+  "extraction_status": "success",
+  "raw_text": "About the security content of macOS Sequoia 15.7.9\nThis document describes the security content of macOS Sequoia 15.7.9.\nAbout Apple security updates\nFor our customers' protection, Apple doesn't disclose, discuss, or confirm security issues until an investigation has occurred and patches or releases are available. Recent releases are listed on the Apple security releases page.\nApple security documents reference vulnerabilities by CVE-ID when possible.\nFor more information about security, see the Apple Product Security page.\nmacOS Sequoia 15.7.9\nReleased August 6, 2026\nScreen Sharing\nAvailable for: macOS Sequoia\nImpact: An attacker on the network may be able to authenticate to Screen Sharing without valid credentials\nDescription: An authentication issue was addressed with improved state management.\nCVE-2026-65400: Alfredo Pesoli (@__rev) via Bynario Atlas (bynar.io)\nInformation about products not manufactured by Apple, or independent websites not controlled or tested by Apple, is provided without recommendation or endorsement. Apple assumes no responsibility with regard to the selection, performance, or use of third-party websites or products. Apple makes no representations regarding third-party website accuracy or reliability. Contact the vendor for additional information.",
+  "http_status": 200,
+  "fallback_used": false,
+  "original_url": null,
+  "replacement_url": null,
+  "replacement_reason": null,
+  "search_query_used": null,
+  "notes": ""
+}

@@ -1,0 +1,12 @@
+{
+  "source_id": "S15",
+  "_note": "DRAFT gold set, hand-authored by the auditing session for a working baseline only -- NOT validated by the project owner yet. entities/canonical_triples were authored independently from domain knowledge of the source; openie_triples were instead sampled from the pipeline's own actual output and spot-checked as correct against the source text (exact-string matching makes blind authoring impractical for free-text OpenIE triples) -- so openie_triple recall on THESE specific sources is not an independent measurement, only a smoke test that verified-correct extractions still match after any future pipeline change.",
+  "entities": [
+    {
+      "canonical_label": "CVE-2026-65400",
+      "entity_type": "CVE"
+    }
+  ],
+  "openie_triples": [],
+  "_openie_note": "No openie_triples included: at ~1.3KB this source is almost entirely short presentation lines ('Released August 6, 2026', 'Available for: macOS Tahoe') that the extractable-sentence filter correctly rejects as headings/fragments -- near-zero yield here is expected pipeline behavior on this source, not a miss."
+}

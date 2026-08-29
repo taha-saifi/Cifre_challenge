@@ -1,0 +1,24 @@
+{
+  "source_id": "S58",
+  "cve_ids": [
+    "CVE-2026-63520"
+  ],
+  "source_name": "CISA KEV catalog entry: CVE-2026-63520",
+  "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-63520",
+  "source_type": {
+    "primary_secondary": "primary",
+    "category": "official"
+  },
+  "date_accessed": "2026-08-28T16:01:21.381997+00:00",
+  "extraction_method": "html_trafilatura",
+  "extraction_method_used": "requests_trafilatura",
+  "extraction_status": "partial_suspect",
+  "raw_text": "Known Exploited Vulnerabilities Catalog\nFor the benefit of the cybersecurity community and network defenders—and to help every organization better manage vulnerabilities and keep pace with threat activity—CISA maintains the authoritative source of vulnerabilities that have been exploited in the wild. Organizations should use the KEV catalog as an input to their vulnerability management prioritization framework. Learn more about how to use the KEV catalog in your organization.\nAre you aware of an actively exploited vulnerability not included in the KEV Catalog?\nNOMINATE A NEW KEV\nThe KEV catalog is also available in these formats:\nCSVJSON Print View\nJSON Schema (updated 06-25-2024)\nLicense\nSubscribe to the KEV Catalog Updates\nStay up to date on the latest known exploited vulnerabilities.\nSubscribe Now",
+  "http_status": 200,
+  "fallback_used": false,
+  "original_url": null,
+  "replacement_url": null,
+  "replacement_reason": null,
+  "search_query_used": null,
+  "notes": "Échec requests (page KEV filtrée sans données par-CVE (Due Date/Required Action/Date Added absents)) ; échec Playwright (page KEV filtrée sans données par-CVE (Due Date/Required Action/Date Added absents))."
+}

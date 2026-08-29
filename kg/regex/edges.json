@@ -1,0 +1,877 @@
+[
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "exploitation_status_per",
+    "object": "active",
+    "object_type": "literal",
+    "qualifiers": {
+      "status_source": "CISA Coordinator",
+      "timestamp": "2026-04-13"
+    },
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "metrics.ssvcV203: role=CISA Coordinator, options=[{'exploitation': 'active'}, {'automatable': 'yes'}, {'technicalImpact': 'total'}]"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "has_weakness",
+    "object": "CWE-415",
+    "object_type": "CWE",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "weaknesses[].description: CWE-415"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows 10 Version 1607 < 10.0.14393.9060",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows 10 Version 1607 lessThan=10.0.14393.9060"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows 10 Version 1809 < 10.0.17763.8644",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows 10 Version 1809 lessThan=10.0.17763.8644"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows 10 Version 21H2 < 10.0.19044.7184",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows 10 Version 21H2 lessThan=10.0.19044.7184"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows 10 Version 22H2 < 10.0.19045.7184",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows 10 Version 22H2 lessThan=10.0.19045.7184"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows 11 version 22H3 < 10.0.22631.6936",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows 11 version 22H3 lessThan=10.0.22631.6936"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows 11 Version 23H2 < 10.0.22631.6936",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows 11 Version 23H2 lessThan=10.0.22631.6936"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows 11 Version 24H2 < 10.0.26100.8246",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows 11 Version 24H2 lessThan=10.0.26100.8246"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows 11 Version 25H2 < 10.0.26200.8246",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows 11 Version 25H2 lessThan=10.0.26200.8246"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows 11 version 26H1 < 10.0.28000.1836",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows 11 version 26H1 lessThan=10.0.28000.1836"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows Server 2016 < 10.0.14393.9060",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows Server 2016 lessThan=10.0.14393.9060"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows Server 2016 (Server Core installation) < 10.0.14393.9060",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows Server 2016 (Server Core installation) lessThan=10.0.14393.9060"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows Server 2019 < 10.0.17763.8644",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows Server 2019 lessThan=10.0.17763.8644"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows Server 2019 (Server Core installation) < 10.0.17763.8644",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows Server 2019 (Server Core installation) lessThan=10.0.17763.8644"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows Server 2022 < 10.0.20348.5020",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows Server 2022 lessThan=10.0.20348.5020"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows Server 2022, 23H2 Edition (Server Core installation) < 10.0.25398.2274",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows Server 2022, 23H2 Edition (Server Core installation) lessThan=10.0.25398.2274"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows Server 2025 < 10.0.26100.32690",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows Server 2025 lessThan=10.0.26100.32690"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Windows Server 2025 (Server Core installation) < 10.0.26100.32690",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Windows Server 2025 (Server Core installation) lessThan=10.0.26100.32690"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "has_patch",
+    "object": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33824",
+    "object_type": "Advisory",
+    "qualifiers": {
+      "tags": [
+        "Vendor Advisory"
+      ]
+    },
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "references[]: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33824 tags=['Vendor Advisory']"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "confirmed_exploited_by",
+    "object": "CISA-KEV",
+    "object_type": "KEV",
+    "qualifiers": {
+      "date_added": "2026-08-18",
+      "action_due": "2026-08-21"
+    },
+    "source_id": "S02",
+    "method": "regex",
+    "evidence": "cisaExploitAdd=2026-08-18, cisaActionDue=2026-08-21"
+  },
+  {
+    "subject": "CVE-2026-55040",
+    "subject_type": "CVE",
+    "relation": "exploitation_status_per",
+    "object": "active",
+    "object_type": "literal",
+    "qualifiers": {
+      "status_source": "CISA Coordinator",
+      "timestamp": "2026-07-13"
+    },
+    "source_id": "S03",
+    "method": "regex",
+    "evidence": "metrics.ssvcV203: role=CISA Coordinator, options=[{'exploitation': 'active'}, {'automatable': 'yes'}, {'technicalImpact': 'total'}]"
+  },
+  {
+    "subject": "CVE-2026-55040",
+    "subject_type": "CVE",
+    "relation": "has_weakness",
+    "object": "CWE-1390",
+    "object_type": "CWE",
+    "qualifiers": {},
+    "source_id": "S03",
+    "method": "regex",
+    "evidence": "weaknesses[].description: CWE-1390"
+  },
+  {
+    "subject": "CVE-2026-55040",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Microsoft SharePoint Enterprise Server 2016 < 16.0.5561.1001",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S03",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Microsoft SharePoint Enterprise Server 2016 lessThan=16.0.5561.1001"
+  },
+  {
+    "subject": "CVE-2026-55040",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Microsoft SharePoint Server 2019 < 16.0.10417.20175",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S03",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Microsoft SharePoint Server 2019 lessThan=16.0.10417.20175"
+  },
+  {
+    "subject": "CVE-2026-55040",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Microsoft SharePoint Server Subscription Edition < 16.0.19725.20434",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S03",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Microsoft SharePoint Server Subscription Edition lessThan=16.0.19725.20434"
+  },
+  {
+    "subject": "CVE-2026-55040",
+    "subject_type": "CVE",
+    "relation": "has_patch",
+    "object": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55040",
+    "object_type": "Advisory",
+    "qualifiers": {
+      "tags": [
+        "Patch",
+        "Vendor Advisory"
+      ]
+    },
+    "source_id": "S03",
+    "method": "regex",
+    "evidence": "references[]: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55040 tags=['Patch', 'Vendor Advisory']"
+  },
+  {
+    "subject": "CVE-2026-55040",
+    "subject_type": "CVE",
+    "relation": "confirmed_exploited_by",
+    "object": "CISA-KEV",
+    "object_type": "KEV",
+    "qualifiers": {
+      "date_added": "2026-08-18",
+      "action_due": "2026-08-21"
+    },
+    "source_id": "S03",
+    "method": "regex",
+    "evidence": "cisaExploitAdd=2026-08-18, cisaActionDue=2026-08-21"
+  },
+  {
+    "subject": "CVE-2026-59310",
+    "subject_type": "CVE",
+    "relation": "exploitation_status_per",
+    "object": "active",
+    "object_type": "literal",
+    "qualifiers": {
+      "status_source": "CISA Coordinator",
+      "timestamp": "2026-07-29"
+    },
+    "source_id": "S04",
+    "method": "regex",
+    "evidence": "metrics.ssvcV203: role=CISA Coordinator, options=[{'exploitation': 'active'}, {'automatable': 'yes'}, {'technicalImpact': 'total'}]"
+  },
+  {
+    "subject": "CVE-2026-59310",
+    "subject_type": "CVE",
+    "relation": "has_weakness",
+    "object": "CWE-22",
+    "object_type": "CWE",
+    "qualifiers": {},
+    "source_id": "S04",
+    "method": "regex",
+    "evidence": "weaknesses[].description: CWE-22"
+  },
+  {
+    "subject": "CVE-2026-59310",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "vCenter < 9.1.0.0300",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S04",
+    "method": "regex",
+    "evidence": "affected[].affectedData: VMware vCenter lessThan=9.1.0.0300"
+  },
+  {
+    "subject": "CVE-2026-59310",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "vCenter < 9.0.2.0100",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S04",
+    "method": "regex",
+    "evidence": "affected[].affectedData: VMware vCenter lessThan=9.0.2.0100"
+  },
+  {
+    "subject": "CVE-2026-59310",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "vCenter < 8.0 U3k",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S04",
+    "method": "regex",
+    "evidence": "affected[].affectedData: VMware vCenter lessThan=8.0 U3k"
+  },
+  {
+    "subject": "CVE-2026-59310",
+    "subject_type": "CVE",
+    "relation": "has_patch",
+    "object": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017",
+    "object_type": "Advisory",
+    "qualifiers": {
+      "tags": [
+        "Vendor Advisory"
+      ]
+    },
+    "source_id": "S04",
+    "method": "regex",
+    "evidence": "references[]: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017 tags=['Vendor Advisory']"
+  },
+  {
+    "subject": "CVE-2026-59310",
+    "subject_type": "CVE",
+    "relation": "confirmed_exploited_by",
+    "object": "CISA-KEV",
+    "object_type": "KEV",
+    "qualifiers": {
+      "date_added": "2026-08-18",
+      "action_due": "2026-08-21"
+    },
+    "source_id": "S04",
+    "method": "regex",
+    "evidence": "cisaExploitAdd=2026-08-18, cisaActionDue=2026-08-21"
+  },
+  {
+    "subject": "CVE-2026-65400",
+    "subject_type": "CVE",
+    "relation": "exploitation_status_per",
+    "object": "active",
+    "object_type": "literal",
+    "qualifiers": {
+      "status_source": "CISA Coordinator",
+      "timestamp": "2026-08-14"
+    },
+    "source_id": "S05",
+    "method": "regex",
+    "evidence": "metrics.ssvcV203: role=CISA Coordinator, options=[{'exploitation': 'active'}, {'automatable': 'yes'}, {'technicalImpact': 'total'}]"
+  },
+  {
+    "subject": "CVE-2026-65400",
+    "subject_type": "CVE",
+    "relation": "has_weakness",
+    "object": "CWE-287",
+    "object_type": "CWE",
+    "qualifiers": {},
+    "source_id": "S05",
+    "method": "regex",
+    "evidence": "weaknesses[].description: CWE-287"
+  },
+  {
+    "subject": "CVE-2026-65400",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "macOS < 14.8.9",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S05",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Apple macOS lessThan=14.8.9"
+  },
+  {
+    "subject": "CVE-2026-65400",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "macOS < 15.7.9",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S05",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Apple macOS lessThan=15.7.9"
+  },
+  {
+    "subject": "CVE-2026-65400",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "macOS < 26.6.1",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S05",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Apple macOS lessThan=26.6.1"
+  },
+  {
+    "subject": "CVE-2026-65400",
+    "subject_type": "CVE",
+    "relation": "has_patch",
+    "object": "https://support.apple.com/en-us/148170",
+    "object_type": "Advisory",
+    "qualifiers": {
+      "tags": [
+        "Release Notes",
+        "Vendor Advisory"
+      ]
+    },
+    "source_id": "S05",
+    "method": "regex",
+    "evidence": "references[]: https://support.apple.com/en-us/148170 tags=['Release Notes', 'Vendor Advisory']"
+  },
+  {
+    "subject": "CVE-2026-65400",
+    "subject_type": "CVE",
+    "relation": "has_patch",
+    "object": "https://support.apple.com/en-us/148171",
+    "object_type": "Advisory",
+    "qualifiers": {
+      "tags": [
+        "Release Notes",
+        "Vendor Advisory"
+      ]
+    },
+    "source_id": "S05",
+    "method": "regex",
+    "evidence": "references[]: https://support.apple.com/en-us/148171 tags=['Release Notes', 'Vendor Advisory']"
+  },
+  {
+    "subject": "CVE-2026-65400",
+    "subject_type": "CVE",
+    "relation": "has_patch",
+    "object": "https://support.apple.com/en-us/148172",
+    "object_type": "Advisory",
+    "qualifiers": {
+      "tags": [
+        "Release Notes",
+        "Vendor Advisory"
+      ]
+    },
+    "source_id": "S05",
+    "method": "regex",
+    "evidence": "references[]: https://support.apple.com/en-us/148172 tags=['Release Notes', 'Vendor Advisory']"
+  },
+  {
+    "subject": "CVE-2026-65400",
+    "subject_type": "CVE",
+    "relation": "confirmed_exploited_by",
+    "object": "CISA-KEV",
+    "object_type": "KEV",
+    "qualifiers": {
+      "date_added": "2026-08-18",
+      "action_due": "2026-08-21"
+    },
+    "source_id": "S05",
+    "method": "regex",
+    "evidence": "cisaExploitAdd=2026-08-18, cisaActionDue=2026-08-21"
+  },
+  {
+    "subject": "CVE-2026-63520",
+    "subject_type": "CVE",
+    "relation": "exploitation_status_per",
+    "object": "none",
+    "object_type": "literal",
+    "qualifiers": {
+      "status_source": "CISA Coordinator",
+      "timestamp": "2026-08-07"
+    },
+    "source_id": "S06",
+    "method": "regex",
+    "evidence": "metrics.ssvcV203: role=CISA Coordinator, options=[{'exploitation': 'none'}, {'automatable': 'no'}, {'technicalImpact': 'total'}]"
+  },
+  {
+    "subject": "CVE-2026-63520",
+    "subject_type": "CVE",
+    "relation": "has_weakness",
+    "object": "CWE-20",
+    "object_type": "CWE",
+    "qualifiers": {},
+    "source_id": "S06",
+    "method": "regex",
+    "evidence": "weaknesses[].description: CWE-20"
+  },
+  {
+    "subject": "CVE-2026-63520",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Microsoft SharePoint Enterprise Server 2016 < 16.0.5565.1001",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S06",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Microsoft SharePoint Enterprise Server 2016 lessThan=16.0.5565.1001"
+  },
+  {
+    "subject": "CVE-2026-63520",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Microsoft SharePoint Server 2019 < 16.0.10417.20198",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S06",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Microsoft SharePoint Server 2019 lessThan=16.0.10417.20198"
+  },
+  {
+    "subject": "CVE-2026-63520",
+    "subject_type": "CVE",
+    "relation": "affects",
+    "object": "Microsoft SharePoint Server Subscription Edition < 16.0.19725.20522",
+    "object_type": "Product/Version",
+    "qualifiers": {},
+    "source_id": "S06",
+    "method": "regex",
+    "evidence": "affected[].affectedData: Microsoft Microsoft SharePoint Server Subscription Edition lessThan=16.0.19725.20522"
+  },
+  {
+    "subject": "CVE-2026-63520",
+    "subject_type": "CVE",
+    "relation": "has_patch",
+    "object": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63520",
+    "object_type": "Advisory",
+    "qualifiers": {
+      "tags": [
+        "Patch",
+        "Vendor Advisory"
+      ]
+    },
+    "source_id": "S06",
+    "method": "regex",
+    "evidence": "references[]: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63520 tags=['Patch', 'Vendor Advisory']"
+  },
+  {
+    "subject": "CVE-2026-59310",
+    "subject_type": "CVE",
+    "relation": "has_vendor_workaround",
+    "object": "false",
+    "object_type": "literal",
+    "qualifiers": {},
+    "source_id": "S12",
+    "method": "regex",
+    "evidence": "to execute arbitrary code. The vulnerability has a maximum CVSS score of 9.8. Broadcom states that no workaround is available, making patching the required remediation. Fixed vCenter releases include: -VMware vCenter 9.1: 9.1"
+  },
+  {
+    "subject": "CVE-2026-55040",
+    "subject_type": "CVE",
+    "relation": "chains_with",
+    "object": "CVE-2026-63520",
+    "object_type": "CVE",
+    "qualifiers": {},
+    "source_id": "S18",
+    "method": "regex",
+    "evidence": "e now using the Rapid7 POC for CVE-2026-55040 against its SharePoint honeypots. Microsoft has yet to confirm the bug has been exploited in the wild, even as it flags the flaw as a likely target. When paired with another vulnerability, CVE-2026-63520, CVE-2026-55040 “could lead to unauthenticated remote code execution against a vulnerable SharePoint server”, according to NHS England Digital. CISA is warning administrators to harde"
+  },
+  {
+    "subject": "BOD 26-04",
+    "subject_type": "Advisory",
+    "relation": "supersedes",
+    "object": "BOD 19-02",
+    "object_type": "Advisory",
+    "qualifiers": {},
+    "source_id": "S19",
+    "method": "regex",
+    "evidence": "igate the risk of cyber incidents. This Directive supersedes and hereby revokes BOD 19-02: Vulnerability Remediation Requirements for Internet-Accessible Systems (April 29, 2019), and BOD 22-01: Reducing the Significant Risk of Known Exploited Vulnerabilities (Nov. 3, 2021). This Directive consolidates and clarifi"
+  },
+  {
+    "subject": "BOD 26-04",
+    "subject_type": "Advisory",
+    "relation": "supersedes",
+    "object": "BOD 22-01",
+    "object_type": "Advisory",
+    "qualifiers": {},
+    "source_id": "S19",
+    "method": "regex",
+    "evidence": "igate the risk of cyber incidents. This Directive supersedes and hereby revokes BOD 19-02: Vulnerability Remediation Requirements for Internet-Accessible Systems (April 29, 2019), and BOD 22-01: Reducing the Significant Risk of Known Exploited Vulnerabilities (Nov. 3, 2021). This Directive consolidates and clarifi"
+  },
+  {
+    "subject": "CVE-2026-33824",
+    "subject_type": "CVE",
+    "relation": "confirmed_exploited_by",
+    "object": "CISA-KEV",
+    "object_type": "KEV",
+    "qualifiers": {
+      "date_added": "2026-08-18",
+      "action_due": "2026-08-21"
+    },
+    "source_id": "S29",
+    "method": "regex",
+    "evidence": "Date Added: 2026-08-18 / Due Date: 2026-08-21"
+  },
+  {
+    "subject": "CVE-2026-55040",
+    "subject_type": "CVE",
+    "relation": "confirmed_exploited_by",
+    "object": "CISA-KEV",
+    "object_type": "KEV",
+    "qualifiers": {
+      "date_added": "2026-08-18",
+      "action_due": "2026-08-21"
+    },
+    "source_id": "S30",
+    "method": "regex",
+    "evidence": "Date Added: 2026-08-18 / Due Date: 2026-08-21"
+  },
+  {
+    "subject": "CVE-2026-59310",
+    "subject_type": "CVE",
+    "relation": "confirmed_exploited_by",
+    "object": "CISA-KEV",
+    "object_type": "KEV",
+    "qualifiers": {
+      "date_added": "2026-08-18",
+      "action_due": "2026-08-21"
+    },
+    "source_id": "S31",
+    "method": "regex",
+    "evidence": "Date Added: 2026-08-18 / Due Date: 2026-08-21"
+  },
+  {
+    "subject": "CVE-2026-65400",
+    "subject_type": "CVE",
+    "relation": "confirmed_exploited_by",
+    "object": "CISA-KEV",
+    "object_type": "KEV",
+    "qualifiers": {
+      "date_added": "2026-08-18",
+      "action_due": "2026-08-21"
+    },
+    "source_id": "S32",
+    "method": "regex",
+    "evidence": "Date Added: 2026-08-18 / Due Date: 2026-08-21"
+  },
+  {
+    "subject": "CVE-2026-55040",
+    "subject_type": "CVE",
+    "relation": "has_weakness",
+    "object": "CWE-1390",
+    "object_type": "CWE",
+    "qualifiers": {},
+    "source_id": "S40",
+    "method": "regex",
+    "evidence": "9.1 (Critical), and a Common Weakness Enumeration (CWE) of CWE-1390: Weak Authentication. On August 18, 2026, CISA added CVE-20"
+  },
+  {
+    "subject": "CVE-2026-63520",
+    "subject_type": "CVE",
+    "relation": "has_weakness",
+    "object": "CWE-20",
+    "object_type": "CWE",
+    "qualifiers": {},
+    "source_id": "S41",
+    "method": "regex",
+    "evidence": "e of 8.1 (High), and a Common Weakness Enumeration (CWE) of CWE-20: Improper Input Validation. While the severity of the RCE i"
+  },
+  {
+    "subject": "CVE-2026-63520",
+    "subject_type": "CVE",
+    "relation": "chains_with",
+    "object": "CVE-2026-55040",
+    "object_type": "CVE",
+    "qualifiers": {},
+    "source_id": "S41",
+    "method": "regex",
+    "evidence": "ch as executing an attacker-controlled OS command. The attacker's arbitrary code is executed with the permission of the Windows service account running the SharePoint Site instance. As CVE-2026-63520 can be chained to the authentication bypass vulnerability, CVE-2026-55040, the resulting exploit chain allows for unauthenticated RCE against a vulnerable server. Credit This vulnerability was discovered by Stephen Fe"
+  },
+  {
+    "subject": "CVE-2026-59309",
+    "subject_type": "CVE",
+    "relation": "has_vendor_workaround",
+    "object": "false",
+    "object_type": "literal",
+    "qualifiers": {},
+    "source_id": "S43",
+    "method": "regex",
+    "evidence": "-59309 apply the patches listed in the 'Fixed Version' column of the 'Response Matrix' found below. Workarounds: None Additional Documentation: A supplemental FAQ was created for clarification. Please see: https://brc"
+  },
+  {
+    "subject": "CVE-2026-59310",
+    "subject_type": "CVE",
+    "relation": "has_vendor_workaround",
+    "object": "false",
+    "object_type": "literal",
+    "qualifiers": {},
+    "source_id": "S43",
+    "method": "regex",
+    "evidence": "-59310 apply the patches listed in the 'Fixed Version' column of the 'Response Matrix' found below. Workarounds: None Additional Documentation: A supplemental FAQ was created for clarification. Please see: https://brc"
+  },
+  {
+    "subject": "CVE-2026-47876",
+    "subject_type": "CVE",
+    "relation": "has_vendor_workaround",
+    "object": "false",
+    "object_type": "literal",
+    "qualifiers": {},
+    "source_id": "S43",
+    "method": "regex",
+    "evidence": "-47876 apply the patches listed in the 'Fixed Version' column of the 'Response Matrix' found below. Workarounds: None Additional Documentation: A supplemental FAQ was created for clarification. Please see: https://brc"
+  },
+  {
+    "subject": "CVE-2026-41703",
+    "subject_type": "CVE",
+    "relation": "has_vendor_workaround",
+    "object": "false",
+    "object_type": "literal",
+    "qualifiers": {},
+    "source_id": "S43",
+    "method": "regex",
+    "evidence": "-41703 apply the patches listed in the 'Fixed Version' column of the 'Response Matrix' found below. Workarounds: None Additional Documentation: None. Acknowledgments:  Broadcom would like to thank Maxim Suhanov (@errn"
+  },
+  {
+    "subject": "CVE-2026-41709",
+    "subject_type": "CVE",
+    "relation": "has_vendor_workaround",
+    "object": "false",
+    "object_type": "literal",
+    "qualifiers": {},
+    "source_id": "S43",
+    "method": "regex",
+    "evidence": "-41709 apply the patches listed in the 'Fixed Version' column of the 'Response Matrix' found below. Workarounds: None. Additional Documentation: None. Acknowledgments:  Broadcom would like to thank Ian Barton of CrowdS"
+  },
+  {
+    "subject": "CVE-2026-41703",
+    "subject_type": "CVE",
+    "relation": "has_patch",
+    "object": "VMSA-2026-0006.2",
+    "object_type": "Advisory",
+    "qualifiers": {},
+    "source_id": "S43",
+    "method": "regex",
+    "evidence": "-41709) 38017 19 August 2026 29 July 2026 OPEN CRITICAL 2.7-9.8 None CVE-2026-59309, CVE-2026-59310, CVE-2026-47876, CVE-2026-41703, CVE-2026-41709 | Advisory ID: | VMSA-2026-0006.2 |  | Advisory Severity: | Critical |  | CVSSv3 Range: | 2.7-9.8 |  | Synopsis: | VMware ESX, vCenter, Workstation, and Fusion updates address multipl"
+  },
+  {
+    "subject": "CVE-2026-41709",
+    "subject_type": "CVE",
+    "relation": "has_patch",
+    "object": "VMSA-2026-0006.2",
+    "object_type": "Advisory",
+    "qualifiers": {},
+    "source_id": "S43",
+    "method": "regex",
+    "evidence": "-41709) 38017 19 August 2026 29 July 2026 OPEN CRITICAL 2.7-9.8 None CVE-2026-59309, CVE-2026-59310, CVE-2026-47876, CVE-2026-41703, CVE-2026-41709 | Advisory ID: | VMSA-2026-0006.2 |  | Advisory Severity: | Critical |  | CVSSv3 Range: | 2.7-9.8 |  | Synopsis: | VMware ESX, vCenter, Workstation, and Fusion updates address multipl"
+  },
+  {
+    "subject": "CVE-2026-47876",
+    "subject_type": "CVE",
+    "relation": "has_patch",
+    "object": "VMSA-2026-0006.2",
+    "object_type": "Advisory",
+    "qualifiers": {},
+    "source_id": "S43",
+    "method": "regex",
+    "evidence": "-41709) 38017 19 August 2026 29 July 2026 OPEN CRITICAL 2.7-9.8 None CVE-2026-59309, CVE-2026-59310, CVE-2026-47876, CVE-2026-41703, CVE-2026-41709 | Advisory ID: | VMSA-2026-0006.2 |  | Advisory Severity: | Critical |  | CVSSv3 Range: | 2.7-9.8 |  | Synopsis: | VMware ESX, vCenter, Workstation, and Fusion updates address multipl"
+  },
+  {
+    "subject": "CVE-2026-59309",
+    "subject_type": "CVE",
+    "relation": "has_patch",
+    "object": "VMSA-2026-0006.2",
+    "object_type": "Advisory",
+    "qualifiers": {},
+    "source_id": "S43",
+    "method": "regex",
+    "evidence": "-41709) 38017 19 August 2026 29 July 2026 OPEN CRITICAL 2.7-9.8 None CVE-2026-59309, CVE-2026-59310, CVE-2026-47876, CVE-2026-41703, CVE-2026-41709 | Advisory ID: | VMSA-2026-0006.2 |  | Advisory Severity: | Critical |  | CVSSv3 Range: | 2.7-9.8 |  | Synopsis: | VMware ESX, vCenter, Workstation, and Fusion updates address multipl"
+  },
+  {
+    "subject": "CVE-2026-59310",
+    "subject_type": "CVE",
+    "relation": "has_patch",
+    "object": "VMSA-2026-0006.2",
+    "object_type": "Advisory",
+    "qualifiers": {},
+    "source_id": "S43",
+    "method": "regex",
+    "evidence": "-41709) 38017 19 August 2026 29 July 2026 OPEN CRITICAL 2.7-9.8 None CVE-2026-59309, CVE-2026-59310, CVE-2026-47876, CVE-2026-41703, CVE-2026-41709 | Advisory ID: | VMSA-2026-0006.2 |  | Advisory Severity: | Critical |  | CVSSv3 Range: | 2.7-9.8 |  | Synopsis: | VMware ESX, vCenter, Workstation, and Fusion updates address multipl"
+  },
+  {
+    "subject": "CVE-2026-59310",
+    "subject_type": "CVE",
+    "relation": "has_vendor_workaround",
+    "object": "false",
+    "object_type": "literal",
+    "qualifiers": {},
+    "source_id": "S44",
+    "method": "regex",
+    "evidence": "d directory and ultimately execute arbitrary code on the vCenter server itself. Broadcom’s advisory offers no workaround: the only fix is the emergency patch. Exploitation began around August 3, 2026, roughly five days a"
+  },
+  {
+    "subject": "CVE-2026-59310",
+    "subject_type": "CVE",
+    "relation": "has_exploitation_signal",
+    "object": "signal-S44-CVE-2026-59310",
+    "object_type": "Exploitation Signal",
+    "qualifiers": {},
+    "source_id": "S44",
+    "method": "regex",
+    "evidence": "lic disclosure. QUIRSO’s telemetry, gathered during an active incident-response engagement, counted 361 unique victim IP addresses spread across 47 countries. Germany, the United States, Turkey, Iran and France account for the largest share of compromise"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "source_id": "S09",
+  "_note": "DRAFT gold set, hand-authored by the auditing session for a working baseline only -- NOT validated by the project owner yet. entities/canonical_triples were authored independently from domain knowledge of the source; openie_triples were instead sampled from the pipeline's own actual output and spot-checked as correct against the source text (exact-string matching makes blind authoring impractical for free-text OpenIE triples) -- so openie_triple recall on THESE specific sources is not an independent measurement, only a smoke test that verified-correct extractions still match after any future pipeline change.",
+  "entities": [
+    {
+      "canonical_label": "CVE-2026-63520",
+      "entity_type": "CVE"
+    },
+    {
+      "canonical_label": "CVE-2026-55040",
+      "entity_type": "CVE"
+    }
+  ],
+  "openie_triples": [],
+  "_openie_note": "No verified-correct sample included: the real extractions sampled for this source (e.g. subject 'remote code execution vulnerability affecting Microsoft SharePoint Today we are publishing technical analysis of CVE-2026-63520 analysis') are garbled MinIE run-ons over complex sentences, not usable gold -- flagged separately in the audit report as a residual quality issue, not filled in with fabricated correct-looking triples here."
+}

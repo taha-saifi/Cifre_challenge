@@ -1,0 +1,24 @@
+{
+  "source_id": "S58",
+  "source_name": "CISA KEV catalog entry: CVE-2026-63520",
+  "cve_ids": [
+    "CVE-2026-63520"
+  ],
+  "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-63520",
+  "extraction_status": "partial_suspect",
+  "relevance": "cve-specific",
+  "char_count_raw": 811,
+  "char_count_clean": 760,
+  "filtered_lines": [
+    {
+      "line": "Subscribe to the KEV Catalog Updates",
+      "pattern": "subscribe (to (our)?\\s*newsletter)?"
+    },
+    {
+      "line": "Subscribe Now",
+      "pattern": "subscribe (to (our)?\\s*newsletter)?"
+    }
+  ],
+  "clean_text": "Known Exploited Vulnerabilities Catalog\nFor the benefit of the cybersecurity community and network defenders—and to help every organization better manage vulnerabilities and keep pace with threat activity—CISA maintains the authoritative source of vulnerabilities that have been exploited in the wild. Organizations should use the KEV catalog as an input to their vulnerability management prioritization framework. Learn more about how to use the KEV catalog in your organization.\nAre you aware of an actively exploited vulnerability not included in the KEV Catalog?\nNOMINATE A NEW KEV\nThe KEV catalog is also available in these formats:\nCSVJSON Print View\nJSON Schema (updated 06-25-2024)\nLicense\nStay up to date on the latest known exploited vulnerabilities.",
+  "chunks": null
+}

@@ -1,0 +1,15 @@
+{
+  "source_id": "S35",
+  "source_name": "CVE.org record: CVE-2026-63520",
+  "cve_ids": [
+    "CVE-2026-63520"
+  ],
+  "url": "https://www.cve.org/CVERecord?id=CVE-2026-63520",
+  "extraction_status": "success",
+  "relevance": "cve-specific",
+  "char_count_raw": 637,
+  "char_count_clean": 637,
+  "filtered_lines": [],
+  "clean_text": "Required CVE Record Information\nUpdated:\nDescription\nImproper input validation in Microsoft Office SharePoint allows an unauthorized attacker to execute code over a network.\nCVSS 1 Total\n| Score | Severity | Version | Vector String | \n|---|---|---|---|\n| 8.1 | HIGH | 3.1 | CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C | \nProduct Status\nLearn more\nVersions 1 Total\nDefault Status: unknown\naffected\nVersions 1 Total\nDefault Status: unknown\naffected\nVersions 1 Total\nDefault Status: unknown\naffected\nReferences 1 Total\n- msrc.microsoft.com: Microsoft SharePoint Server Remote Code Execution Vulnerability vendor-advisorypatch",
+  "chunks": null
+}

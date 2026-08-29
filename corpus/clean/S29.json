@@ -1,0 +1,15 @@
+{
+  "source_id": "S29",
+  "source_name": "CISA KEV catalog entry: CVE-2026-33824",
+  "cve_ids": [
+    "CVE-2026-33824"
+  ],
+  "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-33824",
+  "extraction_status": "success",
+  "relevance": "cve-specific",
+  "char_count_raw": 1508,
+  "char_count_clean": 988,
+  "filtered_lines": [],
+  "clean_text": "Microsoft | Internet Key Exchange (IKE) Service Extensions\n \n \n Microsoft Internet Key Exchange (IKE) Service Extensions Double Free Vulnerability: Microsoft Internet Key Exchange (IKE) Service Extensions contains a double free vulnerability that could enable remote code execution.\n \n \n \n \n \n \n- \n \n Known To Be Used in Ransomware Campaigns?\n \n Unknown\n \n \n \n- Forensic triage required per BOD-26-04: \n \n No\n \n \n- \n Date Added: \n 2026-08-18\n- Due Date: \n 2026-08-21\n \n Action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.\n \n \n Additional Notes",
+  "chunks": null
+}

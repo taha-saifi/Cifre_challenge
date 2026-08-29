@@ -1,0 +1,26 @@
+{
+  "source_id": "S22",
+  "_note": "DRAFT gold set, hand-authored by the auditing session for a working baseline only -- NOT validated by the project owner yet. entities/canonical_triples were authored independently from domain knowledge of the source; openie_triples were instead sampled from the pipeline's own actual output and spot-checked as correct against the source text (exact-string matching makes blind authoring impractical for free-text OpenIE triples) -- so openie_triple recall on THESE specific sources is not an independent measurement, only a smoke test that verified-correct extractions still match after any future pipeline change.",
+  "entities": [
+    {
+      "canonical_label": "CVE-2026-55040",
+      "entity_type": "CVE"
+    },
+    {
+      "canonical_label": "0.396520000",
+      "entity_type": "Probability"
+    }
+  ],
+  "canonical_triples": [
+    {
+      "source": "EPSS observation for CVE-2026-55040 on 2026-08-28",
+      "predicate": "observes",
+      "target": "CVE-2026-55040"
+    },
+    {
+      "source": "EPSS observation for CVE-2026-55040 on 2026-08-28",
+      "predicate": "has EPSS probability",
+      "target": "0.396520000"
+    }
+  ]
+}

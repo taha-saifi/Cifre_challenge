@@ -1,0 +1,32 @@
+{
+  "source_id": "S25",
+  "source_name": "FIRST EPSS: CVE-2026-63520",
+  "cve_ids": [
+    "CVE-2026-63520"
+  ],
+  "url": "https://api.first.org/data/v1/epss?cve=CVE-2026-63520",
+  "extraction_status": "success",
+  "relevance": "cve-specific",
+  "char_count_raw": 280,
+  "char_count_clean": 68,
+  "filtered_lines": [],
+  "clean_text": "CVE-2026-63520 — score EPSS 0.0289 (percentile 0.859) au 2026-08-28.",
+  "chunks": null,
+  "raw_json": {
+    "status": "OK",
+    "status-code": 200,
+    "version": "1.0",
+    "access": "public",
+    "total": 1,
+    "offset": 0,
+    "limit": 100,
+    "data": [
+      {
+        "cve": "CVE-2026-63520",
+        "epss": "0.028930000",
+        "percentile": "0.858610000",
+        "date": "2026-08-28"
+      }
+    ]
+  }
+}

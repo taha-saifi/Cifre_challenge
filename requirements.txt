@@ -1,0 +1,7 @@
+# Direct dependencies of build_corpus.py / preprocess_corpus.py.
+# extraction_pipeline/ has its own requirements.txt (stdlib only).
+trafilatura==2.2.0
+playwright==1.62.0
+requests==2.34.2
+pdfplumber==0.11.10
+readability-lxml==0.9
