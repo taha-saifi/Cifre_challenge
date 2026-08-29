@@ -1,0 +1,238 @@
+{
+  "_note": "Task set for the 13 experiment (9 tasks x 5 configs = 45 cells). T1/T2 reproduce the Day-2 run byte-for-byte (build_contexts.py --verify) and their ablation is frozen as executed. Every other task has ablation_mode=auto: its ablation_lines are COMPUTED by carrier_check.py --apply as the complete set of Tier-1 carriers, never hand-picked. 'anchors' are the terms that must ALL occur in an edge's evidence for that edge to be able to express the target fact. See task_selection.md for the exhaustive candidate list and the written selection rule.",
+  "configs": [
+    1,
+    4,
+    5,
+    7,
+    8
+  ],
+  "tasks": [
+    {
+      "id": "T1",
+      "legacy_id": "A",
+      "template": "pairwise_arbitration",
+      "coverage": [
+        "relations_between_entities",
+        "multi_source"
+      ],
+      "pivots": [
+        "CVE-2026-55040",
+        "CVE-2026-63520"
+      ],
+      "anchors": [
+        "CVE-2026-55040",
+        "CVE-2026-63520"
+      ],
+      "ablation_mode": "historical",
+      "ablation_target": "the chaining relation between the two SharePoint CVEs, as ablated on Day 2 -- known incomplete, kept frozen for comparability",
+      "prompt": "Étant donné les informations disponibles sur CVE-2026-55040 et CVE-2026-63520, si l'équipe ne peut appliquer qu'un seul correctif cette semaine, lequel prioriser, et pourquoi ? Formule ta réponse en une décision claire (lequel patcher en premier) suivie de ta justification.",
+      "ablation_lines": [
+        "CVE-2026-55040 lead_to_unauthenticated_remote_code_execution_against_vulnerable_SharePoint_server CVE-2026-63520 [source: S18]",
+        "CVE-2026-63520 be_chained_to authentication bypass vulnerability [source: S41]"
+      ],
+      "scenario": null,
+      "gap_notice": "Note : une relation potentielle entre CVE-2026-55040 et CVE-2026-63520 n'a pas pu etre confirmee avec certitude dans les sources disponibles."
+    },
+    {
+      "id": "T1b",
+      "template": "pairwise_arbitration",
+      "coverage": [
+        "relations_between_entities",
+        "multi_source"
+      ],
+      "pivots": [
+        "CVE-2026-55040",
+        "CVE-2026-63520"
+      ],
+      "anchors": [
+        "CVE-2026-55040",
+        "CVE-2026-63520"
+      ],
+      "ablation_mode": "auto",
+      "ablation_target": "same fact as T1, but ablating EVERY Tier-1 carrier -- isolates whether the Day-2 non-result came from graph redundancy or from the model's own priors",
+      "prompt": "Étant donné les informations disponibles sur CVE-2026-55040 et CVE-2026-63520, si l'équipe ne peut appliquer qu'un seul correctif cette semaine, lequel prioriser, et pourquoi ? Formule ta réponse en une décision claire (lequel patcher en premier) suivie de ta justification.",
+      "ablation_lines": [
+        "CVE-2026-55040 lead_to_unauthenticated_remote_code_execution_against_vulnerable_SharePoint_server vulnerability [source: S18]",
+        "CVE-2026-55040 lead_to_unauthenticated_remote_code_execution_against_vulnerable_SharePoint_server CVE-2026-63520 [source: S18]",
+        "CVE-2026-63520 be_chained_to authentication bypass vulnerability [source: S41]"
+      ],
+      "scenario": null,
+      "gap_notice": "Note : une relation potentielle entre CVE-2026-55040 et CVE-2026-63520 n'a pas pu etre confirmee avec certitude dans les sources disponibles."
+    },
+    {
+      "id": "T2",
+      "legacy_id": "B",
+      "template": "single_urgency",
+      "coverage": [
+        "conditions_exceptions"
+      ],
+      "pivots": [
+        "CVE-2026-33824"
+      ],
+      "anchors": [],
+      "ablation_mode": "scenario",
+      "ablation_target": "the asset exposure condition -- corpus-external, so it has no KG carrier to count",
+      "prompt": "Étant donné les informations disponibles sur CVE-2026-33824 et l'actif qui l'exécute, ce correctif doit-il être traité en urgence cette semaine ou peut-il attendre le prochain cycle de maintenance standard ? Formule ta réponse en une décision claire suivie de ta justification.",
+      "ablation_lines": [],
+      "scenario": "[Scenario experimental, non issu du corpus] L'actif executant CVE-2026-33824 est un serveur Windows expose publiquement sur internet sur les ports IKE (UDP 500 et 4500).",
+      "gap_notice": "Note : une information potentielle concernant l'exposition de l'actif executant CVE-2026-33824 n'a pas pu etre confirmee avec certitude dans les sources disponibles."
+    },
+    {
+      "id": "T3",
+      "template": "absence_check",
+      "coverage": [
+        "corpus_limits",
+        "conditions_exceptions"
+      ],
+      "pivots": [
+        "CVE-2026-59310"
+      ],
+      "anchors": [
+        "mitigations"
+      ],
+      "ablation_mode": "auto",
+      "ablation_target": "the CISA mitigation-guidance statement, the only edge in the vCenter subgraph that says what to do absent a patch -- note the subgraph has NO patch-availability fact at all, though S17 states one: a genuine extraction gap",
+      "prompt": "Étant donné les informations disponibles sur CVE-2026-59310, existe-t-il un contournement (workaround) distinct de l'application du correctif, utilisable si le patch ne peut pas être déployé immédiatement ? Formule ta réponse en une conclusion claire suivie de ta justification.",
+      "ablation_lines": [
+        "CVE-2026-59310 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S04]"
+      ],
+      "scenario": null,
+      "gap_notice": "Note : l'existence d'un contournement distinct du correctif pour CVE-2026-59310 n'a pas pu etre confirmee avec certitude dans les sources disponibles."
+    },
+    {
+      "id": "T4",
+      "template": "absence_check",
+      "coverage": [
+        "graph_limits"
+      ],
+      "pivots": [
+        "CVE-2026-65400"
+      ],
+      "anchors": [
+        "exploitation:"
+      ],
+      "ablation_mode": "auto",
+      "ablation_target": "the SSVC exploitation-status field, the single carrier of active-exploitation knowledge for macOS",
+      "prompt": "Étant donné les informations disponibles sur CVE-2026-65400, peut-on conclure que cette vulnérabilité fait l'objet d'une exploitation active en conditions réelles ? Formule ta réponse en une conclusion claire suivie de ta justification.",
+      "ablation_lines": [
+        "CVE-2026-65400 has_SSVC_exploitation active [source: S05]"
+      ],
+      "scenario": null,
+      "gap_notice": "Note : le statut d'exploitation active de CVE-2026-65400 n'a pas pu etre confirme avec certitude dans les sources disponibles."
+    },
+    {
+      "id": "T5",
+      "template": "compliance_check",
+      "coverage": [
+        "multi_source",
+        "conditions_exceptions"
+      ],
+      "pivots": [
+        "CVE-2026-55040",
+        "CVE-2026-63520",
+        "CVE-2026-33824",
+        "CVE-2026-59310",
+        "CVE-2026-65400"
+      ],
+      "anchors": [
+        "BOD"
+      ],
+      "ablation_mode": "auto",
+      "ablation_target": "the CISA BOD 26-04 required-action text, which states the regulatory obligation attached to a KEV entry",
+      "prompt": "Étant donné les informations disponibles sur les cinq CVE du périmètre, lesquelles sont hors délai au regard de l'échéance d'action fixée par la CISA à la date du 2026-08-29, et quelle obligation cela crée-t-il pour l'organisation ? Formule ta réponse en une conclusion claire suivie de ta justification.",
+      "ablation_lines": [
+        "CVE-2026-33824 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S02]",
+        "CVE-2026-55040 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S03]",
+        "CVE-2026-59310 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S04]",
+        "CVE-2026-65400 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S05]"
+      ],
+      "scenario": null,
+      "gap_notice": "Note : l'obligation réglementaire exacte attachée à l'inscription au catalogue KEV n'a pas pu etre confirmee avec certitude dans les sources disponibles."
+    },
+    {
+      "id": "T6",
+      "template": "full_ranking",
+      "coverage": [
+        "multi_source",
+        "relations_between_entities"
+      ],
+      "pivots": [
+        "CVE-2026-55040",
+        "CVE-2026-63520",
+        "CVE-2026-33824",
+        "CVE-2026-59310",
+        "CVE-2026-65400"
+      ],
+      "anchors": [
+        "epss"
+      ],
+      "ablation_mode": "auto",
+      "ablation_target": "all EPSS observations -- tests how much of the prioritisation ordering rests on a single quantitative signal",
+      "prompt": "Étant donné les informations disponibles sur les cinq CVE du périmètre, classe-les de la plus urgente à la moins urgente à corriger. Formule ta réponse en un classement ordonné explicite suivi de ta justification.",
+      "ablation_lines": [
+        "EPSS observation for CVE-2026-33824 on 2026-08-28 observes CVE-2026-33824 [source: S21]",
+        "EPSS observation for CVE-2026-33824 on 2026-08-28 has_EPSS_probability 0.726950000 [source: S21]",
+        "EPSS observation for CVE-2026-55040 on 2026-08-28 observes CVE-2026-55040 [source: S22]",
+        "EPSS observation for CVE-2026-55040 on 2026-08-28 has_EPSS_probability 0.396520000 [source: S22]",
+        "EPSS observation for CVE-2026-59310 on 2026-08-28 observes CVE-2026-59310 [source: S23]",
+        "EPSS observation for CVE-2026-59310 on 2026-08-28 has_EPSS_probability 0.458780000 [source: S23]",
+        "EPSS observation for CVE-2026-65400 on 2026-08-28 observes CVE-2026-65400 [source: S24]",
+        "EPSS observation for CVE-2026-65400 on 2026-08-28 has_EPSS_probability 0.099050000 [source: S24]",
+        "EPSS observation for CVE-2026-63520 on 2026-08-28 observes CVE-2026-63520 [source: S25]",
+        "EPSS observation for CVE-2026-63520 on 2026-08-28 has_EPSS_probability 0.028930000 [source: S25]"
+      ],
+      "scenario": null,
+      "gap_notice": "Note : les probabilités d'exploitation (EPSS) n'ont pas pu etre confirmees avec certitude dans les sources disponibles."
+    },
+    {
+      "id": "T7",
+      "template": "conflict_arbitration",
+      "coverage": [
+        "contradiction",
+        "multi_source"
+      ],
+      "pivots": [
+        "CVE-2026-63520"
+      ],
+      "anchors": [
+        "epss"
+      ],
+      "ablation_mode": "auto",
+      "ablation_target": "the EPSS observation that contradicts the high CVSS score -- tests whether a conflict between two source families is surfaced or silently resolved",
+      "prompt": "Étant donné les informations disponibles sur CVE-2026-63520, comment arbitrer entre un score de gravité CVSS élevé et une probabilité d'exploitation faible pour décider du délai de correction ? Formule ta réponse en une décision claire suivie de ta justification.",
+      "ablation_lines": [
+        "EPSS observation for CVE-2026-63520 on 2026-08-28 observes CVE-2026-63520 [source: S25]",
+        "EPSS observation for CVE-2026-63520 on 2026-08-28 has_EPSS_probability 0.028930000 [source: S25]"
+      ],
+      "scenario": null,
+      "gap_notice": "Note : la probabilité d'exploitation (EPSS) de CVE-2026-63520 n'a pas pu etre confirmee avec certitude dans les sources disponibles."
+    },
+    {
+      "id": "T8",
+      "template": "availability_check",
+      "coverage": [
+        "corpus_limits",
+        "multi_source"
+      ],
+      "pivots": [
+        "CVE-2026-63520"
+      ],
+      "anchors": [
+        "KB"
+      ],
+      "ablation_mode": "auto",
+      "ablation_target": "the vendor patch reference list (KB numbers) -- a fact present in S41's text whose extraction is known to be fragmented",
+      "prompt": "Étant donné les informations disponibles sur CVE-2026-63520, un correctif éditeur est-il disponible, et si oui sous quelle référence précise ? Formule ta réponse en une conclusion claire suivie de ta justification.",
+      "ablation_lines": [
+        "CVE-2026-63520 has_patch KB5002893 - Microsoft SharePoint Server Subscription Edition (version 16.0.19725.20522) [source: S41]",
+        "CVE-2026-63520 has_patch KB5002894 - Microsoft SharePoint Server 2019 (version 16.0.10417.20198) [source: S41]",
+        "CVE-2026-63520 has_patch KB5002896 - Microsoft SharePoint Server 2019 (version 16.0.10417.20198) [source: S41]",
+        "CVE-2026-63520 has_patch KB5002905 - Microsoft SharePoint Enterprise Server 2016 (version 16.0.5565.1001) [source: S41]",
+        "CVE-2026-63520 has_patch KB5002906 - Microsoft SharePoint Enterprise Server 2016 (version 16.0.5565.1001) [source: S41]"
+      ],
+      "scenario": null,
+      "gap_notice": "Note : la disponibilité d'un correctif éditeur pour CVE-2026-63520 n'a pas pu etre confirmee avec certitude dans les sources disponibles."
+    }
+  ]
+}

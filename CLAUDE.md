@@ -27,6 +27,25 @@ python3 extraction_pipeline/scripts/build_canonical_kg.py
 python3 extraction_pipeline/scripts/evaluate_pipeline.py
 ```
 
+Experiment harness and deliverables (`experiments/`, stdlib-only; needs `.venv` only for
+the document exports):
+```bash
+python -m venv .venv && .venv/Scripts/python -m pip install -r requirements-deliverables.txt
+
+# ALWAYS run this first after touching anything upstream of the protocol:
+.venv/Scripts/python experiments/build_contexts.py --verify   # must print PASS 10/10
+
+.venv/Scripts/python experiments/carrier_check.py --apply     # recompute ablation targets
+.venv/Scripts/python experiments/build_contexts.py            # -> experiments/contexts/
+.venv/Scripts/python experiments/score.py                     # -> experiments/scores.json
+.venv/Scripts/python experiments/build_report.py              # -> deliverables/resultats.md
+.venv/Scripts/python experiments/build_presentation_view.py   # -> presentation_view.json
+.venv/Scripts/python experiments/build_source_quality.py      # -> deliverables/sources.md
+```
+
+On this machine the interpreter is `python` (3.14.x), not `python3`, and the console is
+cp1252 — always pass `encoding="utf-8"` explicitly when reading repo JSON.
+
 Individual stage scripts under `extraction_pipeline/scripts/` (`extract_structured.py`,
 `extract_openie.py`, `extract_entities.py`, `resolve_entities.py`, `build_open_kg.py`,
 `build_relation_inventory.py`, `normalize_relations.py`, `cluster_relations.py`,
@@ -39,16 +58,25 @@ follow that pattern rather than adding an ad hoc test file.
 
 ## Architecture
 
-### Two independent KG efforts — do not conflate them
+### Four top-level areas — do not conflate them
 
-- **`extraction_pipeline/`** is the active pipeline: rule/statistical extraction only
-  (MinIE OpenIE + deterministic structured-field mapping), never an LLM call. This is
-  what `run_pipeline.py` builds.
-- **`kg/` + `extract_regex.py`** (project root) is a separate, paused mini-experiment
-  comparing regex-rules extraction against direct LLM extraction, for the thesis
-  report's methodology section. Only the regex half (`kg/regex/`) finished; nothing
-  here feeds `extraction_pipeline/`, and `extraction_pipeline/README.md` states
-  explicitly that it never reads `kg/`. Don't wire them together without being asked.
+- **`corpus/`** — 56 cleaned sources with provenance. Frozen.
+- **`extraction_pipeline/`** — the KG builder: rule/statistical extraction only (MinIE
+  OpenIE + deterministic structured-field mapping), never an LLM call. This is what
+  `run_pipeline.py` builds. Frozen at 2123 canonical edges (see above).
+- **`experiments/`** — the §13 experimental protocol run *on top of* the frozen KG:
+  task definitions, context builder, carrier analysis, scoring. Reads
+  `extraction_pipeline/` and never writes to it.
+- **`deliverables/`** — the three artefacts the challenge actually asks for (note, deck,
+  demonstrator) plus generated supporting tables. Written in **French**; the code, its
+  comments and the commit messages stay in English.
+
+**`kg/` has been deleted.** It held an abandoned mini-experiment comparing regex
+extraction against direct LLM extraction; only the regex half finished and it fed nothing.
+Its generator `extract_regex.py` is still at the project root and is now **dead code** —
+it writes to `kg/regex/`, which no longer exists. Don't run it, don't build on it. Older
+reports under `extraction_pipeline/reports/` still mention `kg/`; those are historical
+audit records describing a past state and are deliberately left unedited.
 
 ### `extraction_pipeline/` staged flow
 
@@ -137,6 +165,67 @@ involved; `"free_text"` (everything else, `clean_text` + optional `chunks`) goes
 through sentence-splitting and MinIE. A source can have zero output from either path
 if — and only if — its content genuinely doesn't support the schema; check
 `data/corpus_inventory.json` / `data/openie_audit.json` before assuming a gap is a bug.
+
+### The KG is FROZEN — do not rebuild it
+
+`canonical_kg/` is pinned at **2123 edges** and the 45 experiment cells in
+`experiments/results/` were produced against exactly that state. Rebuilding the graph
+invalidates every one of them, and they cannot be cheaply re-run (each was a separate
+isolated agent call, one shot, no retry). Two consequences:
+
+- Treat `extraction_pipeline/` and `corpus/` as read-only unless the task is explicitly
+  to re-open the extraction work. `evaluate_pipeline.py` is safe to re-run — it only
+  rewrites `metrics.json` with an identical body and a new timestamp.
+- `experiments/build_contexts.py --verify` is the tripwire: it rebuilds the 10 original
+  Day-2 contexts from the current graph and compares them byte-for-byte to the frozen
+  copies in `reports/experiment_contexts/`. If it stops printing `PASS: 0 mismatch(es)`,
+  the graph moved under the protocol and the results are no longer comparable.
+
+MinIE cannot run on the current machine anyway (no Java, no built JAR), so a rebuild
+would silently fall back to the heuristic extractor and produce a different graph.
+
+### `experiments/` — the §13 protocol, and why ablation needs carrier counting
+
+Nine tasks × five configurations = 45 cells. The load-bearing idea is **carrier
+counting**: before removing a fact to measure its impact, count how many canonical edges
+carry it. The Day-2 run removed two edges believing it had removed a relation; a third
+explicit carrier survived, along with nine partial ones, and the decision predictably did
+not move. `carrier_check.py` exists so that never happens silently again.
+
+- A **Tier-1 carrier** is an edge whose `evidence` mentions every anchor of the fact. A
+  **Tier-2 carrier** mentions at least one anchor plus `MIN_SHARED_TERMS` content words
+  drawn *from the Tier-1 evidence* — the vocabulary is derived from data, never
+  hand-authored, and the threshold is swept (2→5) and reported rather than tuned.
+- `carrier_check.py --apply` **writes** the computed Tier-1 set into `tasks.json` as the
+  ablation target for every task with `ablation_mode: "auto"`. Do not hand-edit
+  `ablation_lines`. T1 (`historical`) and T2 (`scenario`) are deliberately exempt: T1 is
+  frozen to reproduce Day 2, T2's fact is corpus-external.
+- `decision_key.json` is **pre-registered** — written before any cell ran, derived only
+  from structured fields. Do not amend it to match observed answers; that would destroy
+  the one thing that makes "exactitude" a measurement.
+
+Scoring never uses an LLM judge (§21 makes that an eliminating criterion). `score.py`
+computes grounding and citation validity by string matching against each cell's exact
+context; prudence and calibration are recorded as observable binary indicators, counted
+not graded.
+
+`deliverables/resultats.md` and `deliverables/sources.md` are **generated** by
+`build_report.py` / `build_source_quality.py`. Fix numbers in the data and regenerate;
+never edit those two files by hand.
+
+### Known data defects — recorded, deliberately not fixed
+
+See `experiments/data_quality_notes.md`. The two that will bite a reader first:
+
+- **`canonical_kg/nodes.json` has 1956 entries but only 1867 distinct ids.** 87 ids are
+  duplicated because the id is computed case-insensitively while the label is not
+  ("Active" from S51 and "active" from S16 collide). Building a `{id: label}` dict — as
+  every consumer here does — silently keeps whichever came last. **The correct node count
+  is 1867**; older reports say 1956 and are counting rows, not entities.
+- **Entity resolution is effectively inert**: 3699 mentions → 3697 canonical entities.
+  This is why carrier detection works off `evidence` text rather than graph structure.
+
+Both are fixable, neither is fixed, because fixing them means rebuilding the frozen KG.
 
 ### Audit trail discipline — keep it
 

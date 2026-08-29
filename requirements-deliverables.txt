@@ -1,0 +1,11 @@
+# Dependencies for the deliverables and the Day 3/4 experiment harness.
+# Separate from:
+#   - requirements.txt                      (corpus scraping, frozen corpus -> optional)
+#   - extraction_pipeline/requirements.txt  (stdlib only, deliberately)
+#
+# experiments/ itself is stdlib-only, like extraction_pipeline/. These packages
+# are needed only to produce the submission artefacts and to re-read the brief.
+python-docx==1.2.0     # note de proposition export (§18.1)
+python-pptx==1.0.2     # pitch deck export (§18.2)
+pdfplumber==0.11.10    # reliable re-reading of the challenge brief PDF
+networkx==3.5          # layout of the presentation subgraph (§11)

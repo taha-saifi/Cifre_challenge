@@ -1,0 +1,620 @@
+{
+  "parameters": {
+    "MIN_SHARED_TERMS": 2,
+    "MIN_TERM_LENGTH": 4
+  },
+  "tasks": {
+    "T1": {
+      "scope_edges": 104,
+      "derived_term_count": 20,
+      "tier1": [
+        {
+          "edge_id": "oe_db4416a87784783f",
+          "source_id": "S18",
+          "line": "CVE-2026-55040 lead_to_unauthenticated_remote_code_execution_against_vulnerable_SharePoint_server vulnerability [source: S18]",
+          "evidence": "When paired with another vulnerability, CVE-2026-63520, CVE-2026-55040 “could lead to unauthenticated remote code execution against a vulnerable SharePoint server”, according to NHS England Digital",
+          "anchors_visible_in_line": false
+        },
+        {
+          "edge_id": "oe_9f024c2e8cf58fcb",
+          "source_id": "S18",
+          "line": "CVE-2026-55040 lead_to_unauthenticated_remote_code_execution_against_vulnerable_SharePoint_server CVE-2026-63520 [source: S18]",
+          "evidence": "When paired with another vulnerability, CVE-2026-63520, CVE-2026-55040 “could lead to unauthenticated remote code execution against a vulnerable SharePoint server”, according to NHS England Digital",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_f7ccb82b84f7330e",
+          "source_id": "S41",
+          "line": "CVE-2026-63520 be_chained_to authentication bypass vulnerability [source: S41]",
+          "evidence": "As CVE-2026-63520 can be chained to the authentication bypass vulnerability, CVE-2026-55040, the resulting exploit chain allows for unauthenticated RCE against a vulnerable server",
+          "anchors_visible_in_line": false
+        }
+      ],
+      "tier2": [
+        {
+          "edge_id": "oe_93e41fe02e4b414d",
+          "source_id": "S03",
+          "line": "CVE-2026-55040 references https://www.rapid7.com/blog/post/ra-microsoft-sharepoint-jwt-token-authentication-bypass-cve-2026-55040/ [source: S03]",
+          "evidence": "https://www.rapid7.com/blog/post/ra-microsoft-sharepoint-jwt-token-authentication-bypass-cve-2026-55040/",
+          "shared_terms": [
+            "authentication",
+            "bypass",
+            "sharepoint"
+          ]
+        },
+        {
+          "edge_id": "oe_3abdf79b3b71e5c6",
+          "source_id": "S10",
+          "line": "pairing with CVE-2026-55040 authentication bypass we_achieved fully authenticated deserialization [source: S10]",
+          "evidence": "And there we have it: Using a LosFormatted TypeConfuseDelegate that runs calc, deserializing it via the BDCM .NET type and method definitions, and pairing with the CVE-2026-55040 authentication bypass, we achieved a fully authenticated deserialization that executes a calc process on our vulnerable SharePoint server",
+          "shared_terms": [
+            "authentication",
+            "bypass",
+            "server",
+            "sharepoint",
+            "vulnerable"
+          ]
+        },
+        {
+          "edge_id": "oe_0e0be89565b72bee",
+          "source_id": "S18",
+          "line": "remote unauthenticated attacker can leverage CVE-2026-55040 perform operations as SharePoint site user be_bypass_authentication_on vulnerable SharePoint server [source: S18]",
+          "evidence": "“A remote unauthenticated attacker can leverage CVE-2026-55040 to bypass authentication on a vulnerable SharePoint server, and perform operations as a SharePoint site user or administrator",
+          "shared_terms": [
+            "authentication",
+            "bypass",
+            "remote",
+            "server",
+            "sharepoint",
+            "unauthenticated",
+            "vulnerable"
+          ]
+        },
+        {
+          "edge_id": "oe_15298c1c72cf7e22",
+          "source_id": "S18",
+          "line": "remote unauthenticated attacker can leverage CVE-2026-55040 perform operations as administrator be_bypass_authentication_on vulnerable SharePoint server [source: S18]",
+          "evidence": "“A remote unauthenticated attacker can leverage CVE-2026-55040 to bypass authentication on a vulnerable SharePoint server, and perform operations as a SharePoint site user or administrator",
+          "shared_terms": [
+            "authentication",
+            "bypass",
+            "remote",
+            "server",
+            "sharepoint",
+            "unauthenticated",
+            "vulnerable"
+          ]
+        },
+        {
+          "edge_id": "oe_aca3f803cf22f0a8",
+          "source_id": "S18",
+          "line": "remote unauthenticated attacker can leverage CVE-2026-55040 perform be_bypass_operations_as SharePoint site user [source: S18]",
+          "evidence": "“A remote unauthenticated attacker can leverage CVE-2026-55040 to bypass authentication on a vulnerable SharePoint server, and perform operations as a SharePoint site user or administrator",
+          "shared_terms": [
+            "authentication",
+            "bypass",
+            "remote",
+            "server",
+            "sharepoint",
+            "unauthenticated",
+            "vulnerable"
+          ]
+        },
+        {
+          "edge_id": "oe_bd2adf57a1568522",
+          "source_id": "S18",
+          "line": "remote unauthenticated attacker can leverage CVE-2026-55040 perform be_bypass_operations_as administrator [source: S18]",
+          "evidence": "“A remote unauthenticated attacker can leverage CVE-2026-55040 to bypass authentication on a vulnerable SharePoint server, and perform operations as a SharePoint site user or administrator",
+          "shared_terms": [
+            "authentication",
+            "bypass",
+            "remote",
+            "server",
+            "sharepoint",
+            "unauthenticated",
+            "vulnerable"
+          ]
+        },
+        {
+          "edge_id": "oe_a379504251006087",
+          "source_id": "S18",
+          "line": "Threat intelligence firm Defused_warned_on_X_that_attackers are using Rapid7 POC for CVE-2026-55040 against SharePoint honeypots [source: S18]",
+          "evidence": "Threat intelligence firm Defused warned on X that attackers are now using the Rapid7 POC for CVE-2026-55040 against its SharePoint honeypots",
+          "shared_terms": [
+            "against",
+            "sharepoint"
+          ]
+        },
+        {
+          "edge_id": "oe_b55b943340c34b60",
+          "source_id": "S18",
+          "line": "Threat intelligence firm Defused_warned are using Rapid7 POC for CVE-2026-55040 against SharePoint honeypots [source: S18]",
+          "evidence": "Threat intelligence firm Defused warned on X that attackers are now using the Rapid7 POC for CVE-2026-55040 against its SharePoint honeypots",
+          "shared_terms": [
+            "against",
+            "sharepoint"
+          ]
+        },
+        {
+          "edge_id": "oe_e085848834011fc0",
+          "source_id": "S40",
+          "line": "Patching CVE-2026-55040 break exploit chain [source: S40]",
+          "evidence": "Patching CVE-2026-55040 will successfully break this exploit chain; this underscores the importance of patching vulnerabilities such as authentication bypasses, which can break complex and high-impact exploit chains",
+          "shared_terms": [
+            "authentication",
+            "chain",
+            "exploit"
+          ]
+        }
+      ],
+      "tier2_sensitivity": {
+        "2": 9,
+        "3": 7,
+        "4": 5,
+        "5": 5
+      },
+      "ablation_declared": [
+        "CVE-2026-55040 lead_to_unauthenticated_remote_code_execution_against_vulnerable_SharePoint_server CVE-2026-63520 [source: S18]",
+        "CVE-2026-63520 be_chained_to authentication bypass vulnerability [source: S41]"
+      ],
+      "tier1_carriers_not_ablated": [
+        "CVE-2026-55040 lead_to_unauthenticated_remote_code_execution_against_vulnerable_SharePoint_server vulnerability [source: S18]"
+      ],
+      "ablation_complete": false,
+      "carrier_count": 12
+    },
+    "T1b": {
+      "scope_edges": 104,
+      "derived_term_count": 20,
+      "tier1": [
+        {
+          "edge_id": "oe_db4416a87784783f",
+          "source_id": "S18",
+          "line": "CVE-2026-55040 lead_to_unauthenticated_remote_code_execution_against_vulnerable_SharePoint_server vulnerability [source: S18]",
+          "evidence": "When paired with another vulnerability, CVE-2026-63520, CVE-2026-55040 “could lead to unauthenticated remote code execution against a vulnerable SharePoint server”, according to NHS England Digital",
+          "anchors_visible_in_line": false
+        },
+        {
+          "edge_id": "oe_9f024c2e8cf58fcb",
+          "source_id": "S18",
+          "line": "CVE-2026-55040 lead_to_unauthenticated_remote_code_execution_against_vulnerable_SharePoint_server CVE-2026-63520 [source: S18]",
+          "evidence": "When paired with another vulnerability, CVE-2026-63520, CVE-2026-55040 “could lead to unauthenticated remote code execution against a vulnerable SharePoint server”, according to NHS England Digital",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_f7ccb82b84f7330e",
+          "source_id": "S41",
+          "line": "CVE-2026-63520 be_chained_to authentication bypass vulnerability [source: S41]",
+          "evidence": "As CVE-2026-63520 can be chained to the authentication bypass vulnerability, CVE-2026-55040, the resulting exploit chain allows for unauthenticated RCE against a vulnerable server",
+          "anchors_visible_in_line": false
+        }
+      ],
+      "tier2": [
+        {
+          "edge_id": "oe_93e41fe02e4b414d",
+          "source_id": "S03",
+          "line": "CVE-2026-55040 references https://www.rapid7.com/blog/post/ra-microsoft-sharepoint-jwt-token-authentication-bypass-cve-2026-55040/ [source: S03]",
+          "evidence": "https://www.rapid7.com/blog/post/ra-microsoft-sharepoint-jwt-token-authentication-bypass-cve-2026-55040/",
+          "shared_terms": [
+            "authentication",
+            "bypass",
+            "sharepoint"
+          ]
+        },
+        {
+          "edge_id": "oe_3abdf79b3b71e5c6",
+          "source_id": "S10",
+          "line": "pairing with CVE-2026-55040 authentication bypass we_achieved fully authenticated deserialization [source: S10]",
+          "evidence": "And there we have it: Using a LosFormatted TypeConfuseDelegate that runs calc, deserializing it via the BDCM .NET type and method definitions, and pairing with the CVE-2026-55040 authentication bypass, we achieved a fully authenticated deserialization that executes a calc process on our vulnerable SharePoint server",
+          "shared_terms": [
+            "authentication",
+            "bypass",
+            "server",
+            "sharepoint",
+            "vulnerable"
+          ]
+        },
+        {
+          "edge_id": "oe_0e0be89565b72bee",
+          "source_id": "S18",
+          "line": "remote unauthenticated attacker can leverage CVE-2026-55040 perform operations as SharePoint site user be_bypass_authentication_on vulnerable SharePoint server [source: S18]",
+          "evidence": "“A remote unauthenticated attacker can leverage CVE-2026-55040 to bypass authentication on a vulnerable SharePoint server, and perform operations as a SharePoint site user or administrator",
+          "shared_terms": [
+            "authentication",
+            "bypass",
+            "remote",
+            "server",
+            "sharepoint",
+            "unauthenticated",
+            "vulnerable"
+          ]
+        },
+        {
+          "edge_id": "oe_15298c1c72cf7e22",
+          "source_id": "S18",
+          "line": "remote unauthenticated attacker can leverage CVE-2026-55040 perform operations as administrator be_bypass_authentication_on vulnerable SharePoint server [source: S18]",
+          "evidence": "“A remote unauthenticated attacker can leverage CVE-2026-55040 to bypass authentication on a vulnerable SharePoint server, and perform operations as a SharePoint site user or administrator",
+          "shared_terms": [
+            "authentication",
+            "bypass",
+            "remote",
+            "server",
+            "sharepoint",
+            "unauthenticated",
+            "vulnerable"
+          ]
+        },
+        {
+          "edge_id": "oe_aca3f803cf22f0a8",
+          "source_id": "S18",
+          "line": "remote unauthenticated attacker can leverage CVE-2026-55040 perform be_bypass_operations_as SharePoint site user [source: S18]",
+          "evidence": "“A remote unauthenticated attacker can leverage CVE-2026-55040 to bypass authentication on a vulnerable SharePoint server, and perform operations as a SharePoint site user or administrator",
+          "shared_terms": [
+            "authentication",
+            "bypass",
+            "remote",
+            "server",
+            "sharepoint",
+            "unauthenticated",
+            "vulnerable"
+          ]
+        },
+        {
+          "edge_id": "oe_bd2adf57a1568522",
+          "source_id": "S18",
+          "line": "remote unauthenticated attacker can leverage CVE-2026-55040 perform be_bypass_operations_as administrator [source: S18]",
+          "evidence": "“A remote unauthenticated attacker can leverage CVE-2026-55040 to bypass authentication on a vulnerable SharePoint server, and perform operations as a SharePoint site user or administrator",
+          "shared_terms": [
+            "authentication",
+            "bypass",
+            "remote",
+            "server",
+            "sharepoint",
+            "unauthenticated",
+            "vulnerable"
+          ]
+        },
+        {
+          "edge_id": "oe_a379504251006087",
+          "source_id": "S18",
+          "line": "Threat intelligence firm Defused_warned_on_X_that_attackers are using Rapid7 POC for CVE-2026-55040 against SharePoint honeypots [source: S18]",
+          "evidence": "Threat intelligence firm Defused warned on X that attackers are now using the Rapid7 POC for CVE-2026-55040 against its SharePoint honeypots",
+          "shared_terms": [
+            "against",
+            "sharepoint"
+          ]
+        },
+        {
+          "edge_id": "oe_b55b943340c34b60",
+          "source_id": "S18",
+          "line": "Threat intelligence firm Defused_warned are using Rapid7 POC for CVE-2026-55040 against SharePoint honeypots [source: S18]",
+          "evidence": "Threat intelligence firm Defused warned on X that attackers are now using the Rapid7 POC for CVE-2026-55040 against its SharePoint honeypots",
+          "shared_terms": [
+            "against",
+            "sharepoint"
+          ]
+        },
+        {
+          "edge_id": "oe_e085848834011fc0",
+          "source_id": "S40",
+          "line": "Patching CVE-2026-55040 break exploit chain [source: S40]",
+          "evidence": "Patching CVE-2026-55040 will successfully break this exploit chain; this underscores the importance of patching vulnerabilities such as authentication bypasses, which can break complex and high-impact exploit chains",
+          "shared_terms": [
+            "authentication",
+            "chain",
+            "exploit"
+          ]
+        }
+      ],
+      "tier2_sensitivity": {
+        "2": 9,
+        "3": 7,
+        "4": 5,
+        "5": 5
+      },
+      "ablation_declared": [
+        "CVE-2026-55040 lead_to_unauthenticated_remote_code_execution_against_vulnerable_SharePoint_server CVE-2026-63520 [source: S18]",
+        "CVE-2026-55040 lead_to_unauthenticated_remote_code_execution_against_vulnerable_SharePoint_server vulnerability [source: S18]",
+        "CVE-2026-63520 be_chained_to authentication bypass vulnerability [source: S41]"
+      ],
+      "tier1_carriers_not_ablated": [],
+      "ablation_complete": true,
+      "carrier_count": 12
+    },
+    "T2": {
+      "skipped": "no anchors declared (no relational ablation)"
+    },
+    "T3": {
+      "scope_edges": 42,
+      "derived_term_count": 33,
+      "tier1": [
+        {
+          "edge_id": "oe_5d8a318d9078e2ea",
+          "source_id": "S04",
+          "line": "CVE-2026-59310 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S04]",
+          "evidence": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "anchors_visible_in_line": true
+        }
+      ],
+      "tier2": [],
+      "tier2_sensitivity": {
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "ablation_declared": [
+        "CVE-2026-59310 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S04]"
+      ],
+      "tier1_carriers_not_ablated": [],
+      "ablation_complete": true,
+      "carrier_count": 1
+    },
+    "T4": {
+      "scope_edges": 38,
+      "derived_term_count": 1,
+      "tier1": [
+        {
+          "edge_id": "oe_d91c7cacd5754323",
+          "source_id": "S05",
+          "line": "CVE-2026-65400 has_SSVC_exploitation active [source: S05]",
+          "evidence": "exploitation: active",
+          "anchors_visible_in_line": false
+        }
+      ],
+      "tier2": [],
+      "tier2_sensitivity": {
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "ablation_declared": [
+        "CVE-2026-65400 has_SSVC_exploitation active [source: S05]"
+      ],
+      "tier1_carriers_not_ablated": [],
+      "ablation_complete": true,
+      "carrier_count": 1
+    },
+    "T5": {
+      "scope_edges": 238,
+      "derived_term_count": 34,
+      "tier1": [
+        {
+          "edge_id": "oe_aaa7f7814e43f72e",
+          "source_id": "S02",
+          "line": "CVE-2026-33824 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S02]",
+          "evidence": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_59ec683a29ec5cc7",
+          "source_id": "S03",
+          "line": "CVE-2026-55040 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S03]",
+          "evidence": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_5d8a318d9078e2ea",
+          "source_id": "S04",
+          "line": "CVE-2026-59310 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S04]",
+          "evidence": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_d5cf85b2ef43ef50",
+          "source_id": "S05",
+          "line": "CVE-2026-65400 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S05]",
+          "evidence": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+          "anchors_visible_in_line": true
+        }
+      ],
+      "tier2": [],
+      "tier2_sensitivity": {
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "ablation_declared": [
+        "CVE-2026-33824 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S02]",
+        "CVE-2026-55040 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S03]",
+        "CVE-2026-59310 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S04]",
+        "CVE-2026-65400 has_CISA_required_action Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines [source: S05]"
+      ],
+      "tier1_carriers_not_ablated": [],
+      "ablation_complete": true,
+      "carrier_count": 4
+    },
+    "T6": {
+      "scope_edges": 238,
+      "derived_term_count": 2,
+      "tier1": [
+        {
+          "edge_id": "oe_7992ffede0caa588",
+          "source_id": "S21",
+          "line": "EPSS observation for CVE-2026-33824 on 2026-08-28 observes CVE-2026-33824 [source: S21]",
+          "evidence": "{\"cve\": \"CVE-2026-33824\", \"epss\": \"0.726950000\", \"percentile\": \"0.994190000\", \"date\": \"2026-08-28\"}",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_b16cbc229e7fb39c",
+          "source_id": "S21",
+          "line": "EPSS observation for CVE-2026-33824 on 2026-08-28 has_EPSS_probability 0.726950000 [source: S21]",
+          "evidence": "epss: 0.726950000",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_97d4e5ab20f00b93",
+          "source_id": "S22",
+          "line": "EPSS observation for CVE-2026-55040 on 2026-08-28 observes CVE-2026-55040 [source: S22]",
+          "evidence": "{\"cve\": \"CVE-2026-55040\", \"epss\": \"0.396520000\", \"percentile\": \"0.985550000\", \"date\": \"2026-08-28\"}",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_3913988dd429f064",
+          "source_id": "S22",
+          "line": "EPSS observation for CVE-2026-55040 on 2026-08-28 has_EPSS_probability 0.396520000 [source: S22]",
+          "evidence": "epss: 0.396520000",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_63c606724d11cd8a",
+          "source_id": "S23",
+          "line": "EPSS observation for CVE-2026-59310 on 2026-08-28 observes CVE-2026-59310 [source: S23]",
+          "evidence": "{\"cve\": \"CVE-2026-59310\", \"epss\": \"0.458780000\", \"percentile\": \"0.987510000\", \"date\": \"2026-08-28\"}",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_c080a6a5b7459438",
+          "source_id": "S23",
+          "line": "EPSS observation for CVE-2026-59310 on 2026-08-28 has_EPSS_probability 0.458780000 [source: S23]",
+          "evidence": "epss: 0.458780000",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_bc2366fddd14ff58",
+          "source_id": "S24",
+          "line": "EPSS observation for CVE-2026-65400 on 2026-08-28 observes CVE-2026-65400 [source: S24]",
+          "evidence": "{\"cve\": \"CVE-2026-65400\", \"epss\": \"0.099050000\", \"percentile\": \"0.952940000\", \"date\": \"2026-08-28\"}",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_59cdbac33e204544",
+          "source_id": "S24",
+          "line": "EPSS observation for CVE-2026-65400 on 2026-08-28 has_EPSS_probability 0.099050000 [source: S24]",
+          "evidence": "epss: 0.099050000",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_2f6df22e7eeb129f",
+          "source_id": "S25",
+          "line": "EPSS observation for CVE-2026-63520 on 2026-08-28 observes CVE-2026-63520 [source: S25]",
+          "evidence": "{\"cve\": \"CVE-2026-63520\", \"epss\": \"0.028930000\", \"percentile\": \"0.858610000\", \"date\": \"2026-08-28\"}",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_49fbc8199824d855",
+          "source_id": "S25",
+          "line": "EPSS observation for CVE-2026-63520 on 2026-08-28 has_EPSS_probability 0.028930000 [source: S25]",
+          "evidence": "epss: 0.028930000",
+          "anchors_visible_in_line": true
+        }
+      ],
+      "tier2": [],
+      "tier2_sensitivity": {
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "ablation_declared": [
+        "EPSS observation for CVE-2026-33824 on 2026-08-28 has_EPSS_probability 0.726950000 [source: S21]",
+        "EPSS observation for CVE-2026-33824 on 2026-08-28 observes CVE-2026-33824 [source: S21]",
+        "EPSS observation for CVE-2026-55040 on 2026-08-28 has_EPSS_probability 0.396520000 [source: S22]",
+        "EPSS observation for CVE-2026-55040 on 2026-08-28 observes CVE-2026-55040 [source: S22]",
+        "EPSS observation for CVE-2026-59310 on 2026-08-28 has_EPSS_probability 0.458780000 [source: S23]",
+        "EPSS observation for CVE-2026-59310 on 2026-08-28 observes CVE-2026-59310 [source: S23]",
+        "EPSS observation for CVE-2026-63520 on 2026-08-28 has_EPSS_probability 0.028930000 [source: S25]",
+        "EPSS observation for CVE-2026-63520 on 2026-08-28 observes CVE-2026-63520 [source: S25]",
+        "EPSS observation for CVE-2026-65400 on 2026-08-28 has_EPSS_probability 0.099050000 [source: S24]",
+        "EPSS observation for CVE-2026-65400 on 2026-08-28 observes CVE-2026-65400 [source: S24]"
+      ],
+      "tier1_carriers_not_ablated": [],
+      "ablation_complete": true,
+      "carrier_count": 10
+    },
+    "T7": {
+      "scope_edges": 45,
+      "derived_term_count": 2,
+      "tier1": [
+        {
+          "edge_id": "oe_2f6df22e7eeb129f",
+          "source_id": "S25",
+          "line": "EPSS observation for CVE-2026-63520 on 2026-08-28 observes CVE-2026-63520 [source: S25]",
+          "evidence": "{\"cve\": \"CVE-2026-63520\", \"epss\": \"0.028930000\", \"percentile\": \"0.858610000\", \"date\": \"2026-08-28\"}",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_49fbc8199824d855",
+          "source_id": "S25",
+          "line": "EPSS observation for CVE-2026-63520 on 2026-08-28 has_EPSS_probability 0.028930000 [source: S25]",
+          "evidence": "epss: 0.028930000",
+          "anchors_visible_in_line": true
+        }
+      ],
+      "tier2": [],
+      "tier2_sensitivity": {
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "ablation_declared": [
+        "EPSS observation for CVE-2026-63520 on 2026-08-28 has_EPSS_probability 0.028930000 [source: S25]",
+        "EPSS observation for CVE-2026-63520 on 2026-08-28 observes CVE-2026-63520 [source: S25]"
+      ],
+      "tier1_carriers_not_ablated": [],
+      "ablation_complete": true,
+      "carrier_count": 2
+    },
+    "T8": {
+      "scope_edges": 45,
+      "derived_term_count": 7,
+      "tier1": [
+        {
+          "edge_id": "oe_3f9a3f0b81b78d84",
+          "source_id": "S41",
+          "line": "CVE-2026-63520 has_patch KB5002893 - Microsoft SharePoint Server Subscription Edition (version 16.0.19725.20522) [source: S41]",
+          "evidence": "- KB5002893 - Microsoft SharePoint Server Subscription Edition (version 16.0.19725.20522).",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_9624b638ac709bc5",
+          "source_id": "S41",
+          "line": "CVE-2026-63520 has_patch KB5002894 - Microsoft SharePoint Server 2019 (version 16.0.10417.20198) [source: S41]",
+          "evidence": "- KB5002894 - Microsoft SharePoint Server 2019 (version 16.0.10417.20198).",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_60c0b96cf26c3640",
+          "source_id": "S41",
+          "line": "CVE-2026-63520 has_patch KB5002896 - Microsoft SharePoint Server 2019 (version 16.0.10417.20198) [source: S41]",
+          "evidence": "- KB5002896 - Microsoft SharePoint Server 2019 (version 16.0.10417.20198).",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_07c1e4ee190d988a",
+          "source_id": "S41",
+          "line": "CVE-2026-63520 has_patch KB5002905 - Microsoft SharePoint Enterprise Server 2016 (version 16.0.5565.1001) [source: S41]",
+          "evidence": "- KB5002905 - Microsoft SharePoint Enterprise Server 2016 (version 16.0.5565.1001).",
+          "anchors_visible_in_line": true
+        },
+        {
+          "edge_id": "oe_9565b4c79a94690f",
+          "source_id": "S41",
+          "line": "CVE-2026-63520 has_patch KB5002906 - Microsoft SharePoint Enterprise Server 2016 (version 16.0.5565.1001) [source: S41]",
+          "evidence": "- KB5002906 - Microsoft SharePoint Enterprise Server 2016 (version 16.0.5565.1001).",
+          "anchors_visible_in_line": true
+        }
+      ],
+      "tier2": [],
+      "tier2_sensitivity": {
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "ablation_declared": [
+        "CVE-2026-63520 has_patch KB5002893 - Microsoft SharePoint Server Subscription Edition (version 16.0.19725.20522) [source: S41]",
+        "CVE-2026-63520 has_patch KB5002894 - Microsoft SharePoint Server 2019 (version 16.0.10417.20198) [source: S41]",
+        "CVE-2026-63520 has_patch KB5002896 - Microsoft SharePoint Server 2019 (version 16.0.10417.20198) [source: S41]",
+        "CVE-2026-63520 has_patch KB5002905 - Microsoft SharePoint Enterprise Server 2016 (version 16.0.5565.1001) [source: S41]",
+        "CVE-2026-63520 has_patch KB5002906 - Microsoft SharePoint Enterprise Server 2016 (version 16.0.5565.1001) [source: S41]"
+      ],
+      "tier1_carriers_not_ablated": [],
+      "ablation_complete": true,
+      "carrier_count": 5
+    }
+  }
+}

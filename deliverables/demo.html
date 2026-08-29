@@ -1,0 +1,369 @@
+<title>Compter les porteurs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;700&display=swap">
+
+<style>
+  :root {
+    --ground:      #F6F7F9;
+    --surface:     #FFFFFF;
+    --surface-sunk:#EDF0F3;
+    --ink:         #171B21;
+    --muted:       #5A6472;
+    --line:        #D8DEE5;
+    --accent:      #0E7490;
+    --accent-soft: #E2F1F4;
+    --shift:       #B4491A;
+    --shift-soft:  #FBEBE1;
+    --stable:      #4F5D6E;
+    --stable-soft: #E7EBEF;
+    --removed:     #A8323C;
+    --removed-soft:#FBE9EA;
+
+    --step--1: 0.815rem;
+    --step-0:  1rem;
+    --step-1:  1.22rem;
+    --step-2:  1.6rem;
+    --step-3:  2.15rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:      #11151A;
+      --surface:     #1A2027;
+      --surface-sunk:#141A20;
+      --ink:         #E4E9EF;
+      --muted:       #9AA6B4;
+      --line:        #2C353F;
+      --accent:      #4FA8BE;
+      --accent-soft: #11333C;
+      --shift:       #E0824F;
+      --shift-soft:  #3A2318;
+      --stable:      #93A1B1;
+      --stable-soft: #232C35;
+      --removed:     #E0777F;
+      --removed-soft:#3A2024;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:      #11151A;
+    --surface:     #1A2027;
+    --surface-sunk:#141A20;
+    --ink:         #E4E9EF;
+    --muted:       #9AA6B4;
+    --line:        #2C353F;
+    --accent:      #4FA8BE;
+    --accent-soft: #11333C;
+    --shift:       #E0824F;
+    --shift-soft:  #3A2318;
+    --stable:      #93A1B1;
+    --stable-soft: #232C35;
+    --removed:     #E0777F;
+    --removed-soft:#3A2024;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+    font-size: var(--step-0);
+    line-height: 1.55;
+    margin: 0;
+    padding: clamp(1.25rem, 4vw, 3rem) clamp(1rem, 5vw, 2rem) 4rem;
+  }
+
+  .wrap { max-width: 78rem; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem; }
+
+  /* ---- header ---- */
+  header { display: flex; flex-direction: column; gap: 0.75rem; }
+  .eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: var(--step--1);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  h1 {
+    font-family: Archivo, ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: var(--step-3);
+    line-height: 1.12;
+    text-wrap: balance;
+    margin: 0;
+    max-width: 24ch;
+  }
+  .lede { color: var(--muted); max-width: 68ch; margin: 0; font-size: var(--step-1); }
+
+  /* ---- tabs ---- */
+  .tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; border-bottom: 1px solid var(--line); }
+  .tab {
+    appearance: none; border: 1px solid transparent; border-bottom: none;
+    background: none; color: var(--muted); cursor: pointer;
+    font-family: Archivo, sans-serif; font-weight: 600; font-size: var(--step-0);
+    padding: 0.7rem 1.1rem; border-radius: 6px 6px 0 0; margin-bottom: -1px;
+  }
+  .tab[aria-selected="true"] {
+    background: var(--surface); border-color: var(--line);
+    color: var(--ink); border-bottom: 1px solid var(--surface);
+  }
+  .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---- case meta ---- */
+  .case-head { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start; justify-content: space-between; }
+  .question { margin: 0; max-width: 60ch; }
+  .question strong { font-family: Archivo, sans-serif; }
+  .carrier-count {
+    font-family: "JetBrains Mono", monospace;
+    background: var(--surface-sunk); border: 1px solid var(--line);
+    border-radius: 6px; padding: 0.6rem 0.9rem;
+    font-size: var(--step--1); color: var(--muted); white-space: nowrap;
+  }
+  .carrier-count b { font-size: var(--step-2); color: var(--ink); display: block; font-family: Archivo, sans-serif; }
+
+  /* ---- toggle ---- */
+  .toggle { display: inline-flex; background: var(--surface-sunk); border: 1px solid var(--line); border-radius: 8px; padding: 3px; gap: 3px; }
+  .toggle button {
+    appearance: none; border: none; background: none; cursor: pointer;
+    font-family: "JetBrains Mono", monospace; font-size: var(--step--1);
+    color: var(--muted); padding: 0.5rem 0.95rem; border-radius: 6px;
+  }
+  .toggle button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgb(0 0 0 / 0.12); }
+  .toggle button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  /* ---- panels ---- */
+  .grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+  @media (min-width: 62rem) { .grid { grid-template-columns: 1.05fr 1fr; } }
+
+  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+  .panel-head {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+    padding: 0.8rem 1rem; border-bottom: 1px solid var(--line); background: var(--surface-sunk);
+  }
+  .panel-title { font-family: Archivo, sans-serif; font-weight: 600; font-size: var(--step--1); letter-spacing: 0.04em; text-transform: uppercase; margin: 0; }
+  .panel-note { font-family: "JetBrains Mono", monospace; font-size: var(--step--1); color: var(--muted); }
+  .panel-body { padding: 1rem; overflow-x: auto; }
+
+  .triples { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+  .triples li {
+    font-family: "JetBrains Mono", monospace; font-size: var(--step--1);
+    line-height: 1.5; padding: 0.45rem 0.6rem; border-radius: 5px;
+    border-left: 3px solid transparent; background: var(--surface-sunk); color: var(--ink);
+    /* Canonical predicates are long underscored tokens with no break opportunity;
+       without this they clip at the panel edge instead of wrapping. */
+    overflow-wrap: anywhere;
+  }
+  li.is-removed { background: var(--removed-soft); border-left-color: var(--removed); color: var(--removed); text-decoration: line-through; text-decoration-thickness: 1px; }
+  li.is-carrier { background: var(--accent-soft); border-left-color: var(--accent); }
+  li .src { color: var(--muted); }
+  li.is-removed .src { color: var(--removed); }
+  .more { font-family: "JetBrains Mono", monospace; font-size: var(--step--1); color: var(--muted); padding: 0.45rem 0.6rem; }
+
+  /* ---- decision ---- */
+  .decision { display: flex; flex-direction: column; gap: 0.6rem; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 0.5rem; align-self: flex-start;
+    font-family: Archivo, sans-serif; font-weight: 600; font-size: var(--step-1);
+    padding: 0.5rem 0.85rem; border-radius: 7px; border: 1px solid;
+  }
+  .badge[data-state="same"]  { background: var(--stable-soft); border-color: var(--stable); color: var(--stable); }
+  .badge[data-state="shift"] { background: var(--shift-soft);  border-color: var(--shift);  color: var(--shift); }
+  .verdict { font-size: var(--step--1); font-family: "JetBrains Mono", monospace; color: var(--muted); }
+  .excerpt { margin: 0; color: var(--ink); font-size: 0.95rem; }
+  .excerpt em { color: var(--muted); }
+
+  /* ---- survivors ---- */
+  .survivors { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.15rem; display: flex; flex-direction: column; gap: 0.65rem; }
+  .survivors h3 { font-family: Archivo, sans-serif; font-size: var(--step-1); margin: 0; }
+  .survivors p { margin: 0; color: var(--muted); max-width: 72ch; }
+  .empty-note { border-left: 3px solid var(--shift); padding-left: 0.85rem; }
+
+  footer { border-top: 1px solid var(--line); padding-top: 1.25rem; color: var(--muted); font-size: var(--step--1); max-width: 72ch; }
+  footer code { font-family: "JetBrains Mono", monospace; background: var(--surface-sunk); padding: 0.1em 0.35em; border-radius: 3px; }
+  .hidden { display: none; }
+  @media (prefers-reduced-motion: no-preference) {
+    li, .badge { transition: background-color .18s ease, color .18s ease, border-color .18s ease; }
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Démonstrateur · challenge CIFRE</span>
+    <h1>Retirer une relation ne change une décision que si elle est le seul porteur du fait</h1>
+    <p class="lede">
+      Même question, même modèle, même consigne. Seul le graphe change : on retire le fait visé,
+      puis on relance. Deux cas, deux régimes — et c'est le nombre de <strong>porteurs</strong>,
+      pas l'importance apparente de la relation, qui prédit lequel s'applique.
+    </p>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="Cas de démonstration">
+    <button class="tab" role="tab" id="tab-T1b" aria-controls="panel-T1b" aria-selected="true">
+      Cas A — fait redondant (12 porteurs)
+    </button>
+    <button class="tab" role="tab" id="tab-T8" aria-controls="panel-T8" aria-selected="false">
+      Cas B — porteur unique (5 arêtes, 1 usage)
+    </button>
+  </div>
+
+  <section id="case" aria-live="polite"></section>
+
+  <footer>
+    <p style="margin:0 0 .6rem">
+      Données figées depuis <code>experiments/carriers.json</code> et
+      <code>experiments/results/</code>. Les triplets sont ceux réellement soumis au modèle, au
+      format <code>sujet prédicat objet [source: Sxx]</code> ; chacun reste rattaché à sa source
+      et à son texte-preuve dans le graphe canonique.
+    </p>
+    <p style="margin:0">
+      Protocole : un appel par cellule, aucun retry, agent isolé ignorant le protocole. Le prompt
+      de décision est identique dans les deux états ; seul le contexte varie.
+    </p>
+  </footer>
+</div>
+
+<script>
+const CASES = {
+  T1b: {
+    question: "Si l'équipe ne peut appliquer qu'un seul correctif cette semaine, faut-il patcher CVE-2026-55040 ou CVE-2026-63520 ?",
+    fact: "le chaînage entre les deux failles SharePoint",
+    carriers: 12, carriersLabel: "3 explicites + 9 partiels",
+    subgraphTotal: 104,
+    removed: [
+      ["CVE-2026-55040 lead_to_unauthenticated_remote_code_execution_against_vulnerable_SharePoint_server CVE-2026-63520", "S18"],
+      ["CVE-2026-55040 lead_to_unauthenticated_remote_code_execution_against_vulnerable_SharePoint_server vulnerability", "S18"],
+      ["CVE-2026-63520 be_chained_to authentication bypass vulnerability", "S41"]
+    ],
+    survivors: [
+      ["Patching CVE-2026-55040 break exploit chain", "S40"],
+      ["pairing with CVE-2026-55040 authentication bypass we_achieved fully authenticated deserialization", "S10"],
+      ["remote unauthenticated attacker can leverage CVE-2026-55040 perform operations as administrator be_bypass_authentication_on vulnerable SharePoint server", "S18"]
+    ],
+    survivorsTotal: 9,
+    answers: {
+      full:    { decision: "Patcher CVE-2026-55040 en premier", state: "same",
+                 excerpt: "Exploitation active (SSVC <em>active</em> contre <em>none</em>), PoC public déjà utilisé contre des honeypots, échéance CISA dépassée, EPSS 14× supérieur — <strong>et patcher CVE-2026-55040 casse la chaîne d'exploitation</strong> menant à CVE-2026-63520." },
+      ablated: { decision: "Patcher CVE-2026-55040 en premier", state: "same",
+                 excerpt: "Mêmes critères, et la réponse cite toujours la rupture de chaîne : <em>« son correctif casse la chaîne d'exploitation qui mène à CVE-2026-63520 »</em> — alors que les trois arêtes portant explicitement ce chaînage ont été retirées." }
+    },
+    verdict: { same: true, text: "décision inchangée · les 3 porteurs explicites retirés, 9 porteurs partiels subsistent" },
+    lesson: {
+      title: "Pourquoi la décision ne bouge pas",
+      body: "Dans un système d'extraction ouverte, un même fait se dépose sous plusieurs formulations que le clustering ne fusionne pas. Retirer les arêtes qui portent <em>littéralement</em> la relation laisse intactes celles qui la portent autrement — au premier rang desquelles <code>Patching CVE-2026-55040 break exploit chain</code>, que la réponse cite mot pour mot. La conclusion tentante — « cette relation n'a pas d'importance » — serait fausse : l'information n'a jamais quitté le graphe.",
+      empty: false
+    }
+  },
+  T8: {
+    question: "Un correctif éditeur est-il disponible pour CVE-2026-63520, et sous quelle référence précise ?",
+    fact: "les références de correctif (numéros KB)",
+    carriers: 5, carriersLabel: "5 explicites + 0 partiel",
+    subgraphTotal: 45,
+    removed: [
+      ["CVE-2026-63520 has_patch KB5002893 - Microsoft SharePoint Server Subscription Edition", "S41"],
+      ["CVE-2026-63520 has_patch KB5002894 - Microsoft SharePoint Server 2019", "S41"],
+      ["CVE-2026-63520 has_patch KB5002896 - Microsoft SharePoint Server 2019", "S41"],
+      ["CVE-2026-63520 has_patch KB5002905 - Microsoft SharePoint Enterprise Server 2016", "S41"],
+      ["CVE-2026-63520 has_patch KB5002906 - Microsoft SharePoint Enterprise Server 2016", "S41"]
+    ],
+    survivors: [],
+    survivorsTotal: 0,
+    answers: {
+      full:    { decision: "Oui — KB5002893 / 94 / 96 / 905 / 906", state: "same",
+                 excerpt: "« Cinq assertions explicites <code>has_patch</code> rattachées à CVE-2026-63520, toutes issues de S41, associant chaque référence KB à un produit et à une version corrigée. »" },
+      ablated: { decision: "Référence indisponible", state: "shift",
+                 excerpt: "« Une remédiation éditeur existe (<code>updates be_remediate CVE-2026-63520</code>, S41), mais <strong>aucune référence précise n'est présente dans le sous-graphe fourni</strong> : il est impossible d'identifier le correctif exact à partir de ces seules données. »" }
+    },
+    verdict: { same: false, text: "décision modifiée · aucun porteur résiduel, la réponse se dégrade proprement" },
+    lesson: {
+      title: "Pourquoi la décision bascule ici",
+      body: "Les cinq arêtes retirées portent le même fait, mais aucune autre formulation du graphe ne le véhicule : le décompte de porteurs partiels tombe à zéro. Le modèle ne comble pas le vide et n'invente pas de numéro KB — il constate l'absence et le dit. <strong>C'est le comportement recherché : une lacune de connaissance devient une réserve explicite, pas une réponse fausse assurée.</strong>",
+      empty: true
+    }
+  }
+};
+
+let activeCase = "T1b";
+let ablated = false;
+
+function tripleHTML(entry, cls) {
+  const [text, src] = entry;
+  return `<li class="${cls}">${text} <span class="src">[source: ${src}]</span></li>`;
+}
+
+function render() {
+  const c = CASES[activeCase];
+  const ans = ablated ? c.answers.ablated : c.answers.full;
+  const kept = c.subgraphTotal - (ablated ? c.removed.length : 0);
+
+  const removedList = c.removed
+    .map(e => tripleHTML(e, ablated ? "is-removed" : "is-carrier")).join("");
+  const survivorList = c.survivors.map(e => tripleHTML(e, "is-carrier")).join("");
+
+  document.getElementById("case").innerHTML = `
+    <div class="case-head">
+      <p class="question"><strong>Question posée :</strong> ${c.question}</p>
+      <div class="carrier-count">
+        <b>${c.carriers}</b>porteurs du fait<br><span>${c.carriersLabel}</span>
+      </div>
+    </div>
+
+    <div style="margin:1.25rem 0">
+      <div class="toggle" role="group" aria-label="État du graphe">
+        <button type="button" data-ablate="false" aria-pressed="${!ablated}">KG complet</button>
+        <button type="button" data-ablate="true"  aria-pressed="${ablated}">KG amputé — ${c.fact}</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="panel">
+        <div class="panel-head">
+          <h2 class="panel-title">Sous-graphe transmis</h2>
+          <span class="panel-note">${kept} triplets</span>
+        </div>
+        <div class="panel-body">
+          <ul class="triples">
+            ${removedList}
+            ${survivorList}
+          </ul>
+          <p class="more">+ ${kept - (ablated ? 0 : c.removed.length) - c.survivors.length} autres triplets, identiques dans les deux états</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2 class="panel-title">Réponse du modèle</h2>
+          <span class="panel-note">${ablated ? "config 5 — KG incomplet" : "config 4 — KG complet"}</span>
+        </div>
+        <div class="panel-body decision">
+          <span class="badge" data-state="${ablated ? ans.state : "same"}">${ans.decision}</span>
+          <span class="verdict">${ablated ? c.verdict.text : "état de référence"}</span>
+          <p class="excerpt">${ans.excerpt}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="survivors" style="margin-top:1.25rem">
+      <h3>${c.lesson.title}</h3>
+      ${c.survivorsTotal > 0
+        ? `<p>Porteurs restés dans le graphe après ablation : <strong>${c.survivorsTotal}</strong>${c.survivors.length < c.survivorsTotal ? ` (les ${c.survivors.length} plus parlants sont surlignés ci-dessus)` : ""}.</p>`
+        : `<p class="empty-note">Porteurs restés dans le graphe après ablation : <strong>aucun</strong>.</p>`}
+      <p>${c.lesson.body}</p>
+    </div>
+  `;
+
+  document.querySelectorAll("[data-ablate]").forEach(b => {
+    b.addEventListener("click", () => { ablated = b.dataset.ablate === "true"; render(); });
+  });
+}
+
+document.querySelectorAll(".tab").forEach(tab => {
+  tab.addEventListener("click", () => {
+    document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", String(t === tab)));
+    activeCase = tab.id.replace("tab-", "");
+    ablated = false;
+    render();
+  });
+});
+
+render();
+</script>
