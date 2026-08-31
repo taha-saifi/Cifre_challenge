@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ingestion de sources — graphe en direct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap">
+<script src="/static/vendor/vis-network.min.js"></script>
+<style>
+  :root{--ground:#F6F7F9;--surface:#FFF;--sunk:#EDF0F3;--ink:#171B21;--muted:#5A6472;
+        --line:#D8DEE5;--accent:#0E7490;--accent-soft:#E2F1F4;--warn:#B4491A;--warn-soft:#FBEBE1;
+        --bad:#A8323C;--bad-soft:#FBE9EA;--s-1:.82rem;--s0:1rem;--s2:1.5rem;}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+        --ground:#11151A;--surface:#1A2027;--sunk:#141A20;--ink:#E4E9EF;--muted:#9AA6B4;
+        --line:#2C353F;--accent:#4FA8BE;--accent-soft:#11333C;--warn:#E0824F;--warn-soft:#3A2318;
+        --bad:#E0777F;--bad-soft:#3A2024;}}
+  *{box-sizing:border-box}
+  body{background:var(--ground);color:var(--ink);margin:0;padding:clamp(1rem,3vw,2rem);
+       font-family:"Source Sans 3",system-ui,sans-serif;line-height:1.55}
+  .wrap{max-width:80rem;margin:0 auto;display:flex;flex-direction:column;gap:1.25rem}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:var(--s-1);letter-spacing:.09em;
+           text-transform:uppercase;color:var(--accent)}
+  h1{font-family:Archivo,sans-serif;font-size:var(--s2);margin:.3rem 0 .3rem}
+  .lede{color:var(--muted);max-width:74ch;margin:0}
+  a{color:var(--accent)}
+
+  /* The heuristic notice is a headline condition, not fine print. */
+  .banner{border:2px solid var(--warn);background:var(--warn-soft);border-radius:10px;
+          padding:1rem 1.15rem;display:flex;flex-direction:column;gap:.4rem}
+  .banner strong{font-family:Archivo,sans-serif;font-size:1.12rem;color:var(--warn)}
+  .banner p{margin:0;font-size:.95rem}
+
+  form{background:var(--surface);border:1px solid var(--line);border-radius:10px;
+       padding:1.1rem;display:flex;flex-direction:column;gap:.9rem}
+  label{font-size:var(--s-1);font-weight:600;color:var(--muted);display:block;margin-bottom:.3rem}
+  textarea,input[type=file]{width:100%;font-family:inherit;font-size:var(--s0);color:var(--ink);
+       background:var(--sunk);border:1px solid var(--line);border-radius:7px;padding:.6rem}
+  textarea{min-height:5.5rem;resize:vertical;font-family:"JetBrains Mono",monospace;font-size:.86rem}
+  .row{display:flex;flex-wrap:wrap;gap:1rem}.row>div{flex:1 1 20rem;min-width:0}
+  button{font-family:Archivo,sans-serif;font-weight:600;font-size:var(--s0);cursor:pointer;
+       background:var(--accent);color:#fff;border:none;border-radius:7px;padding:.65rem 1.4rem;
+       align-self:flex-start}
+  button:disabled{opacity:.55;cursor:progress}
+  button:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  .status{color:var(--muted);font-size:var(--s-1)}
+  table{border-collapse:collapse;width:100%;font-size:var(--s-1)}
+  th,td{text-align:left;padding:.4rem .55rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-family:Archivo,sans-serif;text-transform:uppercase;font-size:.72rem;color:var(--muted)}
+  .pill{font-family:"JetBrains Mono",monospace;font-size:.7rem;border-radius:4px;padding:.05rem .4rem;
+        background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+  .pill.bad{background:var(--bad-soft);color:var(--bad)}
+  .pill.warn{background:var(--warn-soft);color:var(--warn)}
+  .panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .panel h2{font-family:Archivo,sans-serif;font-size:var(--s-1);text-transform:uppercase;
+        letter-spacing:.05em;margin:0;padding:.7rem .9rem;background:var(--sunk);
+        border-bottom:1px solid var(--line)}
+  .panel-body{padding:.9rem;overflow-x:auto}
+  .split{display:grid;gap:1rem;grid-template-columns:1fr}
+  @media (min-width:68rem){.split{grid-template-columns:1.55fr 1fr}}
+  #net{height:34rem;background:var(--sunk);border-radius:8px}
+  .kv{font-family:"JetBrains Mono",monospace;font-size:.74rem;color:var(--muted);
+      display:flex;flex-wrap:wrap;gap:.2rem .9rem;padding:.5rem .9rem;
+      border-bottom:1px solid var(--line)}
+  #detail{font-size:.86rem}
+  #detail dt{font-family:"JetBrains Mono",monospace;font-size:.7rem;color:var(--accent);
+      text-transform:uppercase;letter-spacing:.05em;margin-top:.6rem}
+  #detail dd{margin:.15rem 0 0;overflow-wrap:anywhere}
+  #detail .ev{background:var(--sunk);border-left:3px solid var(--accent);padding:.5rem .6rem;
+      border-radius:0 5px 5px 0;font-size:.83rem}
+  .hint{color:var(--muted);font-size:var(--s-1)}
+  .cluster{border:1px solid var(--line);border-radius:8px;padding:.7rem .85rem;
+        margin-bottom:.6rem;background:var(--sunk)}
+  .cluster.decided-accept{border-left:4px solid var(--accent)}
+  .cluster.decided-reject{border-left:4px solid var(--bad)}
+  .cluster.decided-auto{border-left:4px solid var(--muted)}
+  .chead{display:flex;flex-wrap:wrap;gap:.5rem;align-items:baseline;justify-content:space-between}
+  .crep{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:.94rem}
+  .phrases{font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--muted);
+        margin:.25rem 0 .4rem}
+  .ev{font-size:.8rem;background:var(--surface);border-left:3px solid var(--line);
+        padding:.35rem .5rem;border-radius:0 4px 4px 0;margin:.2rem 0;overflow-wrap:anywhere}
+  .acts{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:.45rem}
+  .acts label{font-weight:400;color:var(--ink);font-size:.8rem;display:flex;
+        align-items:center;gap:.3rem;margin:0;cursor:pointer}
+  .toolbar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-bottom:.8rem}
+  .toolbar button{padding:.5rem 1rem;font-size:.9rem}
+  button.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+  .badge{font-family:"JetBrains Mono",monospace;font-size:.74rem;border-radius:5px;
+        padding:.2rem .5rem;border:1px solid}
+  .badge.human{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+  .badge.machine{border-color:var(--warn);color:var(--warn);background:var(--warn-soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Ingestion en direct · espace de travail isolé</span>
+    <h1>Coller des sources, extraire, visualiser le graphe</h1>
+    <p class="lede">Les sources passent par les mêmes fonctions de collecte et de nettoyage
+    que le corpus figé, puis par le même pipeline d'extraction. Le résultat est écrit dans
+    <code>live_corpus/</code> et <code>live_kg/</code> — <strong>jamais fusionné avec
+    <code>demo_kg/</code></strong>. Pour la comparaison de configurations, voir
+    <a href="/">l'explorateur</a>.</p>
+  </header>
+
+  <div class="banner">
+    <strong>⚠ Extraction en mode heuristique — MinIE indisponible</strong>
+    <p>Le graphe figé du projet a été extrait avec <strong>MinIE</strong> (3 246 assertions
+    sur 3 651). MinIE exige Java et un JAR construit, absents de cette machine : rien
+    n'écoute sur <code>127.0.0.1:8080</code>. Ce que vous allez voir est donc produit par
+    <strong>l'extracteur heuristique de repli</strong>, plus grossier — même phrase, il rend
+    <code>(« Patching CVE-2026-55040 will successfully break this », « exploit », « chain »)</code>
+    là où MinIE rend <code>(« Patching CVE-2026-55040 », « break », « exploit chain »)</code>.
+    Les triplets ci-dessous sont donc réels mais de qualité inférieure au graphe de la note.</p>
+    <p>Second point, aussi important : le graphe affiché est le <strong>graphe ouvert
+    (pré-validation)</strong>. Dans ce projet, aucune arête ne devient canonique sans qu'un
+    humain accepte son cluster de relation ; cette étape n'est pas dans cet outil, donc le
+    graphe canonique serait vide. Ce qui s'affiche est l'état <em>avant</em> validation.</p>
+  </div>
+
+  <form id="f">
+    <div class="row">
+      <div>
+        <label for="urls">URLs — une par ligne</label>
+        <textarea id="urls" placeholder="https://nvd.nist.gov/vuln/detail/CVE-2024-3094&#10;https://www.cisa.gov/news-events/alerts"></textarea>
+      </div>
+      <div>
+        <label for="files">Fichiers — .txt, .md, .html, .pdf</label>
+        <input type="file" id="files" multiple accept=".txt,.md,.text,.html,.htm,.pdf">
+        <p class="hint">Les fichiers sont lus localement ; rien n'est envoyé ailleurs que
+        vers les URLs que vous fournissez.</p>
+      </div>
+    </div>
+    <button id="go" type="submit">Ingérer et extraire</button>
+  </form>
+
+  <div class="status" id="status"></div>
+
+  <div class="panel" id="srcPanel" hidden>
+    <h2>Sources</h2>
+    <div class="panel-body"><table id="srcTable"></table></div>
+  </div>
+
+  <div class="split">
+    <div class="panel" id="graphPanel" hidden>
+      <h2>Graphe extrait — pré-validation</h2>
+      <div class="kv" id="graphMeta"></div>
+      <div class="panel-body"><div id="net"></div>
+        <p class="hint" style="margin:.6rem 0 0">Molette pour zoomer, glisser pour
+        déplacer. <strong>Cliquez sur une arête</strong> pour voir sa source et son
+        texte-preuve.</p>
+      </div>
+    </div>
+    <div class="panel" id="detailPanel" hidden>
+      <h2>Détail de l'arête</h2>
+      <div class="panel-body"><dl id="detail"><dd class="hint">Cliquez une arête du
+      graphe.</dd></dl></div>
+    </div>
+  </div>
+
+  <div class="panel" id="validPanel" hidden>
+    <h2>Étape 2 — validation des relations candidates</h2>
+    <div class="kv" id="validMeta"></div>
+    <div class="panel-body">
+      <p class="hint" style="margin:0 0 .7rem">Les formulations sont regroupées par
+      similarité de Jaccard (seuil <strong>0,80</strong>), le même mécanisme que le graphe
+      figé. Une décision par groupe : <strong>accepter</strong> le fait entrer au graphe
+      canonique, <strong>rejeter</strong> l'en exclure, <strong>laisser au système</strong>
+      s'appuyer uniquement sur les garde-fous déjà codés. Un groupe laissé sans décision ne
+      produit aucune arête.</p>
+      <div class="toolbar">
+        <button id="autoAll" type="button">Tout laisser au système</button>
+        <button id="applyDec" type="button" class="ghost">Appliquer mes décisions</button>
+        <span class="hint" id="decCount"></span>
+      </div>
+      <div id="clusters"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="canonPanel" hidden>
+    <h2>Étape 3 — graphe canonique de la session</h2>
+    <div class="kv" id="canonMeta"></div>
+    <div class="panel-body"><div id="canonNet" style="height:30rem;background:var(--sunk);border-radius:8px"></div></div>
+  </div>
+</div>
+
+<script>
+const esc = t => String(t == null ? "" : t).replace(/[<>&]/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;"}[c]));
+let network = null, edgeIndex = {};
+let canonNetwork = null, CANDIDATES = [], DECISIONS = {};
+
+function renderSources(list){
+  const rows = ['<tr><th>ID</th><th>Statut</th><th>Origine</th><th>Méthode</th><th>Caractères</th><th>Détail</th></tr>'];
+  for (const s of list){
+    const ok = s.status === "ok";
+    const pill = ok ? '<span class="pill">ok</span>' : '<span class="pill bad">échec</span>';
+    const detail = [s.error, s.warning, s.playwright_fallback].filter(Boolean).map(esc).join(" · ");
+    rows.push(`<tr><td>${esc(s.source_id)}</td><td>${pill}</td>`
+      + `<td style="max-width:24rem;overflow-wrap:anywhere">${esc(s.origin)}</td>`
+      + `<td>${esc(s.method || "—")}</td><td>${s.chars != null ? s.chars : "—"}</td>`
+      + `<td style="color:var(--muted)">${detail || "—"}</td></tr>`);
+  }
+  document.getElementById("srcTable").innerHTML = rows.join("");
+  document.getElementById("srcPanel").hidden = false;
+}
+
+function drawNetwork(containerId, graph, existing){
+  if (existing) existing.destroy();
+  return new vis.Network(document.getElementById(containerId), {
+    nodes: new vis.DataSet(graph.nodes),
+    edges: new vis.DataSet(graph.edges.map(e => ({id:e.id, from:e.from, to:e.to, label:e.label, arrows:"to"})))
+  }, {
+    nodes:{ shape:"dot", scaling:{min:6,max:26}, font:{size:13, face:"Source Sans 3"} },
+    edges:{ font:{size:10, face:"JetBrains Mono", align:"middle"},
+            color:{opacity:0.55}, smooth:{type:"continuous"} },
+    physics:{ stabilization:{iterations:200},
+              barnesHut:{gravitationalConstant:-9000, springLength:130} },
+    interaction:{ hover:true, tooltipDelay:150 }
+  });
+}
+
+function updateDecCount(){
+  const n = Object.keys(DECISIONS).length;
+  document.getElementById("decCount").textContent = n
+    ? `${n} décision(s) manuelle(s) ; le reste ira au système.`
+    : "Aucune décision manuelle : tout ira au système.";
+}
+
+function renderCandidates(data){
+  CANDIDATES = data.candidates || []; DECISIONS = {};
+  document.getElementById("validPanel").hidden = false;
+  document.getElementById("validMeta").innerHTML =
+      `<span>${data.total_clusters} groupe(s) candidat(s)</span>`
+    + `<span>seuil Jaccard ${data.jaccard_threshold}</span>`
+    + `<span class="pill warn">aucune arête canonique avant décision</span>`;
+
+  const box = document.getElementById("clusters");
+  box.innerHTML = "";
+  for (const c of CANDIDATES){
+    const div = document.createElement("div");
+    div.className = "cluster"; div.id = "cl_" + c.cluster_id;
+    const ev = (c.examples || []).map(e =>
+      `<div class="ev"><strong>${esc(e.subject).slice(0,60)}</strong> — ${esc(e.phrase)} → `
+      + `<strong>${esc(e.object).slice(0,60)}</strong><br><span class="hint">[${esc(e.source_id)}] ${esc(e.evidence).slice(0,190)}</span></div>`).join("");
+    div.innerHTML =
+        `<div class="chead"><span class="crep">${esc(c.representative)}</span>`
+      + `<span class="pill">${c.assertion_count} assertion(s)</span></div>`
+      + `<div class="phrases">formulations regroupées : ${c.member_phrases.map(esc).join(" · ")}</div>`
+      + ev
+      + `<div class="acts">`
+      + `<label><input type="radio" name="d_${c.cluster_id}" value="accept"> accepter</label>`
+      + `<label><input type="radio" name="d_${c.cluster_id}" value="reject"> rejeter</label>`
+      + `<label><input type="radio" name="d_${c.cluster_id}" value="auto" checked> laisser au système</label>`
+      + `</div>`;
+    box.appendChild(div);
+  }
+  box.addEventListener("change", ev2 => {
+    const t = ev2.target;
+    if (t.name && t.name.startsWith("d_")){
+      const id = t.name.slice(2);
+      if (t.value === "auto") delete DECISIONS[id]; else DECISIONS[id] = t.value;
+      const card = document.getElementById("cl_" + id);
+      card.className = "cluster decided-" + t.value;
+      updateDecCount();
+    }
+  });
+  updateDecCount();
+}
+
+async function runValidation(autoEverything){
+  const btnA = document.getElementById("autoAll"), btnB = document.getElementById("applyDec");
+  btnA.disabled = btnB.disabled = true;
+  document.getElementById("status").textContent = "Validation et reconstruction du graphe canonique…";
+  try{
+    const res = await fetch("/api/validate", {method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ decisions: autoEverything ? {} : DECISIONS, auto_default: true })});
+    const d = await res.json();
+    if (d.error || !d.summary){
+      document.getElementById("status").textContent = d.error || "validation impossible";
+      return;
+    }
+    const s = d.summary, c = s.counts;
+    document.getElementById("canonPanel").hidden = false;
+    const badge = s.fully_human_validated
+      ? '<span class="badge human">validé par un humain</span>'
+      : '<span class="badge machine">validé par la machine</span>';
+    document.getElementById("canonMeta").innerHTML =
+        `${badge}<span>${s.canonical_edges} arêtes canoniques</span>`
+      + `<span>${s.canonical_nodes} nœuds</span>`
+      + `<span>humain : ${c.human_accept} acceptés / ${c.human_reject} rejetés</span>`
+      + `<span>système : ${c.auto_accept} acceptés</span>`
+      + `<span>en attente : ${c.pending}</span>`;
+    canonNetwork = drawNetwork("canonNet", d.graph, canonNetwork);
+    document.getElementById("status").textContent =
+      `Graphe canonique : ${s.canonical_edges} arêtes sur ${document.querySelectorAll('#clusters .cluster').length} groupes traités.`;
+  } catch(e){
+    document.getElementById("status").textContent = "Erreur : " + e.message;
+  } finally { btnA.disabled = btnB.disabled = false; }
+}
+
+document.getElementById("autoAll").addEventListener("click", () => runValidation(true));
+document.getElementById("applyDec").addEventListener("click", () => runValidation(false));
+
+function renderGraph(graph, summary){
+  document.getElementById("graphPanel").hidden = false;
+  document.getElementById("detailPanel").hidden = false;
+
+  const backends = summary && summary.backends ? summary.backends : {};
+  const backendText = Object.entries(backends).map(([k,v]) => `${k}=${v}`).join(" ") || "n/a";
+  document.getElementById("graphMeta").innerHTML =
+      `<span>${graph.nodes.length} nœuds</span><span>${graph.edges.length} arêtes affichées`
+    + `${graph.truncated ? ` sur ${graph.total_edges}` : ""}</span>`
+    + `<span>extracteurs : ${esc(backendText)}</span>`
+    + `<span class="pill warn">pré-validation</span>`;
+
+  edgeIndex = {};
+  for (const e of graph.edges) edgeIndex[e.id] = e;
+
+  network = drawNetwork("net", graph, network);
+
+  network.on("selectEdge", params => {
+    const e = edgeIndex[params.edges[0]];
+    if (!e) return;
+    document.getElementById("detail").innerHTML =
+        `<dt>triplet</dt><dd><strong>${esc(e.subject)}</strong> — ${esc(e.predicate)} → <strong>${esc(e.object)}</strong></dd>`
+      + `<dt>source</dt><dd>${esc(e.source_id)}${e.source_url ? ` · <a href="${esc(e.source_url)}" target="_blank" rel="noopener">${esc(e.source_url.slice(0,60))}</a>` : ""}</dd>`
+      + `<dt>méthode d'extraction</dt><dd>${esc(e.method)}</dd>`
+      + `<dt>texte-preuve</dt><dd class="ev">${esc(e.evidence) || "(aucun)"}</dd>`;
+  });
+}
+
+document.getElementById("f").addEventListener("submit", async ev => {
+  ev.preventDefault();
+  const urls = document.getElementById("urls").value;
+  const files = document.getElementById("files").files;
+  if (!urls.trim() && files.length === 0){
+    document.getElementById("status").textContent = "Fournissez au moins une URL ou un fichier.";
+    return;
+  }
+  const body = new FormData();
+  body.append("urls", urls);
+  for (const f of files) body.append("files", f);
+
+  const btn = document.getElementById("go");
+  btn.disabled = true;
+  document.getElementById("status").textContent =
+    "Collecte, nettoyage et extraction en cours… (le scraping peut prendre un moment par URL)";
+  try{
+    const res = await fetch("/api/ingest", { method: "POST", body });
+    const data = await res.json();
+    if (data.sources) renderSources(data.sources);
+    if (data.error && !data.graph){
+      document.getElementById("status").textContent = data.error;
+      return;
+    }
+    if (data.graph){
+      renderGraph(data.graph, data.summary);
+      try{
+        const cres = await fetch("/api/candidates");
+        const cdata = await cres.json();
+        if (cdata.candidates && cdata.candidates.length) renderCandidates(cdata);
+      } catch(e){ /* la validation reste optionnelle : l'extraction est déjà affichée */ }
+    }
+    const s = data.summary || {};
+    document.getElementById("status").textContent =
+      `${s.sources || 0} source(s) exploitée(s) · ${s.openie_assertions || 0} assertions OpenIE · `
+      + `${s.structured_assertions || 0} structurées · ${s.edges || 0} arêtes construites.`;
+  } catch(e){
+    document.getElementById("status").textContent = "Erreur : " + e.message;
+  } finally { btn.disabled = false; }
+});
+</script>
+</body>
+</html>

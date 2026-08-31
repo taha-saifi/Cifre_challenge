@@ -70,6 +70,13 @@ _STILL_REASONING = re.compile(
     r"based on the provided information,? i)\b", re.I)
 
 
+# The interactive template asks for a citation section; an answer with a decision but no
+# citation block has not answered the question that column exists to answer.
+_ASKS_CITATIONS = True
+_DECISION_HEAD = re.compile(r"D[ÉE]CISION\s*:", re.I)
+_CITED_HEAD_RE = re.compile(r"[ÉE]L[ÉE]MENTS\s+CIT[ÉE]S\s*:", re.I)
+
+
 def strip_reasoning_preamble(text: str) -> str:
     """Remove a leaked chain-of-thought preamble and any trailing self-check.
 
@@ -160,6 +167,15 @@ def chat(prompt: str) -> dict:
         # Truncated mid-answer: incomplete, so unusable. Fall through rather than show it.
         if choice.get("finish_reason") == "length":
             attempts.append({"model": model, "outcome": "réponse tronquée (budget épuisé)"})
+            continue
+        # Observed on a free model: a coherent DÉCISION, then collapse into token
+        # salad, with the citation section never written. Rather than pattern-match
+        # degeneration -- which would mean tuning a fragile heuristic on one observed
+        # sample -- this gates on the structural fact: a decision with no citation
+        # block has not answered what this column exists to answer. A degenerated
+        # answer never reaches the citation section, so this catches it too.
+        if _ASKS_CITATIONS and _DECISION_HEAD.search(cleaned) and not _CITED_HEAD_RE.search(cleaned):
+            attempts.append({"model": model, "outcome": "format incomplet (éléments cités absents)"})
             continue
 
         attempts.append({"model": model, "outcome": "ok"})

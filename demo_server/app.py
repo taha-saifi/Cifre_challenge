@@ -21,6 +21,9 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
 import configs  # noqa: E402
+import live_ingest  # noqa: E402
+import live_pipeline  # noqa: E402
+import live_validate  # noqa: E402
 import model_client  # noqa: E402
 
 app = Flask(__name__, static_folder=str(HERE / "static"))
@@ -35,21 +38,95 @@ def index():
     return send_from_directory(app.static_folder, "index.html")
 
 
+@app.get("/live")
+def live_page():
+    """Ingestion + visualisation. Separate page: it does not touch demo_kg."""
+    return send_from_directory(app.static_folder, "live.html")
+
+
+@app.post("/api/ingest")
+def ingest():
+    """Scrape/read the submitted sources, run the pipeline, return statuses + graph.
+
+    A failure on one source degrades that source only; the request still returns 200 with
+    per-source statuses so the page can render what worked.
+    """
+    urls = [u for u in (request.form.get("urls") or "").splitlines() if u.strip()]
+    files = []
+    for storage in request.files.getlist("files"):
+        if storage and storage.filename:
+            files.append((storage.filename, storage.read()))
+    if not urls and not files:
+        return jsonify({"error": "aucune source fournie"}), 400
+
+    statuses = live_ingest.ingest(urls, files)
+    ok = [s for s in statuses if s.get("status") == "ok"]
+    if not ok:
+        return jsonify({"sources": statuses, "summary": None, "graph": None,
+                        "error": "aucune source exploitable"}), 200
+
+    try:
+        summary = live_pipeline.run()
+        graph = live_pipeline.graph_payload()
+    except Exception as exc:  # noqa: BLE001 - extraction failure must not break the page
+        return jsonify({"sources": statuses, "summary": None, "graph": None,
+                        "error": f"extraction : {type(exc).__name__}: {exc}"}), 200
+
+    return jsonify({"sources": statuses, "summary": summary, "graph": graph})
+
+
+@app.get("/api/candidates")
+def candidates():
+    """Relation clusters awaiting a decision, with their evidence."""
+    try:
+        return jsonify(live_validate.build_candidates())
+    except Exception as exc:  # noqa: BLE001
+        return jsonify({"error": f"{type(exc).__name__}: {exc}", "candidates": []}), 200
+
+
+@app.post("/api/validate")
+def validate():
+    """Apply per-cluster decisions and rebuild the session's canonical graph.
+
+    An empty `decisions` with auto_default=true is the zero-interaction path: one call,
+    no clicks, everything left to the pipeline's own guardrails.
+    """
+    body = request.get_json(force=True, silent=True) or {}
+    decisions = body.get("decisions") or {}
+    auto_default = body.get("auto_default", True)
+    try:
+        summary = live_validate.apply_decisions(decisions, bool(auto_default))
+        return jsonify({"summary": summary, "graph": live_validate.canonical_graph()})
+    except Exception as exc:  # noqa: BLE001
+        return jsonify({"error": f"{type(exc).__name__}: {exc}",
+                        "summary": None, "graph": None}), 200
+
+
+@app.get("/api/live_graph")
+def live_graph():
+    return jsonify(live_pipeline.graph_payload())
+
+
 @app.get("/api/pivots")
 def pivots():
     """Entities that actually anchor edges in demo_kg, most connected first."""
-    return jsonify({"pivots": configs.available_pivots(),
+    source = request.args.get("source", "demo_kg")
+    return jsonify({"pivots": configs.available_pivots(source),
                     "configs": configs.CONFIG_LABELS,
+                    "source": source,
+                    "sources": {k: {"label": v["label"],
+                                    "available": configs.graph_available(k)}
+                                for k, v in configs.GRAPH_SOURCES.items()},
                     "model_ready": model_client.have_key()})
 
 
 def run_one(config: str, question: str, pivots_list: list, ablate: bool,
-            anchors: list) -> dict:
+            anchors: list, source: str = "demo_kg") -> dict:
     """Run a single configuration. Never raises -- failures become a displayable state."""
     result = {"config": config, "label": configs.CONFIG_LABELS.get(config, config)}
     try:
         context, diagnostics = configs.build_context(config, question, pivots_list,
-                                                     ablate, anchors)
+                                                     ablate, anchors, source)
         result["diagnostics"] = diagnostics
         result["context_chars"] = len(context)
         prompt = configs.build_prompt(question, context)
@@ -60,6 +137,10 @@ def run_one(config: str, question: str, pivots_list: list, ablate: bool,
         result["cleaned"] = completion.get("raw") != completion["text"]
         result["model"] = completion["model"]
         result["attempts"] = completion["attempts"]
+        # Both are shown, never one instead of the other: `parsed` is what the model says
+        # it relied on (which can be wrong while sounding right), `grounding` is the
+        # mechanical check against the exact context it was given.
+        result["parsed"] = configs.parse_answer(completion["text"])
         result["grounding"] = configs.grounding(completion["text"], context)
         result["status"] = "ok"
     except model_client.ModelUnavailable as exc:
@@ -80,13 +161,14 @@ def run():
         return jsonify({"error": "question vide"}), 400
 
     selected = body.get("configs") or ["c1", "c2", "c4", "c5", "c8"]
+    source = body.get("source", "demo_kg")
     pivots_list = body.get("pivots") or []
     ablate = bool(body.get("ablate"))
     # Anchors default to the pivots: the fact under test is the one relating them.
     anchors = body.get("anchors") or pivots_list
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
-        futures = {pool.submit(run_one, c, question, pivots_list, ablate, anchors): c
+        futures = {pool.submit(run_one, c, question, pivots_list, ablate, anchors, source): c
                    for c in selected}
         results = []
         for future in concurrent.futures.as_completed(futures):
@@ -98,7 +180,7 @@ def run():
 
     order = {c: i for i, c in enumerate(selected)}
     results.sort(key=lambda r: order.get(r["config"], 99))
-    return jsonify({"question": question, "pivots": pivots_list,
+    return jsonify({"question": question, "pivots": pivots_list, "source": source,
                     "ablate": ablate, "results": results})
 
 
@@ -106,5 +188,6 @@ if __name__ == "__main__":
     if not model_client.have_key():
         print("ATTENTION : OPENROUTER_API_KEY absent de .env — "
               "les colonnes afficheront « configuration indisponible ».")
-    print("Explorateur KG  ->  http://127.0.0.1:5000")
+    print("Explorateur KG        ->  http://127.0.0.1:5000")
+    print("Ingestion + graphe    ->  http://127.0.0.1:5000/live")
     app.run(host="127.0.0.1", port=5000, debug=False)

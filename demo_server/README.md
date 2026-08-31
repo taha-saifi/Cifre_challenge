@@ -13,7 +13,12 @@ Outil d'exploration pour **les 40 minutes de discussion**, pas pour le pitch min
 .venv/Scripts/python demo_server/app.py
 ```
 
-Puis ouvrir **http://127.0.0.1:5000**. Le serveur n'écoute que sur `127.0.0.1`.
+Deux pages, sur `127.0.0.1` uniquement :
+
+| Page | Rôle |
+|---|---|
+| **http://127.0.0.1:5000** | comparaison de 5 configurations sur une question, graphe `demo_kg/` |
+| **http://127.0.0.1:5000/live** | ingestion de sources (URLs, fichiers) → extraction → graphe interactif |
 
 Prérequis : `.venv` avec `flask`, `requests`, `python-dotenv`, et un fichier `.env` à la
 racine contenant `OPENROUTER_API_KEY` (déjà en place, et **ignoré par git**). Sans clé, le
@@ -110,3 +115,80 @@ du cadrage, obtenue sur une question que le jury pourrait poser.
 - Les modèles gratuits sont lents (≈ 100 s pour 5 configurations en parallèle) et peuvent
   être limités en débit ; la chaîne de repli existe pour ça.
 - Les réponses sortent tantôt en français tantôt en anglais selon le modèle qui répond.
+
+
+---
+
+# Page `/live` — ingestion et visualisation
+
+Coller des URLs et/ou déposer des fichiers (`.txt`, `.md`, `.html`, `.pdf`), les faire
+passer par le pipeline existant, et explorer le graphe obtenu.
+
+## Rien n'est réimplémenté
+
+| Étape | Fonctions réutilisées |
+|---|---|
+| Collecte HTTP | `build_corpus.request_with_retry` (retry 5/15/30 s) |
+| HTML → texte | `build_corpus.html_to_text` (trafilatura, repli readability-lxml) |
+| Repli navigateur | `build_corpus.fetch_via_playwright` |
+| PDF | `build_corpus.extract_pdf` (pdfplumber) |
+| Contrôle qualité | `build_corpus.is_suspect` |
+| Nettoyage | `preprocess_corpus.filter_noise`, `normalize_whitespace`, `chunk_text` |
+| Extraction → graphe | `pipeline_lib.extract_structured/extract_openie/extract_entities/resolve_entities/build_open_kg` |
+
+Les fonctions du pipeline ne prennent aucun argument et lisent tous leurs chemins dans
+`config`. `live_pipeline.redirected_config()` rebind ces chemins vers `live_kg/` le temps
+du run, sous verrou, et les restaure toujours — un run live **ne peut pas** écrire dans
+`extraction_pipeline/`. Les sources sont numérotées à partir de `S901` pour ne jamais se
+confondre avec le corpus figé (S01–S58).
+
+## Isolation
+
+Sortie dans `live_corpus/` et `live_kg/`, **jamais fusionnée avec `demo_kg/`** ni avec
+`corpus/`. Les deux répertoires sont régénérés à chaque ingestion et sont gitignorés : ils
+contiennent du texte tiers récupéré sur le web, qui n'a pas à entrer dans le dépôt.
+
+## Deux limites affichées en grand, pas en petits caractères
+
+1. **Extraction heuristique.** MinIE exige Java et un JAR construit, absents ici — rien
+   n'écoute sur `127.0.0.1:8080`. Le backend est **sondé une fois** au début du run
+   (`live_pipeline.minie_available()`) et `config.OPENIE_BACKEND` est réglé sur ce qui
+   existe réellement. Laissé sur `minie` alors que le service est mort, `extract_openie`
+   réessaie une fois par lot **et** une fois par phrase : plusieurs centaines de tentatives
+   réseau pour une seule page longue, ce qui faisait passer une ingestion de 13 s à plus de
+   10 minutes. Le bandeau de la page donne un exemple mesuré de l'écart de qualité.
+2. **Graphe pré-validation.** Ce qui s'affiche est `open_kg`, pas le graphe canonique. Dans
+   ce projet aucune arête ne devient canonique sans qu'un humain accepte son cluster de
+   relation ; cette étape n'est pas dans l'outil, donc le canonique serait vide. Afficher
+   l'ouvert en le disant est la seule option honnête.
+
+## Dégradation propre
+
+Chaque source a son propre statut ; un échec n'affecte qu'elle. Vérifié :
+
+| Cas | Résultat |
+|---|---|
+| Page HTML normale (openwall) | `ok`, 12 253 car., `html_trafilatura`, 2,6 s |
+| SPA sans contenu serveur (NVD) | `failed` — « aucun texte extrait » + raison du repli navigateur (`chromium executable doesn't exist`) |
+| Hôte injoignable | `failed` — « réseau : Échec après 4 tentatives » |
+| Fichier texte | `ok`, `text_direct` |
+
+La requête renvoie toujours HTTP 200 avec les statuts par source, pour que la page affiche
+ce qui a fonctionné.
+
+## Test manuel documenté
+
+2 URLs (openwall + Wikipédia XZ backdoor) via l'interface : **2 sources exploitées, 40
+assertions OpenIE, 77 nœuds, 40 arêtes**, extracteurs `heuristic=303`, pastille
+« pré-validation » affichée. Un clic sur une arête restitue la chaîne de provenance
+complète — triplet, `source_id`, URL cliquable, méthode d'extraction, et le texte-preuve
+verbatim :
+
+```
+backdoor in upstream xz/liblzma — leading to → ssh server compromise
+S901 · https://www.openwall.com/lists/oss-security/2024/03/29/4
+heuristic
+« Subject: backdoor in upstream xz/liblzma leading to ssh server compromise »
+```
+
+`vis-network` est vendoré dans `static/vendor/` : aucune dépendance CDN à l'exécution.

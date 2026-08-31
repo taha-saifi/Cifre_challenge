@@ -42,7 +42,10 @@ RESULTS = HERE / "results"
 VERIFIABLE_PATTERNS = {
     "cve": r"CVE-\d{4}-\d{4,7}",
     "kb": r"KB\d{6,7}",
-    "source_id": r"\bS\d{2}\b",
+    # 2 digits for the frozen corpus (S01-S58), 3 for a live session (S901+). Widening
+    # this does not move the recorded scores: no frozen context or answer contains a
+    # 3-digit source id. Verified by re-running and diffing scores.json.
+    "source_id": r"\bS\d{2,3}\b",
     "iso_date": r"\b20\d{2}-\d{2}-\d{2}\b",
     "cvss": r"\b\d\.\d\b",
 }

@@ -59,6 +59,24 @@
   details pre{background:var(--sunk);padding:.5rem;border-radius:5px;overflow-x:auto;
         font-family:"JetBrains Mono",monospace;font-size:.72rem;margin:.4rem 0 0}
   .status{max-width:74rem;margin:0 auto 1rem;color:var(--muted);font-size:var(--s-1)}
+  .decision{padding:.75rem .9rem;font-family:Archivo,sans-serif;font-weight:600;
+        font-size:1rem;border-bottom:1px solid var(--line)}
+  .block{padding:.7rem .9rem;border-bottom:1px solid var(--line)}
+  .block h3{font-family:"JetBrains Mono",monospace;font-size:.68rem;text-transform:uppercase;
+        letter-spacing:.06em;color:var(--accent);margin:0 0 .3rem}
+  .block p{margin:0;font-size:.88rem;overflow-wrap:anywhere}
+  .cited{font-family:"JetBrains Mono",monospace;font-size:.76rem;white-space:pre-wrap}
+  .cited.none{color:var(--warn);font-weight:700}
+  .gr{display:flex;flex-wrap:wrap;gap:.4rem .9rem;align-items:center;
+        padding:.6rem .9rem;font-size:.8rem}
+  .bar{flex:1 1 6rem;height:6px;border-radius:3px;background:var(--sunk);overflow:hidden;min-width:5rem}
+  .bar i{display:block;height:100%;background:var(--accent)}
+  .bar.zero i{background:var(--warn)}
+  .srcpick{display:flex;flex-wrap:wrap;gap:.9rem}
+  .srcpick label{font-weight:400;color:var(--ink);font-size:var(--s-1);display:flex;
+        align-items:center;gap:.35rem;margin:0;cursor:pointer}
+  .srcnote{border-left:3px solid var(--warn);background:var(--warn-soft);padding:.5rem .7rem;
+        border-radius:0 6px 6px 0;font-size:.82rem;margin-top:.5rem}
 </style>
 </head>
 <body>
@@ -66,14 +84,22 @@
   <span class="eyebrow">Outil d'exploration · discussion</span>
   <h1>Une question, cinq configurations, réponses côte à côte</h1>
   <p class="lede">Le contexte transmis au modèle change d'une colonne à l'autre ; la question
-  et la consigne de décision sont identiques partout. Le graphe interrogé est
-  <code>demo_kg/</code> (406 arêtes, 10 sources).</p>
+  et la consigne de décision sont <strong>identiques partout</strong>. Chaque méthode doit
+  rendre une décision, une justification, et citer ce sur quoi elle s'appuie — la
+  justification donnée par le modèle est affichée <em>à côté</em> du grounding calculé, pas
+  à sa place. Graphe au choix : <code>demo_kg/</code> (figé, validé) ou
+  <code>live_kg/</code> (<a href="/live">session en cours</a>).</p>
 </header>
 
 <form id="f">
   <div>
     <label for="q">Question</label>
     <textarea id="q" placeholder="Ex. : entre CVE-2026-55040 et CVE-2026-63520, laquelle présente le risque le plus immédiat pour un serveur SharePoint exposé ?"></textarea>
+  </div>
+  <div>
+    <label>Graphe interrogé</label>
+    <div class="srcpick" id="srcpick"></div>
+    <div class="srcnote" id="srcnote" hidden></div>
   </div>
   <div class="row">
     <div>
@@ -100,20 +126,51 @@
 <div class="grid" id="out"></div>
 
 <script>
+const esc = t => String(t == null ? "" : t).replace(/[<>&]/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;"}[c]));
 const CFG_ORDER = ["c1","c2","c4","c5","c8"];
 let LABELS = {};
 
-async function boot(){
-  const r = await fetch("/api/pivots");
-  const d = await r.json();
+let SOURCE = "demo_kg";
+
+async function loadPivots(){
+  const d = await (await fetch("/api/pivots?source=" + encodeURIComponent(SOURCE))).json();
   LABELS = d.configs;
   const sel = document.getElementById("pivot");
+  sel.innerHTML = "";
   d.pivots.forEach((p,i) => {
     const o = document.createElement("option");
-    o.value = p.id; o.textContent = `${p.id}  (${p.edges} arêtes)`;
+    o.value = p.id;
+    o.textContent = `${p.id.slice(0,46)}  (${p.edges} arête${p.edges>1?"s":""}${p.kind==="entité"?", entité":""})`;
     if (i < 2) o.selected = true;
     sel.appendChild(o);
   });
+  const note = document.getElementById("srcnote");
+  if (SOURCE === "live_kg"){
+    note.hidden = false;
+    note.innerHTML = d.pivots.length
+      ? "<strong>live_kg</strong> — graphe de la session, extraction <strong>heuristique</strong> "
+        + "(MinIE indisponible). Qualité inférieure au graphe de la note : les réponses illustrent "
+        + "le mécanisme, elles ne sont pas comparables à <code>resultats.md</code>."
+      : "<strong>live_kg est vide.</strong> Ingérez des sources puis validez les relations sur "
+        + "<a href=\"/live\">la page d'ingestion</a> avant d'interroger ce graphe.";
+  } else { note.hidden = true; }
+  return d;
+}
+
+async function boot(){
+  const d0 = await (await fetch("/api/pivots")).json();
+  const pick = document.getElementById("srcpick");
+  Object.entries(d0.sources || {}).forEach(([key, meta], i) => {
+    const l = document.createElement("label");
+    l.innerHTML = `<input type="radio" name="src" value="${key}" ${i===0?"checked":""}> `
+      + `${meta.label}${meta.available ? "" : " (vide)"}`;
+    pick.appendChild(l);
+  });
+  pick.addEventListener("change", async ev => {
+    if (ev.target.name === "src"){ SOURCE = ev.target.value; await loadPivots(); }
+  });
+
+  const d = await loadPivots();
   const box = document.getElementById("cfgs");
   CFG_ORDER.forEach(c => {
     const l = document.createElement("label");
@@ -148,9 +205,48 @@ function card(r){
   el.appendChild(meta);
 
   if (r.status === "ok"){
-    const a = document.createElement("div");
-    a.className = "answer"; a.textContent = r.answer;
-    el.appendChild(a);
+    const pa = r.parsed || {};
+    const dec = document.createElement("div");
+    dec.className = "decision"; dec.textContent = pa.decision || "(décision non formulée)";
+    el.appendChild(dec);
+
+    const just = document.createElement("div");
+    just.className = "block";
+    just.innerHTML = `<h3>Justification donnée par le modèle</h3><p>${esc(pa.justification || "—")}</p>`;
+    el.appendChild(just);
+
+    const cit = document.createElement("div");
+    cit.className = "block";
+    const none = pa.cites_nothing;
+    cit.innerHTML = `<h3>Éléments cités</h3>`
+      + `<p class="cited${none ? " none" : ""}">`
+      + esc(pa.cited || "(non renseigné)")
+      + (none ? "  ← rien de vérifiable à citer" : "") + `</p>`;
+    el.appendChild(cit);
+
+    // The computed check, deliberately next to the model's own claim.
+    const g = r.grounding;
+    const gr = document.createElement("div");
+    gr.className = "gr";
+    if (g){
+      const pct = Math.round((g.ratio || 0) * 100);
+      gr.innerHTML = `<strong>Grounding vérifié</strong> ${g.grounded}/${g.total} jetons`
+        + `<span class="bar${pct===0?" zero":""}"><i style="width:${pct}%"></i></span>`
+        + `<span>${pct}%</span>`
+        + (g.ungrounded && g.ungrounded.length
+            ? `<span class="hint">non ancrés : ${esc(g.ungrounded.join(", "))}</span>` : "");
+    } else {
+      gr.innerHTML = `<strong>Grounding vérifié</strong> <span class="hint">aucun jeton `
+        + `vérifiable dans la réponse — rien à contrôler mécaniquement</span>`;
+    }
+    el.appendChild(gr);
+
+    if (!pa.structured){
+      const w = document.createElement("div");
+      w.className = "bad";
+      w.textContent = "Le modèle n'a pas respecté le format demandé ; réponse brute affichée ci-dessus.";
+      el.appendChild(w);
+    }
   } else {
     const b = document.createElement("div");
     b.className = "bad";
@@ -197,7 +293,8 @@ document.getElementById("f").addEventListener("submit", async ev => {
   document.getElementById("out").innerHTML = "";
   try{
     const res = await fetch("/api/run", {method:"POST", headers:{"Content-Type":"application/json"},
-      body: JSON.stringify({question:q, configs:cfgs, pivots, ablate: document.getElementById("ablate").checked})});
+      body: JSON.stringify({question:q, configs:cfgs, pivots, source: SOURCE,
+        ablate: document.getElementById("ablate").checked})});
     const data = await res.json();
     if (data.error){ document.getElementById("status").textContent = data.error; return; }
     const out = document.getElementById("out");

@@ -1,0 +1,11 @@
+# Dependencies of the interactive demonstrator (demo_server/app.py).
+# Separate from the other three sets:
+#   - requirements.txt                      (corpus scraping)
+#   - requirements-deliverables.txt         (.docx / .pptx export)
+#   - extraction_pipeline/requirements.txt  (stdlib only, deliberately)
+#
+# Live ingestion additionally reuses build_corpus.py, so it needs requirements.txt
+# installed as well (trafilatura, playwright, readability-lxml, pdfplumber).
+flask==3.1.3           # local server, 127.0.0.1 only
+requests==2.34.2       # OpenRouter chat + embedding calls
+python-dotenv==1.2.3   # reads OPENROUTER_API_KEY from .env (never committed)
