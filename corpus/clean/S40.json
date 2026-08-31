@@ -6,6 +6,17 @@
   ],
   "url": "https://www.rapid7.com/blog/post/ve-cve-2026-55040-microsoft-sharepoint-jwt-token-authentication-bypass-fixed/",
   "extraction_status": "success",
+  "extraction_method": "html_trafilatura",
+  "source_authority": {
+    "category": "researcher",
+    "tier": "primary",
+    "method": "html_trafilatura",
+    "authority": 3,
+    "evidence_level": 2,
+    "accessibility": 4,
+    "score": 9,
+    "scale_max": 12
+  },
   "relevance": "cve-specific",
   "char_count_raw": 7474,
   "char_count_clean": 7474,

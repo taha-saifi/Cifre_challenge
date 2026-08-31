@@ -6,6 +6,17 @@
   ],
   "url": "https://www.cve.org/CVERecord?id=CVE-2026-59310",
   "extraction_status": "success",
+  "extraction_method": "playwright+html_trafilatura",
+  "source_authority": {
+    "category": "official",
+    "tier": "primary",
+    "method": "playwright+html_trafilatura",
+    "authority": 5,
+    "evidence_level": 2,
+    "accessibility": 3,
+    "score": 10,
+    "scale_max": 12
+  },
   "relevance": "cve-specific",
   "char_count_raw": 688,
   "char_count_clean": 688,

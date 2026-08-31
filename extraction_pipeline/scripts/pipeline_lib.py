@@ -1138,18 +1138,40 @@ def derived_from_map() -> dict[str, list[str]]:
     return mapping
 
 
+def source_authority_map() -> dict[str, Any]:
+    """{source_id: source_authority} read from the clean corpus. A JOIN, not a computation.
+
+    The score itself is produced once, by `score_source()` in
+    `experiments/build_source_quality.py`, and copied into `corpus/clean/` by
+    `preprocess_corpus.py`. This function only looks it up, so the graph can never carry
+    a reliability figure that disagrees with the published §14.1 table.
+
+    A source with no declared `source_authority` (a live-session corpus, an older clean/
+    file) maps to nothing, and the edge gets `None` -- an explicit "unknown", never a
+    default score that would silently invent authority for an unscored source.
+    """
+    scores: dict[str, Any] = {}
+    for path in sorted(config.CORPUS_DIR.glob("S*.json")):
+        record = load_json(path, {})
+        if record.get("source_authority") is not None:
+            scores[record.get("source_id", path.stem)] = record["source_authority"]
+    return scores
+
+
 def build_canonical_kg() -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     mapping = apply_cluster_validation()
     derived_from = derived_from_map()
     open_nodes = load_json(config.OPEN_KG_DIR / "nodes.json", [])
     node_type = {node["id"]: node.get("entity_type") for node in open_nodes}
     edges = load_json(config.OPEN_KG_DIR / "edges.json", [])
+    authority = source_authority_map()
     canonical_edges = [{
         **edge,
         "predicate_canonical": mapping[edge["predicate_raw"]],
         "domain": node_type.get(edge["source"]),
         "range": node_type.get(edge["target"]),
         "derived_from": derived_from.get(edge["predicate_raw"], [edge["predicate_raw"]]),
+        "source_authority": authority.get(edge["source_id"]),
     } for edge in edges if edge["predicate_raw"] in mapping]
     node_ids = {edge["source"] for edge in canonical_edges} | {edge["target"] for edge in canonical_edges}
     nodes = [node for node in open_nodes if node["id"] in node_ids]

@@ -4,6 +4,17 @@
   "cve_ids": [],
   "url": "https://www.cisa.gov/sites/default/files/publications/cisa-ssvc-guide%20508c.pdf",
   "extraction_status": "success",
+  "extraction_method": "pdf_pdfplumber",
+  "source_authority": {
+    "category": "official_framework",
+    "tier": "primary",
+    "method": "pdf_pdfplumber",
+    "authority": 4,
+    "evidence_level": 2,
+    "accessibility": 3,
+    "score": 9,
+    "scale_max": 12
+  },
   "relevance": "framework",
   "char_count_raw": 21852,
   "char_count_clean": 21852,

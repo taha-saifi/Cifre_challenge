@@ -4,6 +4,17 @@
   "cve_ids": [],
   "url": "https://attack.mitre.org/detectionstrategies/DET0080/",
   "extraction_status": "success",
+  "extraction_method": "html_trafilatura",
+  "source_authority": {
+    "category": "official_framework",
+    "tier": "primary",
+    "method": "html_trafilatura",
+    "authority": 4,
+    "evidence_level": 2,
+    "accessibility": 4,
+    "score": 10,
+    "scale_max": 12
+  },
   "relevance": "framework",
   "char_count_raw": 6339,
   "char_count_clean": 6339,

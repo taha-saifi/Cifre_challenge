@@ -236,7 +236,10 @@ existantes de complétude de KG. Élargir l'ancrage bibliographique au-delà de 
 déjà couverts — littérature sur la complétude et la qualité des graphes, la calibration et
 la quantification d'incertitude. Formaliser le protocole d'ablation consciente de la
 redondance comme **méthode reproductible**, avec sa procédure de pré-enregistrement, plutôt
-que comme un montage propre à ce cas.
+que comme un montage propre à ce cas. Exploiter le score d'autorité désormais porté par
+chaque arête : pondérer la sélection de contexte par fiabilité de source et mesurer si cela
+déplace une décision — sur un protocole ré-enregistré, jamais en repondérant après coup les
+45 cellules déjà exécutées.
 
 **6–12 mois — répondre à la généralisation au lieu de l'argumenter.** Premier test sur un
 second domaine, idéalement **un cas ou des données fournis par SpotWorkAI** plutôt qu'un
@@ -270,9 +273,16 @@ l'art ; rédaction et publications.
    artefact (8 triplets annotés contre 304 prédits). Seul le rappel y est interprétable —
    c'est la métrique qui donnerait un faux sentiment de fiabilité si on la citait telle
    quelle.
-4. **La crédibilité des sources n'atteint pas le graphe** : rang et catégorie sont
-   déclarés à la collecte mais non propagés au pipeline. Un billet commercial pèse autant
-   que le NVD.
+4. **La crédibilité des sources atteint le graphe, mais rien ne s'en sert encore.**
+   Rang, catégorie et score d'autorité (règle unique de `build_source_quality.py`) sont
+   désormais copiés de `corpus/raw/` vers `corpus/clean/` puis **joints sur `source_id`**
+   sur les 2 123 arêtes canoniques — et par héritage sur `demo_kg/`. On peut donc trier
+   et filtrer les arêtes par fiabilité. Ce qui reste ouvert : ce poids n'entre **ni dans
+   le protocole des 45 cellules** (enregistré avant cette propagation, non repondéré a
+   posteriori) **ni dans la sélection de contexte**, qui traite encore toutes les arêtes
+   à poids égal. Un billet commercial et le NVD pèsent toujours autant *dans la réponse*,
+   même si l'écart est maintenant visible *dans la donnée*. Repondération et mesure de
+   son effet : feuille de route, pas résultat.
 5. **87 identifiants de nœuds dupliqués** (identifiant insensible à la casse, libellé
    non) : sans effet sur les arêtes, mais le libellé affiché dépend de l'ordre de lecture.
 6. **Actif et passif non fusionnés** au clustering.
@@ -319,8 +329,12 @@ indisponible, le graphe de démo est une **projection** du graphe canonique, pas
 ré-extraction : un rejeu heuristique remplaçait `break` par `exploit` — cluster déjà
 rejeté — et aurait fabriqué un faux signal « lacune » là où il n'y a qu'un changement
 d'extracteur. L'outil appelle l'API OpenRouter alors que les 45 cellules venaient de
-sous-agents isolés : **même template de prompt, transport différent**, et une chaîne de
-modèles gratuits **jamais comparés entre eux** — ses réponses illustrent le mécanisme, elles
-ne sont pas comparables en exactitude à `resultats.md`. Quatre défauts trouvés en le
+sous-agents isolés : **transport différent**, et une chaîne de modèles gratuits **jamais
+comparés entre eux** — ses réponses illustrent le mécanisme, elles ne sont pas comparables
+en exactitude à `resultats.md`. Son **template de prompt diverge aussi** : il exige une
+décision, une justification et la citation des éléments utilisés, là où les 45 cellules
+demandaient seulement décision + justification. Le template reste identique entre les cinq
+configurations — la contrainte méthodologique est préservée — mais il n'est pas celui du
+protocole enregistré, et `experiments/` comme `resultats.md` sont inchangés. Quatre défauts trouvés en le
 construisant : fuite de raisonnement malgré l'instruction d'exclusion, troncature par budget
 de jetons, réponses non conclusives, erreur de syntaxe JS.

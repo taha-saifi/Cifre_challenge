@@ -19,14 +19,28 @@ est traçable (rien n'est supprimé silencieusement) :
      libre — le filtrage de bruit ligne-à-ligne n'a pas de sens sur du JSON.
      Le JSON d'origine est conservé tel quel (objet, pas string échappée)
      dans le champ "raw_json" pour rester la source de vérité structurée.
+  7. Propagation des métadonnées de fiabilité : catégorie, rang primaire/
+     secondaire, méthode de collecte et score d'autorité sont COPIÉS de raw/
+     vers clean/ (champ "source_authority"), avec la règle unique de
+     experiments/build_source_quality.py. C'est ce qui permet à
+     build_canonical_kg() de joindre le score sur chaque arête par source_id.
 """
 
 import json
 import re
+import sys
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parent
 RAW_DIR = Path("corpus/raw")
 CLEAN_DIR = Path("corpus/clean")
+
+# La règle de scoring d'autorité vit dans experiments/build_source_quality.py et n'est
+# écrite qu'une seule fois. On l'importe pour COPIER son résultat dans clean/ ; on ne la
+# réécrit pas ici, sinon la table §14.1 et le graphe pourraient diverger sur une même
+# source sans que rien ne le signale.
+sys.path.insert(0, str(ROOT / "experiments"))
+from build_source_quality import score_source  # noqa: E402
 
 SHINGLE_SIZE = 8
 DEDUP_THRESHOLD = 0.5
@@ -330,6 +344,11 @@ def build_clean_record(record):
         "cve_ids": record["cve_ids"],
         "url": record["url"],
         "extraction_status": record["extraction_status"],
+        "extraction_method": record.get("extraction_method"),
+        # Copié depuis raw/, jamais recalculé ici : catégorie, rang primaire/secondaire,
+        # méthode de collecte et score d'autorité, tels que score_source() les produit.
+        # Une source atteint clean/ par construction, d'où in_corpus=True.
+        "source_authority": score_source(record, in_corpus=True),
         "relevance": relevance_of(record),
         "char_count_raw": len(record["raw_text"]),
         "char_count_clean": len(clean_text),

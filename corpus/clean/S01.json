@@ -9,6 +9,17 @@
   ],
   "url": "https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
   "extraction_status": "success",
+  "extraction_method": "html_trafilatura",
+  "source_authority": {
+    "category": "official",
+    "tier": "primary",
+    "method": "html_trafilatura",
+    "authority": 5,
+    "evidence_level": 2,
+    "accessibility": 4,
+    "score": 11,
+    "scale_max": 12
+  },
   "relevance": "cve-specific",
   "char_count_raw": 1988,
   "char_count_clean": 1988,

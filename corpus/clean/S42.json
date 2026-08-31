@@ -6,6 +6,17 @@
   ],
   "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63520",
   "extraction_status": "success",
+  "extraction_method": "playwright+html_trafilatura",
+  "source_authority": {
+    "category": "publisher",
+    "tier": "primary",
+    "method": "playwright+html_trafilatura",
+    "authority": 4,
+    "evidence_level": 2,
+    "accessibility": 3,
+    "score": 9,
+    "scale_max": 12
+  },
   "relevance": "cve-specific",
   "char_count_raw": 10059,
   "char_count_clean": 10059,

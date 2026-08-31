@@ -4,6 +4,17 @@
   "cve_ids": [],
   "url": "https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk",
   "extraction_status": "success",
+  "extraction_method": "html_trafilatura",
+  "source_authority": {
+    "category": "official",
+    "tier": "primary",
+    "method": "html_trafilatura",
+    "authority": 5,
+    "evidence_level": 2,
+    "accessibility": 4,
+    "score": 11,
+    "scale_max": 12
+  },
   "relevance": "framework",
   "char_count_raw": 18913,
   "char_count_clean": 18890,

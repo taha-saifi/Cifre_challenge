@@ -4,6 +4,17 @@
   "cve_ids": [],
   "url": "https://www.cve.org/ProgramOrganization/ADPs",
   "extraction_status": "success",
+  "extraction_method": "playwright+html_trafilatura",
+  "source_authority": {
+    "category": "official_framework",
+    "tier": "primary",
+    "method": "playwright+html_trafilatura",
+    "authority": 4,
+    "evidence_level": 2,
+    "accessibility": 3,
+    "score": 9,
+    "scale_max": 12
+  },
   "relevance": "framework",
   "char_count_raw": 4412,
   "char_count_clean": 4412,

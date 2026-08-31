@@ -6,6 +6,17 @@
   ],
   "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59310",
   "extraction_status": "success",
+  "extraction_method": "api_json",
+  "source_authority": {
+    "category": "official",
+    "tier": "primary",
+    "method": "api_json",
+    "authority": 5,
+    "evidence_level": 2,
+    "accessibility": 5,
+    "score": 12,
+    "scale_max": 12
+  },
   "relevance": "cve-specific",
   "char_count_raw": 16856,
   "char_count_clean": 2226,

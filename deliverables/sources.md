@@ -69,7 +69,13 @@ La contradiction a donc été **arbitrée par le silence** : la formulation qui 
 
 **Concordance vérifiée, à ne pas confondre avec une contradiction.** S11 (« 361 victim IPs by August 7 ») et S17 (« By August 14 […] 361 compromised vCenter servers ») annoncent le **même nombre, 361**, à deux dates d'observation différentes. Ce sont deux instantanés concordants, pas un écart — le noter évite de présenter à tort une corroboration comme un désaccord.
 
-## Limite structurelle : la crédibilité n'atteint pas le graphe
+## Le score d'autorité atteint désormais chaque arête
 
-Les champs de rang et de catégorie utilisés ci-dessus vivent dans `corpus/raw/`. `preprocess_corpus.py` ne les propage pas vers `corpus/clean/`, qui est pourtant le seul répertoire lu par le pipeline d'extraction. **Conséquence : une affirmation issue d'un billet commercial et une affirmation issue du NVD entrent dans le KG avec exactement le même poids.** Aucune pondération par fiabilité n'existe aujourd'hui. C'est une extension naturelle de la méthode, et l'une des premières à mener.
+Les champs de rang et de catégorie utilisés ci-dessus sont déclarés dans `corpus/raw/`. Ils sont maintenant **copiés** vers `corpus/clean/` par `preprocess_corpus.py` (champ `source_authority`), et `build_canonical_kg()` les **joint sur `source_id`** : chaque arête de `extraction_pipeline/canonical_kg/edges.json` — et donc de `demo_kg/edges.json`, qui n'en est qu'une projection filtrée — porte le score de fiabilité de sa source, avec ses trois composantes.
+
+Une seule règle produit ce score : `score_source()` dans ce script. `preprocess_corpus.py` l'importe plutôt que de la réécrire, donc la table ci-dessus et le graphe ne peuvent pas diverger sur une même source. Une source sans métadonnée déclarée (corpus de session live) donne `null`, jamais un score par défaut : « inconnu » reste distinct de « faible ».
+
+**Ce que cela permet aujourd'hui** : trier ou filtrer les arêtes par fiabilité de source dans le graphe et dans l'outil de visualisation, et répondre à la question « sur quelle qualité de source repose cette arête ? » sans rouvrir `corpus/raw/`. Répartition observée sur les 2 123 arêtes canoniques (échelle 0–12) : score 12 → 259 arêtes, 10 → 826, 9 → 525, 8 → 124, 7 → 103, 6 → 108.
+
+**Ce que cela ne fait pas encore, et il faut le dire** : ce score n'est utilisé ni dans le protocole des 45 cellules — enregistré et exécuté avant cette propagation, et délibérément non repondéré a posteriori — ni dans la génération de réponse actuelle, qui traite toutes les arêtes du contexte à poids égal. Pondérer effectivement la sélection de contexte, puis mesurer si cela déplace une décision, est une extension déclarée à la feuille de route, pas un résultat acquis. La donnée est exposée ; son exploitation reste à faire.
 

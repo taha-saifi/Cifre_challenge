@@ -6,6 +6,17 @@
   ],
   "url": "https://diesec.com/2026/08/vmware-vcenter-cve-2026-59310/",
   "extraction_status": "success",
+  "extraction_method": "html_trafilatura",
+  "source_authority": {
+    "category": "commercial",
+    "tier": "secondary",
+    "method": "html_trafilatura",
+    "authority": 1,
+    "evidence_level": 1,
+    "accessibility": 4,
+    "score": 6,
+    "scale_max": 12
+  },
   "relevance": "cve-specific",
   "char_count_raw": 4792,
   "char_count_clean": 4792,

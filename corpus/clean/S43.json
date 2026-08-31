@@ -6,6 +6,17 @@
   ],
   "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/38017",
   "extraction_status": "success",
+  "extraction_method": "html_trafilatura",
+  "source_authority": {
+    "category": "publisher",
+    "tier": "primary",
+    "method": "html_trafilatura",
+    "authority": 4,
+    "evidence_level": 2,
+    "accessibility": 4,
+    "score": 10,
+    "scale_max": 12
+  },
   "relevance": "cve-specific",
   "char_count_raw": 17034,
   "char_count_clean": 16987,

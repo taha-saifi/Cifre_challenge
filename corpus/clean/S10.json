@@ -6,6 +6,17 @@
   ],
   "url": "https://www.vulncheck.com/blog/cve-2026-63520-sharepoint-unsafe-type-rce",
   "extraction_status": "success",
+  "extraction_method": "html_trafilatura",
+  "source_authority": {
+    "category": "researcher",
+    "tier": "primary",
+    "method": "html_trafilatura",
+    "authority": 3,
+    "evidence_level": 2,
+    "accessibility": 4,
+    "score": 9,
+    "scale_max": 12
+  },
   "relevance": "cve-specific",
   "char_count_raw": 25640,
   "char_count_clean": 24325,

@@ -6,6 +6,17 @@
   ],
   "url": "https://www.sentrium.co.uk/labs/windows-ike-service-extensions-vulnerability-enables-remote-code-execution-cve-2026-33824",
   "extraction_status": "success",
+  "extraction_method": "playwright+html_trafilatura",
+  "source_authority": {
+    "category": "researcher",
+    "tier": "secondary",
+    "method": "playwright+html_trafilatura",
+    "authority": 3,
+    "evidence_level": 1,
+    "accessibility": 3,
+    "score": 7,
+    "scale_max": 12
+  },
   "relevance": "cve-specific",
   "char_count_raw": 4763,
   "char_count_clean": 4763,

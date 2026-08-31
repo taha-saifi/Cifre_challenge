@@ -39,6 +39,10 @@ different labels. Removing a *singly*-carried fact does change the decision, cle
    uses **no LLM judge**. Stdlib only.
 4. **`deliverables/`** — the three required artefacts (4-page note, 8-slide deck,
    demonstrator) plus generated tables. In French; the code stays in English.
+5. **`demo_server/`** — the interactive demonstrator: a local Flask app that runs the five
+   configurations in parallel on a question you type, over `demo_kg/` (a filtered
+   projection of the frozen graph, never a re-extraction) or over `live_kg/` (sources
+   ingested during the session, kept isolated and clearly marked heuristic-quality).
 
 An earlier regex-vs-LLM mini-experiment (`kg/`) has been removed — only its regex half was
 ever finished and it fed nothing. Its generator `extract_regex.py` remains at the root as
@@ -96,44 +100,143 @@ replaced with placeholder text.
 Two small standalone warm-up scripts (toy KG triple store, toy TF-IDF RAG) — not
 part of the deliverable, kept for reference.
 
-## Setup
+## Setup — exact steps
 
-Requires Python 3.11+. Three separate dependency sets, deliberately:
+Requires **Python 3.11+** (developed on 3.14.2). Paths below use the Windows layout
+(`.venv/Scripts/`); on Linux/macOS substitute `.venv/bin/`.
+
+### Step 1 — virtual environment
 
 ```bash
 python -m venv .venv
-.venv/Scripts/python -m pip install -r requirements-deliverables.txt  # docx, pptx, pdfplumber, networkx
 ```
 
-- `requirements-deliverables.txt` — only needed to export the note and deck.
-- `requirements.txt` — corpus scraping (trafilatura, playwright…). Optional: the corpus
-  is frozen, so this is only needed to re-scrape from scratch.
-- `extraction_pipeline/requirements.txt` — **empty by design**: the pipeline is standard
-  library only. `experiments/` is too.
+### Step 2 — install what you actually need
 
-MinIE additionally needs Java 21 + Maven; see
-[`extraction_pipeline/README.md`](extraction_pipeline/README.md). Without it the pipeline
-falls back to a heuristic extractor and records that it did — it never silently pretends
-to have run MinIE.
-
-## Running things
+There are four dependency sets, deliberately separate. Install only the ones for the
+task at hand; none of them is required to *read* the results.
 
 ```bash
-# The experiment (safe — reads the frozen graph, writes only to experiments/ and deliverables/)
-.venv/Scripts/python experiments/build_contexts.py --verify   # tripwire: expect PASS 10/10
-.venv/Scripts/python experiments/carrier_check.py             # carrier profile per task
-.venv/Scripts/python experiments/score.py                     # grounding + citations
-.venv/Scripts/python experiments/build_report.py              # -> deliverables/resultats.md
-
-# Rebuilding the corpus or the KG (only if you mean to re-open that work)
-.venv/Scripts/python build_corpus.py                          # -> corpus/raw/
-.venv/Scripts/python preprocess_corpus.py                     # -> corpus/clean/
-python extraction_pipeline/scripts/run_pipeline.py
+.venv/Scripts/python -m pip install -r requirements-deliverables.txt
 ```
 
+| File | Needed for | Contents |
+|---|---|---|
+| `requirements-deliverables.txt` | exporting the note/deck, presentation subgraph | python-docx, python-pptx, pdfplumber, networkx |
+| `demo_server/requirements.txt` | the interactive demonstrator | flask, requests, python-dotenv |
+| `requirements.txt` | re-scraping the corpus, and live ingestion in the demo | trafilatura, playwright, requests, pdfplumber, readability-lxml |
+| `extraction_pipeline/requirements.txt` | nothing | **empty by design** — the pipeline is standard library only, and so is `experiments/` |
+
+Playwright also needs its browser binary once, and only if you re-scrape or ingest live
+sources (10 sources of the frozen corpus required a browser after a 403):
+
+```bash
+.venv/Scripts/python -m playwright install chromium
+```
+
+### Step 3 — MinIE (only to re-extract)
+
+The OpenIE backend needs **Java 21 + Maven**, built once:
+
+```bash
+cd extraction_pipeline/vendor/minie && mvn -ntp -Dmaven.repo.local=../../.m2 -DskipTests package
+```
+
+Then start the service in a separate terminal before any extraction run — it binds
+`127.0.0.1:8080` only, so no corpus text leaves the machine:
+
+```bash
+python extraction_pipeline/scripts/start_minie_service.py
+```
+
+Without MinIE the pipeline falls back to a heuristic extractor **and records that it
+did** (`data/openie_run_metadata.json`) — it never silently pretends to have run MinIE.
+
+### Step 4 — model API key (only for the interactive demonstrator)
+
+The demonstrator calls OpenRouter. Create a local `.env` at the repo root — it is
+gitignored and must never be committed:
+
+```
+OPENROUTER_API_KEY=<your key>
+OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
+```
+
+Nothing else in the repo needs a key. The extraction pipeline never calls a model, and
+the 45 experiment cells are already recorded.
+
+## Running things — exact steps
+
+### A. Read the results (no install, no key)
+
+`deliverables/` and `experiments/scores.json` are committed. Nothing needs to run.
+
+### B. Verify and re-score the experiment (safe)
+
+Reads the frozen graph; writes only under `experiments/` and `deliverables/`.
+**Run the tripwire first, every time.**
+
+```bash
+.venv/Scripts/python experiments/build_contexts.py --verify   # must print PASS 10/10
+```
+
+```bash
+.venv/Scripts/python experiments/carrier_check.py             # carrier profile per task
+.venv/Scripts/python experiments/score.py                     # -> experiments/scores.json
+.venv/Scripts/python experiments/build_report.py              # -> deliverables/resultats.md
+.venv/Scripts/python experiments/build_source_quality.py      # -> deliverables/sources.md
+.venv/Scripts/python experiments/build_presentation_view.py   # -> presentation_view.json
+.venv/Scripts/python experiments/build_docx.py                # -> note.docx (+ measures pages)
+.venv/Scripts/python experiments/build_pptx.py                # -> deck.pptx
+```
+
+`carrier_check.py --apply` additionally rewrites the ablation targets in `tasks.json`;
+run it that way only if an upstream change should move them.
+
+### C. The interactive demonstrator
+
+```bash
+.venv/Scripts/python -m pip install -r demo_server/requirements.txt
+.venv/Scripts/python demo_server/app.py       # http://127.0.0.1:5000
+```
+
+Ask a question against `demo_kg` (a filtered projection of the frozen graph) or against
+`live_kg` (sources you ingest in the session), and the five configurations answer side by
+side. Live ingestion also needs `requirements.txt` installed. `demo_kg/` is regenerated
+by `.venv/Scripts/python demo_server/build_demo_kg.py`; `deliverables/demo.html` is the
+separate scripted 2-case demo and needs no server.
+
+### D. Rebuilding the corpus or the KG — read this first
+
 **Rebuilding the KG invalidates the 45 experiment cells**, which were produced against the
-current 2123-edge graph and cannot be cheaply re-run. Run `build_contexts.py --verify`
-afterwards: if it stops passing, the graph moved under the protocol.
+current 2123-edge graph and cannot be cheaply re-run. In dependency order:
+
+```bash
+.venv/Scripts/python build_corpus.py                          # -> corpus/raw/
+.venv/Scripts/python preprocess_corpus.py                     # -> corpus/clean/
+python extraction_pipeline/scripts/run_pipeline.py            # -> canonical_kg/
+```
+
+Between clustering and the canonical graph there is a **human gate**: after hand-editing
+`extraction_pipeline/relation_clustering/clusters_validation.json`, re-run
+
+```bash
+python extraction_pipeline/scripts/apply_cluster_validation.py
+python extraction_pipeline/scripts/build_canonical_kg.py
+python extraction_pipeline/scripts/evaluate_pipeline.py
+```
+
+Then run `experiments/build_contexts.py --verify` again: if it stops passing, the graph
+moved under the protocol and the recorded results are no longer comparable.
+
+`preprocess_corpus.py` also copies each source's declared category, primary/secondary
+rank, collection method and **authority score** into `corpus/clean/`, and
+`build_canonical_kg()` joins that score onto every edge as `source_authority` (inherited
+by `demo_kg/` for free, since it is a projection). The score itself is computed in one
+place only — `score_source()` in `experiments/build_source_quality.py`, which
+`preprocess_corpus.py` imports rather than restates. It is exposed on the graph but
+**not yet used** by the 45-cell protocol or by answer generation; that is declared
+roadmap work, not a retroactive reweighting of recorded results.
 
 See [`extraction_pipeline/README.md`](extraction_pipeline/README.md) for the full
 workflow (including starting the local MinIE service first) and

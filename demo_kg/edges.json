@@ -18,7 +18,17 @@
     "range": "Date",
     "derived_from": [
       "has published date"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_fa14ed33219de907",
@@ -39,7 +49,17 @@
     "range": "Date",
     "derived_from": [
       "has last modified date"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_31f3e4dfaea24f8d",
@@ -60,7 +80,17 @@
     "range": "Value",
     "derived_from": [
       "has vulnerability status"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_1e35cb2851b39762",
@@ -81,7 +111,17 @@
     "range": "Value",
     "derived_from": [
       "has source identifier"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_dad31ab7daf00c02",
@@ -102,7 +142,17 @@
     "range": "Description",
     "derived_from": [
       "has description"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_589b77ec4c0afa2f",
@@ -123,7 +173,17 @@
     "range": "Product",
     "derived_from": [
       "has affected product"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2e03cbc5354e1a40",
@@ -144,7 +204,17 @@
     "range": "Vendor",
     "derived_from": [
       "has vendor"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0e46a99431b11515",
@@ -165,7 +235,17 @@
     "range": "Version",
     "derived_from": [
       "has affected version bound"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_8aec7176771abbcf",
@@ -186,7 +266,17 @@
     "range": "Product",
     "derived_from": [
       "has affected product"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_64b6e675101d2956",
@@ -207,7 +297,17 @@
     "range": "Vendor",
     "derived_from": [
       "has vendor"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_ce332ee587a73aae",
@@ -228,7 +328,17 @@
     "range": "Version",
     "derived_from": [
       "has affected version bound"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b0f6325047bee42a",
@@ -249,7 +359,17 @@
     "range": "Product",
     "derived_from": [
       "has affected product"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_93369d2c50690475",
@@ -270,7 +390,17 @@
     "range": "Vendor",
     "derived_from": [
       "has vendor"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_79f6835d6b1da4cf",
@@ -291,7 +421,17 @@
     "range": "Version",
     "derived_from": [
       "has affected version bound"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_51e1d681daa8f3fd",
@@ -312,7 +452,17 @@
     "range": "CWE",
     "derived_from": [
       "has weakness"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_1c61cad17bdb3d23",
@@ -334,7 +484,17 @@
     "derived_from": [
       "references",
       "reference"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0c819f3a7aaf6a64",
@@ -356,7 +516,17 @@
     "derived_from": [
       "references",
       "reference"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9f0b8f195c870665",
@@ -378,7 +548,17 @@
     "derived_from": [
       "references",
       "reference"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_93e41fe02e4b414d",
@@ -400,7 +580,17 @@
     "derived_from": [
       "references",
       "reference"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_4d0b991947bf8abb",
@@ -421,7 +611,17 @@
     "range": "Metric",
     "derived_from": [
       "has baseScore"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_e8d34cf769b947b8",
@@ -442,7 +642,17 @@
     "range": "Metric",
     "derived_from": [
       "has baseSeverity"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c528ca8b8aaa6a15",
@@ -463,7 +673,17 @@
     "range": "Metric",
     "derived_from": [
       "has vectorString"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_116dd377d4b39d0f",
@@ -484,7 +704,17 @@
     "range": "Metric",
     "derived_from": [
       "has attackVector"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_063912ddb41b27fd",
@@ -505,7 +735,17 @@
     "range": "Metric",
     "derived_from": [
       "has attackComplexity"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_eecf4a0ba0ace844",
@@ -526,7 +766,17 @@
     "range": "Metric",
     "derived_from": [
       "has privilegesRequired"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_e8b8808cf09bc0cb",
@@ -547,7 +797,17 @@
     "range": "Metric",
     "derived_from": [
       "has userInteraction"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_8d6a61041afce041",
@@ -568,7 +828,17 @@
     "range": "Metric",
     "derived_from": [
       "has scope"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_ba86d8a72860e55d",
@@ -589,7 +859,17 @@
     "range": "Metric",
     "derived_from": [
       "has confidentialityImpact"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_ceb120e93a37dea1",
@@ -610,7 +890,17 @@
     "range": "Metric",
     "derived_from": [
       "has integrityImpact"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_5e5ec39ab0199d52",
@@ -631,7 +921,17 @@
     "range": "Metric",
     "derived_from": [
       "has availabilityImpact"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_88d18f6fae9efe48",
@@ -652,7 +952,17 @@
     "range": "Metric",
     "derived_from": [
       "has exploitabilityScore"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_16646988ef9fa61b",
@@ -673,7 +983,17 @@
     "range": "Metric",
     "derived_from": [
       "has impactScore"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0297d842965515bb",
@@ -694,7 +1014,17 @@
     "range": "Observation",
     "derived_from": [
       "has SSVC exploitation"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_aef5f65cbc1ac4a4",
@@ -715,7 +1045,17 @@
     "range": "Observation",
     "derived_from": [
       "has SSVC automatable"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a5b98963539abed5",
@@ -736,7 +1076,17 @@
     "range": "Observation",
     "derived_from": [
       "has SSVC technicalImpact"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_4b149ef07bf3f5e9",
@@ -757,7 +1107,17 @@
     "range": "Date",
     "derived_from": [
       "has CISA exploit addition date"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_5eeb8520aeb80043",
@@ -778,7 +1138,17 @@
     "range": "Date",
     "derived_from": [
       "has CISA action due date"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_59ec683a29ec5cc7",
@@ -799,7 +1169,17 @@
     "range": "Mitigation",
     "derived_from": [
       "has CISA required action"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a98a78eeae7d038d",
@@ -820,7 +1200,17 @@
     "range": "Date",
     "derived_from": [
       "has published date"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_7f1753c45e5d5826",
@@ -841,7 +1231,17 @@
     "range": "Date",
     "derived_from": [
       "has last modified date"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_ed113caa2d8a5e82",
@@ -862,7 +1262,17 @@
     "range": "Value",
     "derived_from": [
       "has vulnerability status"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_7ea6011d3fd24078",
@@ -883,7 +1293,17 @@
     "range": "Value",
     "derived_from": [
       "has source identifier"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_51875148bf1b76fa",
@@ -904,7 +1324,17 @@
     "range": "Description",
     "derived_from": [
       "has description"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_8fb7397835fdbda3",
@@ -925,7 +1355,17 @@
     "range": "Product",
     "derived_from": [
       "has affected product"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_75dc059041bf95e1",
@@ -946,7 +1386,17 @@
     "range": "Vendor",
     "derived_from": [
       "has vendor"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f4cf1426d7c98f38",
@@ -967,7 +1417,17 @@
     "range": "Version",
     "derived_from": [
       "has affected version bound"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_79d020f4e3d95709",
@@ -988,7 +1448,17 @@
     "range": "Product",
     "derived_from": [
       "has affected product"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_55c1b0553b205914",
@@ -1009,7 +1479,17 @@
     "range": "Vendor",
     "derived_from": [
       "has vendor"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_8e193374170b3e19",
@@ -1030,7 +1510,17 @@
     "range": "Version",
     "derived_from": [
       "has affected version bound"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_eb7f7aeb420a572a",
@@ -1051,7 +1541,17 @@
     "range": "Product",
     "derived_from": [
       "has affected product"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_db5e330e3ebe0b58",
@@ -1072,7 +1572,17 @@
     "range": "Vendor",
     "derived_from": [
       "has vendor"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_e7bf5981f9a08db2",
@@ -1093,7 +1603,17 @@
     "range": "Version",
     "derived_from": [
       "has affected version bound"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_3be9f56cde16f7ec",
@@ -1114,7 +1634,17 @@
     "range": "CWE",
     "derived_from": [
       "has weakness"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_499aa6c437b9812c",
@@ -1136,7 +1666,17 @@
     "derived_from": [
       "references",
       "reference"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f5579f47359b20e1",
@@ -1157,7 +1697,17 @@
     "range": "Metric",
     "derived_from": [
       "has baseScore"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f327d7376b98d1f8",
@@ -1178,7 +1728,17 @@
     "range": "Metric",
     "derived_from": [
       "has baseSeverity"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2a28443d2b9d7367",
@@ -1199,7 +1759,17 @@
     "range": "Metric",
     "derived_from": [
       "has vectorString"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_6bf4167222f224a7",
@@ -1220,7 +1790,17 @@
     "range": "Metric",
     "derived_from": [
       "has attackVector"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b48ee2cb1d5a0eec",
@@ -1241,7 +1821,17 @@
     "range": "Metric",
     "derived_from": [
       "has attackComplexity"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_8995cca4430f39e6",
@@ -1262,7 +1852,17 @@
     "range": "Metric",
     "derived_from": [
       "has privilegesRequired"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a0036deb692b1e32",
@@ -1283,7 +1883,17 @@
     "range": "Metric",
     "derived_from": [
       "has userInteraction"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_e9f0e0118c1d1595",
@@ -1304,7 +1914,17 @@
     "range": "Metric",
     "derived_from": [
       "has scope"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f7f5e5bf191040f9",
@@ -1325,7 +1945,17 @@
     "range": "Metric",
     "derived_from": [
       "has confidentialityImpact"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a457cec3aece6183",
@@ -1346,7 +1976,17 @@
     "range": "Metric",
     "derived_from": [
       "has integrityImpact"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_77a7315ec3eb1397",
@@ -1367,7 +2007,17 @@
     "range": "Metric",
     "derived_from": [
       "has availabilityImpact"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b56339d3eeffd946",
@@ -1388,7 +2038,17 @@
     "range": "Metric",
     "derived_from": [
       "has exploitabilityScore"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_1a37218c0bfcd54d",
@@ -1409,7 +2069,17 @@
     "range": "Metric",
     "derived_from": [
       "has impactScore"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9ac119f1c140d9df",
@@ -1430,7 +2100,17 @@
     "range": "Observation",
     "derived_from": [
       "has SSVC exploitation"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9b34360674633832",
@@ -1451,7 +2131,17 @@
     "range": "Observation",
     "derived_from": [
       "has SSVC automatable"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_6d99a592801e8d2b",
@@ -1472,7 +2162,17 @@
     "range": "Observation",
     "derived_from": [
       "has SSVC technicalImpact"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_97d4e5ab20f00b93",
@@ -1493,7 +2193,17 @@
     "range": "CVE",
     "derived_from": [
       "observes"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_3913988dd429f064",
@@ -1514,7 +2224,17 @@
     "range": "Probability",
     "derived_from": [
       "has EPSS probability"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_259416311e1de074",
@@ -1535,7 +2255,17 @@
     "range": "Probability",
     "derived_from": [
       "has EPSS percentile"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_68c1b8e9b3ff30e9",
@@ -1556,7 +2286,17 @@
     "range": "Date",
     "derived_from": [
       "has observation date"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2f6df22e7eeb129f",
@@ -1577,7 +2317,17 @@
     "range": "CVE",
     "derived_from": [
       "observes"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_49fbc8199824d855",
@@ -1598,7 +2348,17 @@
     "range": "Probability",
     "derived_from": [
       "has EPSS probability"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_ed87eed3931b7e0e",
@@ -1619,7 +2379,17 @@
     "range": "Probability",
     "derived_from": [
       "has EPSS percentile"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_aab26d17e139ab39",
@@ -1640,7 +2410,17 @@
     "range": "Date",
     "derived_from": [
       "has observation date"
-    ]
+    ],
+    "source_authority": {
+      "category": "official",
+      "tier": "primary",
+      "method": "api_json",
+      "authority": 5,
+      "evidence_level": 2,
+      "accessibility": 5,
+      "score": 12,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_936c113f64e8f9b6",
@@ -1661,7 +2441,17 @@
     "range": "Value",
     "derived_from": [
       "has MSRC publicly disclosed status"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_26a4e038ee28c34e",
@@ -1682,7 +2472,17 @@
     "range": "Value",
     "derived_from": [
       "has MSRC exploited status"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_4b74bd9e8517a56b",
@@ -1703,7 +2503,17 @@
     "range": "Value",
     "derived_from": [
       "has MSRC exploitability assessment"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c853de37532a7e97",
@@ -1725,7 +2535,17 @@
     "derived_from": [
       "has patch",
       "patched"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2428f8d21185ac03",
@@ -1747,7 +2567,17 @@
     "derived_from": [
       "has patch",
       "patched"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_6155aa0840eabda4",
@@ -1769,7 +2599,17 @@
     "derived_from": [
       "has patch",
       "patched"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_3f9a3f0b81b78d84",
@@ -1791,7 +2631,17 @@
     "derived_from": [
       "has patch",
       "patched"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9624b638ac709bc5",
@@ -1813,7 +2663,17 @@
     "derived_from": [
       "has patch",
       "patched"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_60c0b96cf26c3640",
@@ -1835,7 +2695,17 @@
     "derived_from": [
       "has patch",
       "patched"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_07c1e4ee190d988a",
@@ -1857,7 +2727,17 @@
     "derived_from": [
       "has patch",
       "patched"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9565b4c79a94690f",
@@ -1879,7 +2759,17 @@
     "derived_from": [
       "has patch",
       "patched"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9a977df4d34a0fe0",
@@ -1900,7 +2790,17 @@
     "range": "Value",
     "derived_from": [
       "has MSRC publicly disclosed status"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_ecdeae593add8b04",
@@ -1921,7 +2821,17 @@
     "range": "Value",
     "derived_from": [
       "has MSRC exploited status"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f1d457e0db8d8f73",
@@ -1942,7 +2852,17 @@
     "range": "Value",
     "derived_from": [
       "has MSRC exploitability assessment"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b49eceee46ca9396",
@@ -1963,7 +2883,17 @@
     "range": "Mention",
     "derived_from": [
       "has technical impact"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_5d3f3907a18f9373",
@@ -1984,7 +2914,17 @@
     "range": "Description",
     "derived_from": [
       "has technical impact"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_ce6229e7ea6bb6f9",
@@ -2005,7 +2945,17 @@
     "range": "Mention",
     "derived_from": [
       "published PoC for CVE-2026-55040 on"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_6f3e37c4112a6f9e",
@@ -2026,7 +2976,17 @@
     "range": "CVE",
     "derived_from": [
       "published PoC for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_1bd6cda59c76d598",
@@ -2047,7 +3007,17 @@
     "range": "Mention",
     "derived_from": [
       "was added to VulnCheck KEV on"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_738489b7ba85b71b",
@@ -2068,7 +3038,17 @@
     "range": "Product",
     "derived_from": [
       "was added to VulnCheck KEV before"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_aa1ed31456357922",
@@ -2089,7 +3069,17 @@
     "range": "Mention",
     "derived_from": [
       "was added to"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2a8780cef8575a86",
@@ -2110,7 +3100,17 @@
     "range": "Mention",
     "derived_from": [
       "exploit along with version scanner"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_bc7fe10927b23703",
@@ -2131,7 +3131,17 @@
     "range": "Mention",
     "derived_from": [
       "exploit along with version scanner"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_342e5709404c6302",
@@ -2152,7 +3162,17 @@
     "range": "Mention",
     "derived_from": [
       "exploit along with version scanner"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2e1f5026a66e49c9",
@@ -2173,7 +3193,17 @@
     "range": "Mention",
     "derived_from": [
       "exploit along with Suricata"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9bc61d969283b8d1",
@@ -2194,7 +3224,17 @@
     "range": "Mention",
     "derived_from": [
       "exploit along with Suricata"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_bca93ecb44bf8106",
@@ -2215,7 +3255,17 @@
     "range": "Mention",
     "derived_from": [
       "exploit along with Suricata"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c9713d47376c57e0",
@@ -2236,7 +3286,17 @@
     "range": "Mention",
     "derived_from": [
       "exploit along with Snort rules"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_11b1862459f7a281",
@@ -2257,7 +3317,17 @@
     "range": "Mention",
     "derived_from": [
       "exploit along with Snort rules"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_8568e522f0189356",
@@ -2278,7 +3348,17 @@
     "range": "Mention",
     "derived_from": [
       "exploit along with Snort rules"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_d72f79597063157e",
@@ -2299,7 +3379,17 @@
     "range": "Mention",
     "derived_from": [
       "has analysis of"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_1934e2205ca89a2d",
@@ -2323,7 +3413,17 @@
       "uses",
       "do use",
       "Uses"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b6d0f0facc2d6b94",
@@ -2344,7 +3444,17 @@
     "range": "Mention",
     "derived_from": [
       "be access"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_fe9af94b707d13a6",
@@ -2365,7 +3475,17 @@
     "range": "Mention",
     "derived_from": [
       "be access"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a9b1cf721e82f904",
@@ -2386,7 +3506,17 @@
     "range": "Mention",
     "derived_from": [
       "be achieve"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a84ef81c4b02790a",
@@ -2407,7 +3537,17 @@
     "range": "CVE",
     "derived_from": [
       "has disclosure for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_6a82efc01231f96b",
@@ -2428,7 +3568,17 @@
     "range": "Mention",
     "derived_from": [
       "describes issue as"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_fb314d7cd0cd77e7",
@@ -2449,7 +3599,17 @@
     "range": "Patch/update",
     "derived_from": [
       "bypass"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_e759fbc1a95ece6a",
@@ -2470,7 +3630,17 @@
     "range": "Organization",
     "derived_from": [
       "be found inside"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0d2777b646fda656",
@@ -2491,7 +3661,17 @@
     "range": "Mention",
     "derived_from": [
       "applies additional validation Starting with"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9749c098692bb3fc",
@@ -2512,7 +3692,17 @@
     "range": "Mention",
     "derived_from": [
       "be Starting with"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_330d2cfd689a02d4",
@@ -2533,7 +3723,17 @@
     "range": "Mention",
     "derived_from": [
       "be used by"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_88e35542481b188e",
@@ -2554,7 +3754,17 @@
     "range": "Mention",
     "derived_from": [
       "are present in"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_58905caf9da9a77f",
@@ -2575,7 +3785,17 @@
     "range": "Mention",
     "derived_from": [
       "are blocked to provide additional protection against"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a1ccc53fb913ac54",
@@ -2597,7 +3817,17 @@
     "derived_from": [
       "involve",
       "involves"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_abbb4792539a2660",
@@ -2618,7 +3848,17 @@
     "range": "Mention",
     "derived_from": [
       "be imported within"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_dcae69eb099140df",
@@ -2639,7 +3879,17 @@
     "range": "CVE",
     "derived_from": [
       "know similar structure to CVE-2026-63520 from"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_e33effbea49b274a",
@@ -2660,7 +3910,17 @@
     "range": "CVE",
     "derived_from": [
       "know"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_3c2aab3a6730f1bf",
@@ -2682,7 +3942,17 @@
     "derived_from": [
       "has patch",
       "patched"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_1f982bc1e0dc9d8f",
@@ -2703,7 +3973,17 @@
     "range": "Mention",
     "derived_from": [
       "be looking at"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_87a7e9fa96ff2b8d",
@@ -2724,7 +4004,17 @@
     "range": "Mention",
     "derived_from": [
       "be looking"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_74dbb8b00ee36832",
@@ -2746,7 +4036,17 @@
     "derived_from": [
       "make",
       "makes"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_53bab1b2de5b45f6",
@@ -2767,7 +4067,17 @@
     "range": "Mention",
     "derived_from": [
       "document"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_4ecb2762fb9a085d",
@@ -2788,7 +4098,17 @@
     "range": "Mention",
     "derived_from": [
       "document BDCM schema in"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_aac153c0c1ab048a",
@@ -2809,7 +4129,17 @@
     "range": "Mention",
     "derived_from": [
       "be needed to"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_aabb2cadd1d9a63f",
@@ -2830,7 +4160,17 @@
     "range": "Mention",
     "derived_from": [
       "told"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9e49b70dee63b128",
@@ -2851,7 +4191,17 @@
     "range": "Mention",
     "derived_from": [
       "be hit"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_abf5a82715d4b792",
@@ -2872,7 +4222,17 @@
     "range": "Mention",
     "derived_from": [
       "see"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_8915bb610e8d51f0",
@@ -2895,7 +4255,17 @@
       "result in",
       "resulted in",
       "results in"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2b454583320fda90",
@@ -2916,7 +4286,17 @@
     "range": "Mention",
     "derived_from": [
       "code"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_fffc0fb78a452ddc",
@@ -2937,7 +4317,17 @@
     "range": "Mention",
     "derived_from": [
       "be use as"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_fc3735621a3789d3",
@@ -2958,7 +4348,17 @@
     "range": "Mention",
     "derived_from": [
       "needed"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_6959d8786c7318ec",
@@ -2979,7 +4379,17 @@
     "range": "Mention",
     "derived_from": [
       "did test"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c27830c988e85fee",
@@ -3000,7 +4410,17 @@
     "range": "Mention",
     "derived_from": [
       "needed"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_496b50fcb267e8fd",
@@ -3021,7 +4441,17 @@
     "range": "Mention",
     "derived_from": [
       "did test"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c354517f9d009475",
@@ -3042,7 +4472,17 @@
     "range": "Mention",
     "derived_from": [
       "be selected of"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9888643dd3cce220",
@@ -3063,7 +4503,17 @@
     "range": "Mention",
     "derived_from": [
       "decided to go"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_7511ee6e410e0b99",
@@ -3084,7 +4534,17 @@
     "range": "Mention",
     "derived_from": [
       "has parameterless constructor with"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_878c67dc38732cda",
@@ -3105,7 +4565,17 @@
     "range": "Mention",
     "derived_from": [
       "call Deserialize with base64-encoded string as"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_d521fdcab2983054",
@@ -3126,7 +4596,17 @@
     "range": "Mention",
     "derived_from": [
       "be deserialization gadget in"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_763d29b57dd013eb",
@@ -3147,7 +4627,17 @@
     "range": "Mention",
     "derived_from": [
       "deserialize"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_242560b2809c84d2",
@@ -3168,7 +4658,17 @@
     "range": "Mention",
     "derived_from": [
       "'s familiar to"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_15e2119441448597",
@@ -3189,7 +4689,17 @@
     "range": "Mention",
     "derived_from": [
       "'s"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c7923179d935e764",
@@ -3211,7 +4721,17 @@
     "derived_from": [
       "make",
       "makes"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_6448d3ac92b04155",
@@ -3232,7 +4752,17 @@
     "range": "Mention",
     "derived_from": [
       "be talk about"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_fe1c0a6e3e5880d2",
@@ -3253,7 +4783,17 @@
     "range": "Mention",
     "derived_from": [
       "be run method with"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_8a61e6b174c49572",
@@ -3274,7 +4814,17 @@
     "range": "Mention",
     "derived_from": [
       "chose to bind"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_8f4c3b6d4b62ceec",
@@ -3295,7 +4845,17 @@
     "range": "Mention",
     "derived_from": [
       "expect method to use to perform"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_750e8c836e112260",
@@ -3316,7 +4876,17 @@
     "range": "Mention",
     "derived_from": [
       "calls to fetch"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_6c8bd07e308ad8ad",
@@ -3337,7 +4907,17 @@
     "range": "Mention",
     "derived_from": [
       "fires"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_20fa39f867d318f1",
@@ -3358,7 +4938,17 @@
     "range": "Mention",
     "derived_from": [
       "views associated External List"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c04df7ec21fe2c20",
@@ -3379,7 +4969,17 @@
     "range": "Mention",
     "derived_from": [
       "needed"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_30e4426da1372e48",
@@ -3400,7 +5000,17 @@
     "range": "Mention",
     "derived_from": [
       "has to return collection by"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b3e83df9bc749aa3",
@@ -3421,7 +5031,17 @@
     "range": "Mention",
     "derived_from": [
       "has to return"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_43d71fa9c8738e9b",
@@ -3442,7 +5062,17 @@
     "range": "Mention",
     "derived_from": [
       "gets SharePoint to run"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_94fdc98963b5ca07",
@@ -3463,7 +5093,17 @@
     "range": "Mention",
     "derived_from": [
       "gets SharePoint to run it for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_fa7308ef1a26ef8a",
@@ -3484,7 +5124,17 @@
     "range": "Mention",
     "derived_from": [
       "be run it for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_5fe7eb9553fffabf",
@@ -3506,7 +5156,17 @@
     "derived_from": [
       "define",
       "defines"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_7f028ddb8c279b5a",
@@ -3527,7 +5187,17 @@
     "range": "Mention",
     "derived_from": [
       "define in model to do something"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_bd4fcd7202468bef",
@@ -3548,7 +5218,17 @@
     "range": "Mention",
     "derived_from": [
       "defines argument for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0adef042fa6788fc",
@@ -3570,7 +5250,17 @@
     "derived_from": [
       "define",
       "defines"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_ddb71ce276795d6a",
@@ -3591,7 +5281,17 @@
     "range": "Mention",
     "derived_from": [
       "define DefaultValues for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_364dac18fab0d07a",
@@ -3612,7 +5312,17 @@
     "range": "Mention",
     "derived_from": [
       "do need to pass"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_25c12968f678d6bc",
@@ -3633,7 +5343,17 @@
     "range": "Mention",
     "derived_from": [
       "do need to pass"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_80a9e07411af9aa9",
@@ -3654,7 +5374,17 @@
     "range": "Mention",
     "derived_from": [
       "defined MethodInstance as"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_08f40690c8875f5f",
@@ -3677,7 +5407,17 @@
       "are defined",
       "defined",
       "has defined"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c60fd09a633c3069",
@@ -3698,7 +5438,17 @@
     "range": "Mention",
     "derived_from": [
       "to bind together"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c9d359a4373b8f2a",
@@ -3719,7 +5469,17 @@
     "range": "Mention",
     "derived_from": [
       "to bind"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c39612bd4f2afac1",
@@ -3740,7 +5500,17 @@
     "range": "Mention",
     "derived_from": [
       "be process"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9358715d6c07133a",
@@ -3761,7 +5531,17 @@
     "range": "Mention",
     "derived_from": [
       "was uploaded in"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_4cbaad923f23ff2f",
@@ -3782,7 +5562,17 @@
     "range": "Mention",
     "derived_from": [
       "read from"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_8841631a9cd426a0",
@@ -3803,7 +5593,17 @@
     "range": "Mention",
     "derived_from": [
       "be deserializing it via"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c66c063068461e85",
@@ -3824,7 +5624,17 @@
     "range": "Mention",
     "derived_from": [
       "NET type achieved"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f527c7a6ce99ec25",
@@ -3845,7 +5655,17 @@
     "range": "Mention",
     "derived_from": [
       "method achieved"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_5f02a01f5649ceda",
@@ -3866,7 +5686,17 @@
     "range": "Mention",
     "derived_from": [
       "pairing with CVE-2026-55040 authentication bypass achieved"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_519e2d0fa43c886a",
@@ -3887,7 +5717,17 @@
     "range": "Mention",
     "derived_from": [
       "we achieved"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_362e5c2b87e2c3ba",
@@ -3908,7 +5748,17 @@
     "range": "Mention",
     "derived_from": [
       "we achieved"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_3abdf79b3b71e5c6",
@@ -3929,7 +5779,17 @@
     "range": "Mention",
     "derived_from": [
       "we achieved"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_fab597c945c239e0",
@@ -3950,7 +5810,17 @@
     "range": "Mention",
     "derived_from": [
       "executes calc process on"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_873c948eaff990dc",
@@ -3971,7 +5841,17 @@
     "range": "Mention",
     "derived_from": [
       "empowers organizations to transcend challenges of"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f31867511de2bd17",
@@ -3992,7 +5872,17 @@
     "range": "Mention",
     "derived_from": [
       "has suite of"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f018b2183e205fab",
@@ -4013,7 +5903,17 @@
     "range": "Mention",
     "derived_from": [
       "provides product managers with tools required for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_ed56a6d9db08b0b1",
@@ -4034,7 +5934,17 @@
     "range": "Mention",
     "derived_from": [
       "provides product managers with tools required for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a022b51a5117719d",
@@ -4055,7 +5965,17 @@
     "range": "Mention",
     "derived_from": [
       "provides product managers with tools required for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f5dc0aedd5079210",
@@ -4076,7 +5996,17 @@
     "range": "Mention",
     "derived_from": [
       "provides PSIRT teams with tools required for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_5ab66123900149d2",
@@ -4097,7 +6027,17 @@
     "range": "Mention",
     "derived_from": [
       "provides PSIRT teams with tools required for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_682518dd72d49ffd",
@@ -4118,7 +6058,17 @@
     "range": "Mention",
     "derived_from": [
       "provides PSIRT teams with tools required for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_525083ffadf2750f",
@@ -4139,7 +6089,17 @@
     "range": "Mention",
     "derived_from": [
       "provides threat hunters with tools required for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_17e2549e25f3c8c4",
@@ -4160,7 +6120,17 @@
     "range": "Mention",
     "derived_from": [
       "provides threat hunters with tools required for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_1c544b00045fb3ee",
@@ -4181,7 +6151,17 @@
     "range": "Mention",
     "derived_from": [
       "provides threat hunters with tools required for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_bd66eb2fdf699c8a",
@@ -4203,7 +6183,17 @@
     "derived_from": [
       "provides",
       "provide"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_852a74bfd2509a3b",
@@ -4225,7 +6215,17 @@
     "derived_from": [
       "provides",
       "provide"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_86a6b932d2f8b412",
@@ -4247,7 +6247,17 @@
     "derived_from": [
       "provides",
       "provide"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_3a9cc2a7a4fd721c",
@@ -4268,7 +6278,17 @@
     "range": "Mention",
     "derived_from": [
       "be required for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_4c2a33a2614bf6bc",
@@ -4289,7 +6309,17 @@
     "range": "Mention",
     "derived_from": [
       "be required for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_35ef40ced6366bb3",
@@ -4310,7 +6340,17 @@
     "range": "Mention",
     "derived_from": [
       "be required for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2284baacbb17bb84",
@@ -4332,7 +6372,17 @@
     "derived_from": [
       "be support",
       "be supporting"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_77a2f0cbf453357c",
@@ -4353,7 +6403,17 @@
     "range": "Mention",
     "derived_from": [
       "remain"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_4ea7e96a95374e2c",
@@ -4374,7 +6434,17 @@
     "range": "Mention",
     "derived_from": [
       "emerging trends"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f51519e1d6567660",
@@ -4396,7 +6466,17 @@
     "derived_from": [
       "be support",
       "be supporting"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_113eac4726060ab1",
@@ -4417,7 +6497,17 @@
     "range": "Mention",
     "derived_from": [
       "be found"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_cf197e53fb23dfa6",
@@ -4438,7 +6528,17 @@
     "range": "Mention",
     "derived_from": [
       "be found"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_cd33aaa4b01b5974",
@@ -4459,7 +6559,17 @@
     "range": "Product",
     "derived_from": [
       "have begun"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_7c935141bf16f95b",
@@ -4480,7 +6590,17 @@
     "range": "CVE",
     "derived_from": [
       "be Tracked as"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0ce7502eba101806",
@@ -4501,7 +6621,17 @@
     "range": "Mention",
     "derived_from": [
       "allow attacker to disclose"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_afad975831919823",
@@ -4522,7 +6652,17 @@
     "range": "Mention",
     "derived_from": [
       "impact availability of"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_44527d05299f375d",
@@ -4543,7 +6683,17 @@
     "range": "Organization",
     "derived_from": [
       "has published in-depth technical analysis of flaw accompanied by proof-of-concept"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_dcde6a7a5bf5d5ef",
@@ -4564,7 +6714,17 @@
     "range": "Mention",
     "derived_from": [
       "be accompanied by"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0e0be89565b72bee",
@@ -4585,7 +6745,17 @@
     "range": "Mention",
     "derived_from": [
       "be bypass authentication on"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_15298c1c72cf7e22",
@@ -4606,7 +6776,17 @@
     "range": "Mention",
     "derived_from": [
       "be bypass authentication on"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_aca3f803cf22f0a8",
@@ -4627,7 +6807,17 @@
     "range": "Mention",
     "derived_from": [
       "be bypass operations as"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_bd2adf57a1568522",
@@ -4648,7 +6838,17 @@
     "range": "Mention",
     "derived_from": [
       "be bypass operations as"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_37ab5e09f0ba7347",
@@ -4669,7 +6869,17 @@
     "range": "Product",
     "derived_from": [
       "Defused warned on X that attackers"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a379504251006087",
@@ -4690,7 +6900,17 @@
     "range": "CVE",
     "derived_from": [
       "Defused warned on X that attackers"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_d45cd3533f79ee25",
@@ -4711,7 +6931,17 @@
     "range": "Product",
     "derived_from": [
       "Defused warned on X that attackers"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_3ba49870cfbb3522",
@@ -4732,7 +6962,17 @@
     "range": "Product",
     "derived_from": [
       "Defused warned"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b55b943340c34b60",
@@ -4753,7 +6993,17 @@
     "range": "CVE",
     "derived_from": [
       "Defused warned"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_93bb589a141735b3",
@@ -4774,7 +7024,17 @@
     "range": "Product",
     "derived_from": [
       "Defused warned"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c1313e09bef9630f",
@@ -4796,7 +7056,17 @@
     "derived_from": [
       "has been exploited in",
       "have been exploited in"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_db4416a87784783f",
@@ -4817,7 +7087,17 @@
     "range": "Mention",
     "derived_from": [
       "lead to unauthenticated remote code execution against vulnerable SharePoint server"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9f024c2e8cf58fcb",
@@ -4838,7 +7118,17 @@
     "range": "CVE",
     "derived_from": [
       "lead to unauthenticated remote code execution against vulnerable SharePoint server"
-    ]
+    ],
+    "source_authority": {
+      "category": "journalistic",
+      "tier": "secondary",
+      "method": "html_trafilatura",
+      "authority": 2,
+      "evidence_level": 1,
+      "accessibility": 4,
+      "score": 7,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f4259de5ffd718a7",
@@ -4859,7 +7149,17 @@
     "range": "Mention",
     "derived_from": [
       "describes conditions beyond"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_d569197310b91931",
@@ -4880,7 +7180,17 @@
     "range": "Mention",
     "derived_from": [
       "describes level of"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_4672b5c5626cfae5",
@@ -4901,7 +7211,17 @@
     "range": "Mention",
     "derived_from": [
       "possess before exploiting vulnerability"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_ca30f7b072aeb977",
@@ -4922,7 +7242,17 @@
     "range": "Mention",
     "derived_from": [
       "possess"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f5166ba1f547dbc7",
@@ -4943,7 +7273,17 @@
     "range": "Mention",
     "derived_from": [
       "is unauthorized prior to"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_37d3ee327d9ae26a",
@@ -4964,7 +7304,17 @@
     "range": "Mention",
     "derived_from": [
       "be exploited at will of"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c1411a9818cb4164",
@@ -4985,7 +7335,17 @@
     "range": "Mention",
     "derived_from": [
       "be scored relative to impacted component If"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_8926a27fbb154525",
@@ -5006,7 +7366,17 @@
     "range": "Mention",
     "derived_from": [
       "be scored relative to impacted component If"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_61066dd9b4a208e1",
@@ -5027,7 +7397,17 @@
     "range": "Mention",
     "derived_from": [
       "be scored relative to impacted component If"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_d9dfd7dbd031e53f",
@@ -5048,7 +7428,17 @@
     "range": "Mention",
     "derived_from": [
       "be scored relative to impacted component If"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0b28378edb75be4e",
@@ -5070,7 +7460,17 @@
     "derived_from": [
       "be scored",
       "be scoring"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_1a2c8ca587b0bb3d",
@@ -5092,7 +7492,17 @@
     "derived_from": [
       "be scored",
       "be scoring"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c29f5d46e522ca4f",
@@ -5114,7 +7524,17 @@
     "derived_from": [
       "be scored",
       "be scoring"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_d1d35c29d063b14e",
@@ -5136,7 +7556,17 @@
     "derived_from": [
       "be scored",
       "be scoring"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2436b097e81af28b",
@@ -5157,7 +7587,17 @@
     "range": "Mention",
     "derived_from": [
       "be managed by"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_e0e7abc00acf64d5",
@@ -5178,7 +7618,17 @@
     "range": "Mention",
     "derived_from": [
       "are same In"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_77ef5d43709ecbc0",
@@ -5199,7 +7649,17 @@
     "range": "Mention",
     "derived_from": [
       "are same In"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_7a03b583b5029479",
@@ -5220,7 +7680,17 @@
     "range": "Mention",
     "derived_from": [
       "are managed by"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_310ed0d72dc086b1",
@@ -5241,7 +7711,17 @@
     "range": "Mention",
     "derived_from": [
       "be managed by"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a97da462dbce887d",
@@ -5262,7 +7742,17 @@
     "range": "Mention",
     "derived_from": [
       "disclosed"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2a6896e209a4b247",
@@ -5283,7 +7773,17 @@
     "range": "Mention",
     "derived_from": [
       "be protected by"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_25d7eba7c0e4f5d5",
@@ -5304,7 +7804,17 @@
     "range": "Mention",
     "derived_from": [
       "be resulting from"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_757accb1fdd1dc2d",
@@ -5325,7 +7835,17 @@
     "range": "Mention",
     "derived_from": [
       "refers to accessibility of"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_61e6dd0ae89c619d",
@@ -5346,7 +7866,17 @@
     "range": "Mention",
     "derived_from": [
       "refers to accessibility of"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_65075b2e4d7518d3",
@@ -5367,7 +7897,17 @@
     "range": "Mention",
     "derived_from": [
       "refers to accessibility of"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_3bd6dc43af088533",
@@ -5388,7 +7928,17 @@
     "range": "Mention",
     "derived_from": [
       "consume"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_ec833d7eb78d4983",
@@ -5409,7 +7959,17 @@
     "range": "Mention",
     "derived_from": [
       "is important factor for"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9a93ed39cc6d3259",
@@ -5430,7 +7990,17 @@
     "range": "Mention",
     "derived_from": [
       "is unpatched when"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_aca6c058fd3876ec",
@@ -5452,7 +8022,17 @@
     "derived_from": [
       "becomes",
       "has become"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_e83034d7506ff79b",
@@ -5473,7 +8053,17 @@
     "range": "Mention",
     "derived_from": [
       "has issued"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_77d2203b6ef62ce9",
@@ -5494,7 +8084,17 @@
     "range": "Mention",
     "derived_from": [
       "has issued"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0e4c63422d42d71c",
@@ -5516,7 +8116,17 @@
     "derived_from": [
       "becomes",
       "has become"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_cab07cd736989cae",
@@ -5537,7 +8147,17 @@
     "range": "Mention",
     "derived_from": [
       "is known to exist with"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_4a5cfc1c8fef8e49",
@@ -5558,7 +8178,17 @@
     "range": "Mention",
     "derived_from": [
       "suggests"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_ed549c2508d6f02c",
@@ -5579,7 +8209,17 @@
     "range": "Mention",
     "derived_from": [
       "allows unauthorized attacker to bypass security feature over"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_fad55ae3ec9ea4a9",
@@ -5600,7 +8240,17 @@
     "range": "Mention",
     "derived_from": [
       "lead to major loss of"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_fabb9f0645661229",
@@ -5621,7 +8271,17 @@
     "range": "Mention",
     "derived_from": [
       "impact availability of"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b1ce5aeaa47733ba",
@@ -5642,7 +8302,17 @@
     "range": "Mention",
     "derived_from": [
       "allow attacker to disclose"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_254ad57b618d3752",
@@ -5663,7 +8333,17 @@
     "range": "Mention",
     "derived_from": [
       "bypass"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_1904df326379c8d1",
@@ -5685,7 +8365,17 @@
     "derived_from": [
       "make",
       "makes"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2ac3b6c4da100a1c",
@@ -5706,7 +8396,17 @@
     "range": "Mention",
     "derived_from": [
       "protect customers through"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_53b0a33a2bd46653",
@@ -5727,7 +8427,17 @@
     "range": "Mention",
     "derived_from": [
       "recognizes"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_997fe5fe95ae0850",
@@ -5748,7 +8458,17 @@
     "range": "Mention",
     "derived_from": [
       "are with"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_63c41421154e950f",
@@ -5769,7 +8489,17 @@
     "range": "Vendor",
     "derived_from": [
       "be patched by"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_dd97cc5c5a9f16f5",
@@ -5790,7 +8520,17 @@
     "range": "Mention",
     "derived_from": [
       "was developed as entry for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_22f953560fb2320c",
@@ -5811,7 +8551,17 @@
     "range": "Mention",
     "derived_from": [
       "be raise bar in"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_284b0db9a890c05d",
@@ -5833,7 +8583,17 @@
     "derived_from": [
       "added CVE-2026-55040 to",
       "adds CVE-2026-55040 to"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_3e882200a2997a16",
@@ -5854,7 +8614,17 @@
     "range": "Mention",
     "derived_from": [
       "be based on evidence of"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_e8c5d445b6c37c53",
@@ -5875,7 +8645,17 @@
     "range": "Mention",
     "derived_from": [
       "be integrated"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2e52278ddd130c9e",
@@ -5896,7 +8676,17 @@
     "range": "Mention",
     "derived_from": [
       "acts as critical bridge between"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_497465c106f21d5b",
@@ -5917,7 +8707,17 @@
     "range": "Mention",
     "derived_from": [
       "present high-risk attack surface"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_5f46884c5db70214",
@@ -5938,7 +8738,17 @@
     "range": "Mention",
     "derived_from": [
       "present high-risk attack surface"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0166c8c36f3f1d77",
@@ -5959,7 +8769,17 @@
     "range": "Mention",
     "derived_from": [
       "is attacker know in"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_7c25dd63af5b1702",
@@ -5980,7 +8800,17 @@
     "range": "Mention",
     "derived_from": [
       "be know in advance"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f667fa91a36519f0",
@@ -6001,7 +8831,17 @@
     "range": "Mention",
     "derived_from": [
       "perform operations as"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f16351b281c63cb1",
@@ -6023,7 +8863,17 @@
     "derived_from": [
       "perform",
       "performs"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_e273e84fbd4b1c32",
@@ -6045,7 +8895,17 @@
     "derived_from": [
       "identifies",
       "identify"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_85b20b0fff4e23b5",
@@ -6066,7 +8926,17 @@
     "range": "Mention",
     "derived_from": [
       "be chained to"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_e085848834011fc0",
@@ -6087,7 +8957,17 @@
     "range": "Mention",
     "derived_from": [
       "break"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b8fe01ec02953968",
@@ -6108,7 +8988,17 @@
     "range": "Mention",
     "derived_from": [
       "break"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c244d625b20ae1e2",
@@ -6129,7 +9019,17 @@
     "range": "Mention",
     "derived_from": [
       "break"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0c5ef9a216068720",
@@ -6150,7 +9050,17 @@
     "range": "Mention",
     "derived_from": [
       "did encompass more traditional vulnerability research such as"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_70a38c0463d6f2ae",
@@ -6171,7 +9081,17 @@
     "range": "Mention",
     "derived_from": [
       "is significant amount of"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f64d5dddc99ac85b",
@@ -6192,7 +9112,17 @@
     "range": "Mention",
     "derived_from": [
       "was undertaken through"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a461d0ca935c83c7",
@@ -6213,7 +9143,17 @@
     "range": "Organization",
     "derived_from": [
       "was discovered by Senior Principal Security Researcher at"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_edcc4e78bf576e48",
@@ -6234,7 +9174,17 @@
     "range": "Vendor",
     "derived_from": [
       "has been provided by"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b59d4ecbfb8bd0a0",
@@ -6255,7 +9205,17 @@
     "range": "Product",
     "derived_from": [
       "like to thank"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_5dd14beab4eb1a80",
@@ -6276,7 +9236,17 @@
     "range": "Organization",
     "derived_from": [
       "like to thank"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_aacd33258297ae35",
@@ -6297,7 +9267,17 @@
     "range": "CVE",
     "derived_from": [
       "has published full technical details for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_42cf65b02bfebaed",
@@ -6318,7 +9298,17 @@
     "range": "CVE",
     "derived_from": [
       "be remediate"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_d84a69f99aa6243e",
@@ -6339,7 +9329,17 @@
     "range": "Mention",
     "derived_from": [
       "acknowledges receipt of"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b08836c462ef0841",
@@ -6361,7 +9361,17 @@
     "derived_from": [
       "be support",
       "be supporting"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b3f1a48284ab2b8d",
@@ -6382,7 +9392,17 @@
     "range": "Mention",
     "derived_from": [
       "acknowledges"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0c6d66ab11801cd2",
@@ -6403,7 +9423,17 @@
     "range": "Mention",
     "derived_from": [
       "acknowledges"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2097dc21b7ab0574",
@@ -6425,7 +9455,17 @@
     "derived_from": [
       "exploitation in-the-wild publication of details occur",
       "exploitation in-the-wild publication of details occur proviso"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a185458dc48de1e0",
@@ -6447,7 +9487,17 @@
     "derived_from": [
       "exploitation third-party publication of details occur",
       "exploitation third-party publication of details occur proviso"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_3496ef6f90d59750",
@@ -6469,7 +9519,17 @@
     "derived_from": [
       "exploitation in-the-wild publication of details occur",
       "exploitation in-the-wild publication of details occur proviso"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c7900fed2205df69",
@@ -6491,7 +9551,17 @@
     "derived_from": [
       "exploitation third-party publication of details occur",
       "exploitation third-party publication of details occur proviso"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_e92b61877d901ee1",
@@ -6512,7 +9582,17 @@
     "range": "Mention",
     "derived_from": [
       "to publish occur proviso"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9ad0f253df10bbc8",
@@ -6533,7 +9613,17 @@
     "range": "Mention",
     "derived_from": [
       "to publish occur proviso"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_dd9e989d4a10e0b4",
@@ -6554,7 +9644,17 @@
     "range": "Mention",
     "derived_from": [
       "to publish occur"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_d18c48ffbeb3e289",
@@ -6575,7 +9675,17 @@
     "range": "Mention",
     "derived_from": [
       "to publish occur"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_ea0e47b036618c45",
@@ -6596,7 +9706,17 @@
     "range": "Mention",
     "derived_from": [
       "be supporting information for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_46175577ea8ac728",
@@ -6618,7 +9738,17 @@
     "derived_from": [
       "provides",
       "provide"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0af95484fc2819b0",
@@ -6639,7 +9769,17 @@
     "range": "Mention",
     "derived_from": [
       "is updated to reflect"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_7e085d87f362d138",
@@ -6660,7 +9800,17 @@
     "range": "CVE",
     "derived_from": [
       "publishes technical details for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_bcded468aef6f1ab",
@@ -6681,7 +9831,17 @@
     "range": "CVE",
     "derived_from": [
       "is updated to reflect"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_013f141ec43a74fa",
@@ -6702,7 +9862,17 @@
     "range": "Mention",
     "derived_from": [
       "is due to"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a34ba41fea3f6ccb",
@@ -6723,7 +9893,17 @@
     "range": "Mention",
     "derived_from": [
       "was developed as entry for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a988ea6949efa1cf",
@@ -6744,7 +9924,17 @@
     "range": "Mention",
     "derived_from": [
       "be raise bar in"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_6420715b2b7e53c4",
@@ -6765,7 +9955,17 @@
     "range": "Mention",
     "derived_from": [
       "be based on evidence of"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_84edb371f5cfae28",
@@ -6787,7 +9987,17 @@
     "derived_from": [
       "added CVE-2026-55040 to",
       "adds CVE-2026-55040 to"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_345c04acb623ced6",
@@ -6808,7 +10018,17 @@
     "range": "Mention",
     "derived_from": [
       "augmented agentic work with"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2859e663b6f8f937",
@@ -6829,7 +10049,17 @@
     "range": "Mention",
     "derived_from": [
       "augmented"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_1449be011ba4e19b",
@@ -6850,7 +10080,17 @@
     "range": "Mention",
     "derived_from": [
       "reverse engineering to provide"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b2a40b870f603358",
@@ -6871,7 +10111,17 @@
     "range": "Mention",
     "derived_from": [
       "reverse"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_cab25286ca64b408",
@@ -6892,7 +10142,17 @@
     "range": "Mention",
     "derived_from": [
       "be provide"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a4eb1f28999f8467",
@@ -6913,7 +10173,17 @@
     "range": "Mention",
     "derived_from": [
       "be integrated"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0d0add4f8fe477bf",
@@ -6934,7 +10204,17 @@
     "range": "Mention",
     "derived_from": [
       "present high-risk attack surface"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c14fceaccac60c40",
@@ -6955,7 +10235,17 @@
     "range": "Mention",
     "derived_from": [
       "present high-risk attack surface"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_eebd2b1514107e39",
@@ -6976,7 +10266,17 @@
     "range": "Mention",
     "derived_from": [
       "acts as critical bridge between"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b3566e74844a6423",
@@ -6997,7 +10297,17 @@
     "range": "Mention",
     "derived_from": [
       "perform arbitrary operations such as"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_21883de8bda5315e",
@@ -7018,7 +10328,17 @@
     "range": "Mention",
     "derived_from": [
       "is executed with permission of Windows service"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_aa88222b88415897",
@@ -7039,7 +10359,17 @@
     "range": "Mention",
     "derived_from": [
       "is executed"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f7ccb82b84f7330e",
@@ -7060,7 +10390,17 @@
     "range": "Mention",
     "derived_from": [
       "be chained to"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_5ff0e0a339468371",
@@ -7081,7 +10421,17 @@
     "range": "Organization",
     "derived_from": [
       "was discovered by Senior Principal Security Researcher at"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f9fc2681ffe55600",
@@ -7102,7 +10452,17 @@
     "range": "Vendor",
     "derived_from": [
       "has been provided by"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b99000547d13d6bc",
@@ -7123,7 +10483,17 @@
     "range": "Product",
     "derived_from": [
       "like to thank"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_97b0458bbb6a33fa",
@@ -7144,7 +10514,17 @@
     "range": "Organization",
     "derived_from": [
       "like to thank"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_404a470c4a8598e4",
@@ -7165,7 +10545,17 @@
     "range": "CVE",
     "derived_from": [
       "be remediate"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9a8f3965e5580c96",
@@ -7186,7 +10576,17 @@
     "range": "Mention",
     "derived_from": [
       "assess"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_fc8c8ce2f70e8893",
@@ -7207,7 +10607,17 @@
     "range": "Mention",
     "derived_from": [
       "acknowledges receipt of"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_67b97804e0452c4e",
@@ -7229,7 +10639,17 @@
     "derived_from": [
       "be support",
       "be supporting"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f957ce2af3ba5b60",
@@ -7250,7 +10670,17 @@
     "range": "Mention",
     "derived_from": [
       "acknowledges"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_7c9956b7d06bf565",
@@ -7271,7 +10701,17 @@
     "range": "Mention",
     "derived_from": [
       "acknowledges"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_76611b5632684b94",
@@ -7293,7 +10733,17 @@
     "derived_from": [
       "exploitation in-the-wild publication of details occur",
       "exploitation in-the-wild publication of details occur proviso"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_bdd1e9af035b89a7",
@@ -7315,7 +10765,17 @@
     "derived_from": [
       "exploitation third-party publication of details occur",
       "exploitation third-party publication of details occur proviso"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c483d69b3a338bdf",
@@ -7337,7 +10797,17 @@
     "derived_from": [
       "exploitation in-the-wild publication of details occur",
       "exploitation in-the-wild publication of details occur proviso"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_dd15bf3f2562ba3e",
@@ -7359,7 +10829,17 @@
     "derived_from": [
       "exploitation third-party publication of details occur",
       "exploitation third-party publication of details occur proviso"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2b3cdfa1b5d6ca33",
@@ -7380,7 +10860,17 @@
     "range": "Mention",
     "derived_from": [
       "to publish occur proviso"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_cf842786450ae265",
@@ -7401,7 +10891,17 @@
     "range": "Mention",
     "derived_from": [
       "to publish occur proviso"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f2d79643f572e1d7",
@@ -7422,7 +10922,17 @@
     "range": "Mention",
     "derived_from": [
       "to publish occur"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_4f02bb9d6e18ba1f",
@@ -7443,7 +10953,17 @@
     "range": "Mention",
     "derived_from": [
       "to publish occur"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_dfdddc303a278a8e",
@@ -7464,7 +10984,17 @@
     "range": "Mention",
     "derived_from": [
       "be supporting information for"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_cf8bd5b35958ccf7",
@@ -7486,7 +11016,17 @@
     "derived_from": [
       "provides",
       "provide"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_338fd5fc41e0089b",
@@ -7507,7 +11047,17 @@
     "range": "Mention",
     "derived_from": [
       "be provided by Microsoft on"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c78703d48a0a836d",
@@ -7528,7 +11078,17 @@
     "range": "Vendor",
     "derived_from": [
       "be provided by"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_7b5d1402b5513966",
@@ -7549,7 +11109,17 @@
     "range": "Mention",
     "derived_from": [
       "has been updated to reflect"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2018c94c7e468d3a",
@@ -7571,7 +11141,17 @@
     "derived_from": [
       "added CVE-2026-55040 to",
       "adds CVE-2026-55040 to"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_84b5ecd2b7bfefb4",
@@ -7592,7 +11172,17 @@
     "range": "Mention",
     "derived_from": [
       "are published by"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_0760f13482633e54",
@@ -7613,7 +11203,17 @@
     "range": "CVE",
     "derived_from": [
       "publishes"
-    ]
+    ],
+    "source_authority": {
+      "category": "researcher",
+      "tier": "primary",
+      "method": "html_trafilatura",
+      "authority": 3,
+      "evidence_level": 2,
+      "accessibility": 4,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_04d4037b96ac12d8",
@@ -7634,7 +11234,17 @@
     "range": "Mention",
     "derived_from": [
       "describes conditions beyond"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_95a9d9a39affabd1",
@@ -7655,7 +11265,17 @@
     "range": "Mention",
     "derived_from": [
       "exists"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b034bd4485de03d7",
@@ -7676,7 +11296,17 @@
     "range": "Mention",
     "derived_from": [
       "describes level of"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f9fd074e0d06b87a",
@@ -7697,7 +11327,17 @@
     "range": "Mention",
     "derived_from": [
       "possess before exploiting vulnerability"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b1bf3986f33a7525",
@@ -7718,7 +11358,17 @@
     "range": "Mention",
     "derived_from": [
       "possess"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_8cbe2cfb500d3748",
@@ -7739,7 +11389,17 @@
     "range": "Mention",
     "derived_from": [
       "is unauthorized prior to"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_5e87d4cbd0bb4fa3",
@@ -7760,7 +11420,17 @@
     "range": "Mention",
     "derived_from": [
       "be exploited at will of"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f4e655aeb1010d1a",
@@ -7781,7 +11451,17 @@
     "range": "Mention",
     "derived_from": [
       "be scored relative to impacted component If"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a35f3af0c34350e9",
@@ -7802,7 +11482,17 @@
     "range": "Mention",
     "derived_from": [
       "be scored relative to impacted component If"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_16a198463e091f69",
@@ -7823,7 +11513,17 @@
     "range": "Mention",
     "derived_from": [
       "be scored relative to impacted component If"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_bcc465b1ff409594",
@@ -7844,7 +11544,17 @@
     "range": "Mention",
     "derived_from": [
       "be scored relative to impacted component If"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_6609950ab06b28ea",
@@ -7866,7 +11576,17 @@
     "derived_from": [
       "be scored",
       "be scoring"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_90e1f6635f497d71",
@@ -7888,7 +11608,17 @@
     "derived_from": [
       "be scored",
       "be scoring"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c8dc9b42fac6a45f",
@@ -7910,7 +11640,17 @@
     "derived_from": [
       "be scored",
       "be scoring"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_1a5e0109d2f77c88",
@@ -7932,7 +11672,17 @@
     "derived_from": [
       "be scored",
       "be scoring"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_567326f33b86d70d",
@@ -7953,7 +11703,17 @@
     "range": "Mention",
     "derived_from": [
       "be managed by"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_79ce836f12dab867",
@@ -7974,7 +11734,17 @@
     "range": "Mention",
     "derived_from": [
       "are same In"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9294c0ba3608ce3c",
@@ -7995,7 +11765,17 @@
     "range": "Mention",
     "derived_from": [
       "are same In"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_c26693bb08f4c7a7",
@@ -8016,7 +11796,17 @@
     "range": "Mention",
     "derived_from": [
       "are managed by"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_91de3fa222a18ab6",
@@ -8037,7 +11827,17 @@
     "range": "Mention",
     "derived_from": [
       "be managed by"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_482a9efaa853dd4e",
@@ -8058,7 +11858,17 @@
     "range": "Mention",
     "derived_from": [
       "disclosed"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2c4f5ef99a939b4b",
@@ -8079,7 +11889,17 @@
     "range": "Mention",
     "derived_from": [
       "be protected by"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_886a2419dca2c79e",
@@ -8100,7 +11920,17 @@
     "range": "Mention",
     "derived_from": [
       "be resulting from"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_54355548032a6ab7",
@@ -8121,7 +11951,17 @@
     "range": "Mention",
     "derived_from": [
       "refers to accessibility of"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a0af84d4cfbcc45d",
@@ -8142,7 +11982,17 @@
     "range": "Mention",
     "derived_from": [
       "refers to accessibility of"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_58444858b5d1be47",
@@ -8163,7 +12013,17 @@
     "range": "Mention",
     "derived_from": [
       "refers to accessibility of"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_26eba3f10dd2c1dc",
@@ -8184,7 +12044,17 @@
     "range": "Mention",
     "derived_from": [
       "consume"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_94772fae67689dab",
@@ -8205,7 +12075,17 @@
     "range": "Mention",
     "derived_from": [
       "is important factor for"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_297b86311faf4f81",
@@ -8226,7 +12106,17 @@
     "range": "Mention",
     "derived_from": [
       "is unpatched when"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_b7f113b6d3804a5c",
@@ -8248,7 +12138,17 @@
     "derived_from": [
       "becomes",
       "has become"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_1f2d04b3e6ca2182",
@@ -8269,7 +12169,17 @@
     "range": "Mention",
     "derived_from": [
       "has issued"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_43cb1722d64480ab",
@@ -8290,7 +12200,17 @@
     "range": "Mention",
     "derived_from": [
       "has issued"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_68c7f7e6159cbae3",
@@ -8311,7 +12231,17 @@
     "range": "Mention",
     "derived_from": [
       "is known to exist with"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_1f1748c862e294c5",
@@ -8332,7 +12262,17 @@
     "range": "Mention",
     "derived_from": [
       "suggests"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_78b6b85aeb1b4015",
@@ -8353,7 +12293,17 @@
     "range": "Mention",
     "derived_from": [
       "is complex"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_3f58d72b9d6fcf44",
@@ -8374,7 +12324,17 @@
     "range": "Mention",
     "derived_from": [
       "is complex"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_e5f2468aca5c9883",
@@ -8395,7 +12355,17 @@
     "range": "Mention",
     "derived_from": [
       "is time‑consuming"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_a978411b5032987f",
@@ -8416,7 +12386,17 @@
     "range": "Mention",
     "derived_from": [
       "is time‑consuming"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_20bb3c6f12dc06b7",
@@ -8437,7 +12417,17 @@
     "range": "Mention",
     "derived_from": [
       "is complex"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f1df557939c17a6a",
@@ -8458,7 +12448,17 @@
     "range": "Mention",
     "derived_from": [
       "is complex"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_9f235dc07b53b9d4",
@@ -8479,7 +12479,17 @@
     "range": "Mention",
     "derived_from": [
       "is time‑consuming"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_5681a198899280d9",
@@ -8500,7 +12510,17 @@
     "range": "Mention",
     "derived_from": [
       "is time‑consuming"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f0d78545d576ddc4",
@@ -8521,7 +12541,17 @@
     "range": "Mention",
     "derived_from": [
       "be installed on"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_2108478b7b1e1a54",
@@ -8542,7 +12572,17 @@
     "range": "Mention",
     "derived_from": [
       "recognizes"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_f0cf4857b97159f2",
@@ -8563,7 +12603,17 @@
     "range": "Mention",
     "derived_from": [
       "protect customers through"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   },
   {
     "edge_id": "oe_25382bd37dc51509",
@@ -8584,6 +12634,16 @@
     "range": "Mention",
     "derived_from": [
       "are with"
-    ]
+    ],
+    "source_authority": {
+      "category": "publisher",
+      "tier": "primary",
+      "method": "playwright+html_trafilatura",
+      "authority": 4,
+      "evidence_level": 2,
+      "accessibility": 3,
+      "score": 9,
+      "scale_max": 12
+    }
   }
 ]

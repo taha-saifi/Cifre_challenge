@@ -41,6 +41,18 @@ python -m venv .venv && .venv/Scripts/python -m pip install -r requirements-deli
 .venv/Scripts/python experiments/build_report.py              # -> deliverables/resultats.md
 .venv/Scripts/python experiments/build_presentation_view.py   # -> presentation_view.json
 .venv/Scripts/python experiments/build_source_quality.py      # -> deliverables/sources.md
+.venv/Scripts/python experiments/build_docx.py                # -> note.docx, measures real pages
+.venv/Scripts/python experiments/build_pptx.py                # -> deck.pptx
+```
+
+Interactive demonstrator (`demo_server/`; needs `demo_server/requirements.txt`, plus
+`requirements.txt` for live ingestion, plus a gitignored root `.env` carrying
+`OPENROUTER_API_KEY`):
+```bash
+.venv/Scripts/python -m pip install -r demo_server/requirements.txt
+.venv/Scripts/python demo_server/app.py            # 127.0.0.1:5000
+.venv/Scripts/python demo_server/build_demo_kg.py  # regenerate the demo_kg/ projection
+.venv/Scripts/python demo_server/rag.py demo_kg    # rebuild one RAG embedding index
 ```
 
 On this machine the interpreter is `python` (3.14.x), not `python3`, and the console is
@@ -58,7 +70,7 @@ follow that pattern rather than adding an ad hoc test file.
 
 ## Architecture
 
-### Four top-level areas — do not conflate them
+### Five top-level areas — do not conflate them
 
 - **`corpus/`** — 56 cleaned sources with provenance. Frozen.
 - **`extraction_pipeline/`** — the KG builder: rule/statistical extraction only (MinIE
@@ -70,6 +82,15 @@ follow that pattern rather than adding an ad hoc test file.
 - **`deliverables/`** — the three artefacts the challenge actually asks for (note, deck,
   demonstrator) plus generated supporting tables. Written in **French**; the code, its
   comments and the commit messages stay in English.
+- **`demo_server/`** — the interactive demonstrator (Flask, 127.0.0.1 only). It is an
+  *exploration tool built on the same prompt contract*, not a replay of the 45 cells: same
+  template across the five configurations, different transport and different model. It
+  reads `demo_kg/` (a `source_id` projection of the frozen graph — never a re-extraction,
+  see the docstring of `build_demo_kg.py` for why a re-run would manufacture a false gap
+  signal) and `live_kg/` (session-ingested sources, isolated, marked heuristic-quality and
+  never merged into `demo_kg/`). `live_corpus/` and `live_kg/` are gitignored working
+  state. Nothing here may write into `extraction_pipeline/` — that is what
+  `redirected_config()` in `live_pipeline.py` enforces, under a lock.
 
 **`kg/` has been deleted.** It held an abandoned mini-experiment comparing regex
 extraction against direct LLM extraction; only the regex half finished and it fed nothing.
@@ -155,6 +176,38 @@ effect on `canonical_kg/` until `extract_entities → resolve_entities → build
 runs again — `build_canonical_kg()` never reads assertions directly. This has bitten
 this exact pipeline before (a promoted fact stayed invisible in canonical output
 despite a correct `"accept"` decision until `build_open_kg()` was rerun).
+
+### Source authority is copied, never recomputed
+
+There is exactly **one** source-scoring rule: `score_source()` in
+`experiments/build_source_quality.py` (authority by declared category + primary/secondary
+tier + accessibility by collection method, 0–12). It flows one way and is only ever
+copied:
+
+```
+corpus/raw/S*.json  (source_type, extraction_method declared at collection)
+  -> score_source()                       # the only place the score is computed
+  -> preprocess_corpus.py                 # copies it into corpus/clean/ as source_authority
+  -> build_canonical_kg()                 # source_authority_map(), a JOIN on source_id
+  -> canonical_kg/edges.json              # every edge carries source_authority
+  -> demo_kg/edges.json                   # inherited: demo_kg is a projection, no separate logic
+```
+
+Do **not** add a second scoring rule anywhere — `preprocess_corpus.py` imports the
+function (via `sys.path` on `experiments/`) precisely so the §14.1 table in
+`deliverables/sources.md` and the graph cannot disagree about the same source. A source
+with no declared metadata (a `live_corpus/` session) joins to `None`, which is an explicit
+"unknown" and must never be defaulted to a numeric score.
+
+Two consequences to keep in mind:
+
+- Adding the field to `clean/` does nothing until `build_canonical_kg()` runs again — the
+  same staleness trap as everything else downstream of `open_kg/`.
+- The score is **exposed, not used**: it is absent from the 45-cell protocol (pre-registered
+  before it existed) and from context selection in `demo_server/`. Reweighting the recorded
+  results with it is roadmap work and explicitly out of bounds — see
+  `deliverables/note.md` §16.4. `build_contexts.py --verify` still passes 10/10 with the
+  field present, because context rendering never reads edge metadata.
 
 ### Corpus structure
 

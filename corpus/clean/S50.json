@@ -4,6 +4,17 @@
   "cve_ids": [],
   "url": "https://www.first.org/cvss/v4.0/specification-document",
   "extraction_status": "success",
+  "extraction_method": "html_trafilatura",
+  "source_authority": {
+    "category": "official_framework",
+    "tier": "primary",
+    "method": "html_trafilatura",
+    "authority": 4,
+    "evidence_level": 2,
+    "accessibility": 4,
+    "score": 10,
+    "scale_max": 12
+  },
   "relevance": "framework",
   "char_count_raw": 71337,
   "char_count_clean": 71328,
