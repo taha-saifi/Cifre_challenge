@@ -61,13 +61,20 @@ Familles représentées : NVD, FIRST EPSS, Rapid7, MSRC, VulnCheck, Help Net Sec
 **Non produit à ce stade — blocage technique constaté, pas une omission.**
 
 Le graphe figé a été extrait avec MinIE pour 3246 assertions et l'extracteur heuristique
-de repli pour 405 seulement (`extraction_pipeline/data/openie_run_metadata.json`). Or
-MinIE **ne peut pas tourner sur cette machine** : ni Java, ni JAR construit, et le service
-local répond `(None, 'urlerror')` — rien n'écoute sur `127.0.0.1:8080`.
+de repli pour 405 seulement (`extraction_pipeline/data/openie_run_metadata.json`).
 
-Rejouer le pipeline sur ce sous-ensemble utiliserait donc l'extracteur heuristique pour
-100 % du texte libre. Mesuré directement sur la phrase la plus importante de la
-démonstration (S40) :
+**Mise à jour** : MinIE a depuis été installé et vérifié (JDK 21 + Maven, JAR construit,
+service interrogé avec succès). La raison initiale de ne pas rejouer le pipeline — MinIE
+indisponible — n'est donc plus valable, et il faut le dire plutôt que de conserver un
+argument périmé. La décision, elle, ne change pas, pour une raison plus solide : le graphe
+canonique est gelé à 2123 arêtes et les 45 cellules ont été produites contre cet état
+exact. Le service tourne côté WSL et n'est pas joignable depuis le serveur de démo
+Windows, qui continue donc d'annoncer honnêtement son extracteur heuristique en ingestion
+live.
+
+La divergence qui rendait une ré-extraction dangereuse a par ailleurs été **re-mesurée
+après construction du JAR**, et elle est exactement celle documentée à l'origine.
+Sur la phrase la plus importante de la démonstration (S40) :
 
 ```
 MinIE (graphe figé)  : Patching CVE-2026-55040 | break        | exploit chain

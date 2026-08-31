@@ -4,14 +4,16 @@
 Why this is a projection and not a pipeline re-run
 --------------------------------------------------
 Re-running `extraction_pipeline` on the 10 demo sources would be the faithful thing to
-do, and it is what was originally asked for. It is not possible on this machine, and
-producing it anyway would manufacture a false signal:
+do, and it is what was originally asked for. Producing it would manufacture a false
+signal:
 
   * The frozen KG was built with MinIE for 3246 assertions and the heuristic fallback for
-    only 405 (`data/openie_run_metadata.json`). MinIE needs Java + a built JAR; neither
-    exists here and nothing listens on 127.0.0.1:8080.
-  * A re-run would therefore be heuristic-only. Measured on the single most important
-    sentence of the demonstration (S40):
+    only 405 (`data/openie_run_metadata.json`).
+  * MinIE is now installed and verified (JDK 21, built JAR, service answering) -- the
+    original blocker is gone and this docstring no longer claims otherwise. It runs inside
+    WSL, unreachable from this Windows-side process, so a re-run launched from here would
+    still be heuristic-only. Measured on the single most important sentence of the
+    demonstration (S40), re-verified after the build:
         MinIE       : Patching CVE-2026-55040 | break   | exploit chain
         heuristic   : Patching CVE-2026-55040 will successfully break this | exploit | chain
     The predicate becomes `exploit`, which is one of the 11 clusters a human REJECTED, so
