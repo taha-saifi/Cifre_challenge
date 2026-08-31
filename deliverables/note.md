@@ -62,6 +62,16 @@ conformité — il n'en est rien : l'enregistrement NVD de cette CVE ne contient
 `cisa*` quand les quatre autres en contiennent quatre chacun. Deux sources indépendantes
 concordent : c'est une **preuve d'absence**, pas une **absence de preuve**.
 
+**Une contradiction inter-sources conservée telle quelle**, et ce qu'elle révèle. S10
+(VulnCheck) date la publication du PoC de CVE-2026-55040 au **11 août**, S17 (DIESEC) au
+**13 août**. Les deux dates ont été extraites ; une seule a survécu à la validation —
+l'arête canonique porte « August 11 », les trois assertions de S17 sont restées dans
+`open_kg`, leur cluster n'ayant pas été accepté. **La contradiction a donc été arbitrée par
+le silence**, sans que personne la constate. C'est une limite de conception à énoncer :
+la porte de validation humaine protège contre les fausses relations, pas contre l'arbitrage
+involontaire d'un désaccord factuel, parce qu'elle statue sur des étiquettes de relation et
+jamais sur la cohérence des valeurs.
+
 ## 6. Représentation de connaissance
 
 Pipeline **non-LLM**, auditable : OpenIE (MinIE) sur le texte libre, mappage déterministe
@@ -151,6 +161,22 @@ baseline « LLM seul » n'est pas un isolement parfait — sur une tâche le mod
 identifiants de source qu'il ne pouvait tenir que de son environnement. Elle est donc
 légèrement flatteuse.
 
+**Deux observations issues de l'outil de démonstration interactif, à ne pas confondre avec
+le protocole.** Elles proviennent d'une exécution de l'explorateur (`demo_server/`,
+modèles gratuits via OpenRouter) sur une question *hors des 9 tâches* ; elles illustrent le
+mécanisme et ne sont pas comparables en exactitude aux 45 cellules.
+
+- **Le mécanisme généralise au-delà du jeu de tâches figé.** Sur cette question inédite, la
+  configuration sans contexte produit **0 jeton vérifiable**, la configuration RAG
+  sémantique **6/6** — la récupération fonctionne réellement, elle n'est pas décorative.
+- **Un effet de cadrage, découvert et non prévu.** Les configurations 5 et 8 reçoivent un
+  contexte identique à une seule phrase près (le signalement d'incomplétude) et aboutissent
+  à des décisions **opposées** : « urgent » contre « peut attendre ». Le modèle lit donc
+  bien le contexte plutôt que de réciter, mais cela signifie aussi que **la formulation du
+  signalement est une variable qui influence la décision et que nous n'avons jamais
+  mesurée comme telle**. À énoncer au même titre que la précision de 0,026 : avant qu'un
+  jury ne le trouve.
+
 ## 12. Persistance et amélioration continue
 
 Une connaissance entre dans le graphe canonique parce qu'un humain l'a acceptée, non parce
@@ -184,21 +210,54 @@ que d'un couple d'entités et d'un texte-preuve, l'arbre de classification n'int
 les artefacts du pipeline. Santé — une recommandation dépend d'une contre-indication ;
 droit — une obligation dépend d'une exception ; finance — un ratio d'une méthode datée ;
 éducation — un parcours d'un prérequis. Même question opératoire : *cette relation
-critique est-elle représentée, et combien de fois ?* **Limite : cette généralisation est
-argumentée, pas démontrée — aucun second domaine n'a été traité.**
+critique est-elle représentée, et combien de fois ?*
+
+**Limite, et ce qui la lève.** Cette généralisation est **argumentée, pas démontrée** :
+aucun second domaine n'a été traité. Et un obstacle précis reste à franchir avant qu'elle
+le soit — le décompte de porteurs s'appuie aujourd'hui sur le *texte-preuve*, pas sur la
+structure du graphe, faute de résolution d'entités fiable. C'est ce qui rend la §15
+nécessaire plutôt que décorative : les 0–6 mois lèvent l'obstacle en dégageant une
+définition du porteur indépendante du corpus, et les 6–12 mois transforment l'argument en
+résultat sur un second domaine. Le présent point dit *pourquoi la méthode devrait
+transférer* ; la roadmap dit *quand et comment on le vérifiera*.
 
 ## 15. Roadmap CIFRE
 
-**0–6 mois** — état de l'art (qualité de KG, GraphRAG, complétion) ; formalisation des
-dimensions de qualité dont la redondance relationnelle ; reprise du cas à l'échelle
-complète (32 tâches) pour transformer une observation en mesure ; correction de la
-résolution d'entités.
-**6–12 mois** — second domaine choisi pour sa distance au premier ; benchmark RAG /
-GraphRAG / KG-aware sur ablation consciente de la redondance ; publication méthodologique.
-**12–24 mois** — prédire les relations à porteur unique sans exécuter l'ablation ;
-génération et validation de relations candidates sous contrôle humain ; multi-domaines.
-**24–36 mois** — passage à l'échelle, intégration métier, comparaison à l'état de l'art,
-valorisation produit, thèse.
+La trajectoire remonte les cinq niveaux du projet : cas d'usage → décision métier →
+problème expérimental → question scientifique → question de thèse. Le décompte de porteurs
+et la typologie des trois lacunes ne sont pas le point d'arrivée : ils sont l'amorce
+empirique d'une **méthode d'évaluation de la complétude d'un graphe**, qui est la question
+de thèse.
+
+**0–6 mois — de l'artefact au concept.** Généraliser le décompte de porteurs en une
+**métrique de complétude indépendante du domaine** : formaliser « porteur » sans recourir
+au texte-preuve d'un corpus cyber, et caractériser ce qu'elle mesure face aux mesures
+existantes de complétude de KG. Élargir l'ancrage bibliographique au-delà de RAG/GraphRAG
+déjà couverts — littérature sur la complétude et la qualité des graphes, la calibration et
+la quantification d'incertitude. Formaliser le protocole d'ablation consciente de la
+redondance comme **méthode reproductible**, avec sa procédure de pré-enregistrement, plutôt
+que comme un montage propre à ce cas.
+
+**6–12 mois — répondre à la généralisation au lieu de l'argumenter.** Premier test sur un
+second domaine, idéalement **un cas ou des données fournis par SpotWorkAI** plutôt qu'un
+second cas cyber choisi par nous : c'est la seule façon de transformer le §14 d'argument en
+résultat. Benchmark comparant RAG documentaire, GraphRAG et KG-aware sous le même protocole
+d'ablation. Première publication méthodologique sur la métrique de complétude et sur le
+résultat négatif qui la motive — l'ablation naïve ne mesure pas ce qu'elle prétend mesurer.
+
+**12–24 mois — du rétrospectif au prédictif.** Aujourd'hui la fragilité d'un fait se
+constate *après* ablation ; l'objectif est de l'**identifier avant génération**, comme
+signal d'alerte sur une réponse en train de se construire. Confrontation aux stratégies
+d'enrichissement de l'état de l'art (GraphRAG, complétion de graphe façon OMNIA, apport de
+sources externes) : enrichir un graphe et mesurer sa complétude sont deux faces du même
+problème. Intégrer une évaluation **LLM-as-a-Judge** de la fiabilité des recommandations —
+non comme juge unique, ce que le §21 exclut, mais confrontée aux mesures calculées de ce
+travail, la question de recherche étant précisément *quand* un juge modèle est fiable.
+
+**24–36 mois — retour au terrain industriel.** Validation à l'échelle sur des cas réels et
+des bases de connaissances SpotWorkAI ; transfert du détecteur de redondance en composant
+intégrable à leur plateforme, en amont de la génération ; comparaison finale à l'état de
+l'art ; rédaction et publications.
 
 ## 16. Limites et risques
 
@@ -218,7 +277,12 @@ valorisation produit, thèse.
    non) : sans effet sur les arêtes, mais le libellé affiché dépend de l'ordre de lecture.
 6. **Actif et passif non fusionnés** au clustering.
 7. **Mécanisme de re-validation jamais déclenché** en conditions réelles.
-8. **Couche actif/exposition synthétique**, signalée comme telle dans le contexte lui-même.
+8. **Aucune couche actif/exposition dans le graphe.** Le KG n'a ni type d'entité `Asset` ni
+   prédicat d'exposition : la condition d'exposition est **une phrase de contexte**
+   préfixée `[Scénario expérimental, non issu du corpus]`, injectée dans 2 des 45
+   contextes. Le marquage est donc dans la donnée transmise au modèle, pas seulement dans
+   cette note — mais il ne faut pas parler de « deux couches du graphe », il n'y en a
+   qu'une.
 9. **Graphe non ré-extractible sur la machine de rédaction** (ni Java ni MinIE) : il est
    gelé, ce qui garantit la cohérence des 45 cellules mais interdit une reproduction
    complète de bout en bout.
@@ -237,19 +301,26 @@ note est régénérable depuis les données du dépôt.
 
 **Corrections apportées à des sorties d'IA, après vérification humaine :**
 
-- **Deux sources déclarées à tort inexistantes** ont été retrouvées manuellement (DIESEC).
-  Une troisième (DTIC) redirigeait bien vers une page de maintenance : **retirée de la
-  liste plutôt que fabriquée**.
-- **~940 groupes de relations validés en bloc** lors d'une première passe : conséquence
-  détectée à la relecture — les deux plus grosses « relations » du graphe étaient des
-  copules vides (`is`, `has`). Passe reprise, filtre ajouté.
-- **Deux bugs détruisant silencieusement du travail de validation humaine** : une décision
-  de scission perdue à chaque ré-export, un cache de graphe non recalculé rendant
-  invisibles des faits validés. Trouvés parce que les compteurs avant/après divergeaient.
-- **L'ablation initiale ne mesurait rien** : elle retirait deux arêtes en croyant retirer
-  une relation. La conclusion a été **retirée, pas réécrite**.
-- **Deux artefacts de mesure corrigés** avant interprétation : la date fournie dans la
-  question comptée comme non ancrée, et un identifiant en minuscules dans une URL échouant
-  à une comparaison sensible à la casse.
-- **Source inaccessible enregistrée, jamais remplacée** : S27 exigeait une authentification
-  éditeur et n'a délibérément pas été collectée.
+- **Deux sources déclarées à tort inexistantes**, retrouvées manuellement (DIESEC). Une
+  troisième (DTIC) redirigeait bien vers une page de maintenance : **retirée plutôt que
+  fabriquée**. S27, inaccessible sans authentification, est enregistrée comme telle.
+- **~940 clusters validés en bloc** lors d'une première passe : les deux plus grosses
+  « relations » du graphe étaient les copules vides `is` et `has`. Passe reprise, filtre ajouté.
+- **Deux bugs détruisant silencieusement du travail de validation** : décision de scission
+  perdue à chaque ré-export, cache de graphe non recalculé. Trouvés parce que les compteurs
+  avant/après divergeaient.
+- **L'ablation initiale ne mesurait rien** — deux arêtes retirées sur trois. Conclusion
+  **retirée, pas réécrite** ; c'est ce qui a produit le décompte de porteurs.
+- **Deux artefacts de mesure corrigés** avant interprétation (date fournie dans la question
+  comptée comme non ancrée ; identifiant en minuscules dans une URL).
+
+**Écarts de l'outil de démonstration, déclarés plutôt que lissés.** MinIE étant
+indisponible, le graphe de démo est une **projection** du graphe canonique, pas une
+ré-extraction : un rejeu heuristique remplaçait `break` par `exploit` — cluster déjà
+rejeté — et aurait fabriqué un faux signal « lacune » là où il n'y a qu'un changement
+d'extracteur. L'outil appelle l'API OpenRouter alors que les 45 cellules venaient de
+sous-agents isolés : **même template de prompt, transport différent**, et une chaîne de
+modèles gratuits **jamais comparés entre eux** — ses réponses illustrent le mécanisme, elles
+ne sont pas comparables en exactitude à `resultats.md`. Quatre défauts trouvés en le
+construisant : fuite de raisonnement malgré l'instruction d'exclusion, troncature par budget
+de jetons, réponses non conclusives, erreur de syntaxe JS.

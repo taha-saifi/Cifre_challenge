@@ -1,0 +1,4571 @@
+[
+  {
+    "id": "e_fe9851382fa747fc",
+    "label": "0.028930000",
+    "entity_type": "Probability",
+    "aliases": [
+      "0.028930000"
+    ],
+    "source_ids": [
+      "S25"
+    ]
+  },
+  {
+    "id": "e_e9554d05d1121df3",
+    "label": "0.396520000",
+    "entity_type": "Probability",
+    "aliases": [
+      "0.396520000"
+    ],
+    "source_ids": [
+      "S22"
+    ]
+  },
+  {
+    "id": "e_117e5ace0cfe9546",
+    "label": "0.858610000",
+    "entity_type": "Probability",
+    "aliases": [
+      "0.858610000"
+    ],
+    "source_ids": [
+      "S25"
+    ]
+  },
+  {
+    "id": "e_cee83abd40d45a15",
+    "label": "0.985550000",
+    "entity_type": "Probability",
+    "aliases": [
+      "0.985550000"
+    ],
+    "source_ids": [
+      "S22"
+    ]
+  },
+  {
+    "id": "e_37c43c3b40e6e030",
+    "label": "16.0.10417.20175",
+    "entity_type": "Version",
+    "aliases": [
+      "16.0.10417.20175"
+    ],
+    "source_ids": [
+      "S03"
+    ]
+  },
+  {
+    "id": "e_bdf2110783316cf3",
+    "label": "16.0.10417.20198",
+    "entity_type": "Version",
+    "aliases": [
+      "16.0.10417.20198"
+    ],
+    "source_ids": [
+      "S06"
+    ]
+  },
+  {
+    "id": "e_3fee363ad1ab8674",
+    "label": "16.0.19725.20434",
+    "entity_type": "Version",
+    "aliases": [
+      "16.0.19725.20434"
+    ],
+    "source_ids": [
+      "S03"
+    ]
+  },
+  {
+    "id": "e_f7cd0c312803af91",
+    "label": "16.0.19725.20522",
+    "entity_type": "Version",
+    "aliases": [
+      "16.0.19725.20522"
+    ],
+    "source_ids": [
+      "S06"
+    ]
+  },
+  {
+    "id": "e_d7f040ba3bf869d7",
+    "label": "16.0.5561.1001",
+    "entity_type": "Version",
+    "aliases": [
+      "16.0.5561.1001"
+    ],
+    "source_ids": [
+      "S03"
+    ]
+  },
+  {
+    "id": "e_afe039e30fa0c926",
+    "label": "16.0.5565.1001",
+    "entity_type": "Version",
+    "aliases": [
+      "16.0.5565.1001"
+    ],
+    "source_ids": [
+      "S06"
+    ]
+  },
+  {
+    "id": "e_645eabbe5d9d44c4",
+    "label": "2.2",
+    "entity_type": "Metric",
+    "aliases": [
+      "2.2"
+    ],
+    "source_ids": [
+      "S06"
+    ]
+  },
+  {
+    "id": "e_0753c3a6aa4aaffa",
+    "label": "2026-07-14T18:18:15.413",
+    "entity_type": "Date",
+    "aliases": [
+      "2026-07-14T18:18:15.413"
+    ],
+    "source_ids": [
+      "S03"
+    ]
+  },
+  {
+    "id": "e_06e658826ae0c25a",
+    "label": "2026-08-11T17:18:47.377",
+    "entity_type": "Date",
+    "aliases": [
+      "2026-08-11T17:18:47.377"
+    ],
+    "source_ids": [
+      "S06"
+    ]
+  },
+  {
+    "id": "e_7e31cc6e5f37e12c",
+    "label": "2026-08-13T13:38:30.453",
+    "entity_type": "Date",
+    "aliases": [
+      "2026-08-13T13:38:30.453"
+    ],
+    "source_ids": [
+      "S06"
+    ]
+  },
+  {
+    "id": "e_a4bd4e079dfd849d",
+    "label": "2026-08-18",
+    "entity_type": "Date",
+    "aliases": [
+      "2026-08-18"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05"
+    ]
+  },
+  {
+    "id": "e_31b93d3b100a6024",
+    "label": "2026-08-19T04:17:23.540",
+    "entity_type": "Date",
+    "aliases": [
+      "2026-08-19T04:17:23.540"
+    ],
+    "source_ids": [
+      "S03"
+    ]
+  },
+  {
+    "id": "e_c2300a2b8413d008",
+    "label": "2026-08-21",
+    "entity_type": "Date",
+    "aliases": [
+      "2026-08-21"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05"
+    ]
+  },
+  {
+    "id": "e_5059b1d5f2e4e09e",
+    "label": "2026-08-28",
+    "entity_type": "Date",
+    "aliases": [
+      "2026-08-28"
+    ],
+    "source_ids": [
+      "S21",
+      "S22",
+      "S23",
+      "S24",
+      "S25"
+    ]
+  },
+  {
+    "id": "e_a7516f329ac25193",
+    "label": "3.9",
+    "entity_type": "Metric",
+    "aliases": [
+      "3.9"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05"
+    ]
+  },
+  {
+    "id": "e_88dd118770703bf9",
+    "label": "5.2",
+    "entity_type": "Metric",
+    "aliases": [
+      "5.2"
+    ],
+    "source_ids": [
+      "S03"
+    ]
+  },
+  {
+    "id": "e_c67701ed2fd411f4",
+    "label": "5.9",
+    "entity_type": "Metric",
+    "aliases": [
+      "5.9"
+    ],
+    "source_ids": [
+      "S02",
+      "S04",
+      "S05",
+      "S06"
+    ]
+  },
+  {
+    "id": "e_b9dc72ff786e8be4",
+    "label": "8.1",
+    "entity_type": "Metric",
+    "aliases": [
+      "8.1"
+    ],
+    "source_ids": [
+      "S06"
+    ]
+  },
+  {
+    "id": "e_bc88720355327bef",
+    "label": "9.1",
+    "entity_type": "Metric",
+    "aliases": [
+      "9.1"
+    ],
+    "source_ids": [
+      "S03"
+    ]
+  },
+  {
+    "id": "e_473b3e6c2f3a9810",
+    "label": "ASM queries",
+    "entity_type": "Mention",
+    "aliases": [
+      "ASM queries"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_76780e7dcca5f8b4",
+    "label": "Activator.CreateInstance",
+    "entity_type": "Mention",
+    "aliases": [
+      "Activator.CreateInstance"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_fc7dbd581d39a8a8",
+    "label": "After reproducing the authentication",
+    "entity_type": "Mention",
+    "aliases": [
+      "After reproducing the authentication"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_b5b88d276861e80d",
+    "label": "Analyzed",
+    "entity_type": "Value",
+    "aliases": [
+      "Analyzed"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06"
+    ]
+  },
+  {
+    "id": "e_9b28c50be6e7da88",
+    "label": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines",
+    "entity_type": "Mitigation",
+    "aliases": [
+      "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05"
+    ]
+  },
+  {
+    "id": "e_537e6ab50e8f2e44",
+    "label": "Attacker",
+    "entity_type": "Mention",
+    "aliases": [
+      "Attacker"
+    ],
+    "source_ids": [
+      "S08"
+    ]
+  },
+  {
+    "id": "e_ba9a48b261b71bc9",
+    "label": "August 11",
+    "entity_type": "Mention",
+    "aliases": [
+      "August 11"
+    ],
+    "source_ids": [
+      "S10",
+      "S17"
+    ]
+  },
+  {
+    "id": "e_ed277ba657b8bf3e",
+    "label": "August 12",
+    "entity_type": "Mention",
+    "aliases": [
+      "August 12"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_2f4f3cc513cdd23d",
+    "label": "August 2026 CU",
+    "entity_type": "Mention",
+    "aliases": [
+      "August 2026 CU"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_1bb0bfedc1e44926",
+    "label": "Authentication Bypass",
+    "entity_type": "Mention",
+    "aliases": [
+      "Authentication Bypass"
+    ],
+    "source_ids": [
+      "S17"
+    ]
+  },
+  {
+    "id": "e_e56e3d4771ca46d9",
+    "label": "Availability",
+    "entity_type": "Mention",
+    "aliases": [
+      "Availability"
+    ],
+    "source_ids": [
+      "S50",
+      "S51",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_56bee0a7d5aada83",
+    "label": "BCS models",
+    "entity_type": "Mention",
+    "aliases": [
+      "BCS models"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_a27d5a1f835fc3ca",
+    "label": "BDCM",
+    "entity_type": "Mention",
+    "aliases": [
+      "BDCM"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_2279292c015b9359",
+    "label": "BDCM schema",
+    "entity_type": "Mention",
+    "aliases": [
+      "BDCM schema"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_544178d28761a5ab",
+    "label": "Base Score increases",
+    "entity_type": "Mention",
+    "aliases": [
+      "Base Score increases"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42"
+    ]
+  },
+  {
+    "id": "e_6f7684418f21aa11",
+    "label": "CISA",
+    "entity_type": "Organization",
+    "aliases": [
+      "CISA"
+    ],
+    "source_ids": [
+      "S01",
+      "S17",
+      "S18",
+      "S19",
+      "S28",
+      "S40",
+      "S41",
+      "S45",
+      "S53",
+      "S54",
+      "S58"
+    ]
+  },
+  {
+    "id": "e_663ef150532fa83f",
+    "label": "CISA 's addition of CVE-2026-55040 to KEV catalog",
+    "entity_type": "CVE",
+    "aliases": [
+      "CISA 's addition of CVE-2026-55040 to KEV catalog"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_e367164d58bec1f8",
+    "label": "CRITICAL",
+    "entity_type": "Metric",
+    "aliases": [
+      "CRITICAL"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05"
+    ]
+  },
+  {
+    "id": "e_3f3e6e2f2051ffbe",
+    "label": "CRUD operation",
+    "entity_type": "Mention",
+    "aliases": [
+      "CRUD operation"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_8ea2d5e84baadda6",
+    "label": "CVE-2026-55040",
+    "entity_type": "CVE",
+    "aliases": [
+      "CVE-2026-55040",
+      "cve-2026-55040"
+    ],
+    "source_ids": [
+      "S03",
+      "S10",
+      "S17",
+      "S18",
+      "S22",
+      "S39",
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_06ff061380adaa62",
+    "label": "CVE-2026-55040 here",
+    "entity_type": "CVE",
+    "aliases": [
+      "CVE-2026-55040 here"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_fbfb70a00355d68e",
+    "label": "CVE-2026-63520",
+    "entity_type": "CVE",
+    "aliases": [
+      "CVE-2026-63520"
+    ],
+    "source_ids": [
+      "S06",
+      "S09",
+      "S10",
+      "S18",
+      "S25",
+      "S41",
+      "S42"
+    ]
+  },
+  {
+    "id": "e_59fdb74b39b735a4",
+    "label": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "entity_type": "Metric",
+    "aliases": [
+      "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+    ],
+    "source_ids": [
+      "S06"
+    ]
+  },
+  {
+    "id": "e_c6f77698814fa7c8",
+    "label": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "entity_type": "Metric",
+    "aliases": [
+      "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+    ],
+    "source_ids": [
+      "S03"
+    ]
+  },
+  {
+    "id": "e_011ebc7c2419a3db",
+    "label": "CWE-1390",
+    "entity_type": "CWE",
+    "aliases": [
+      "CWE-1390"
+    ],
+    "source_ids": [
+      "S03"
+    ]
+  },
+  {
+    "id": "e_7f3b129867f4d710",
+    "label": "CWE-20",
+    "entity_type": "CWE",
+    "aliases": [
+      "CWE-20"
+    ],
+    "source_ids": [
+      "S06"
+    ]
+  },
+  {
+    "id": "e_1715e8b099b1a820",
+    "label": "Catalog",
+    "entity_type": "Mention",
+    "aliases": [
+      "Catalog"
+    ],
+    "source_ids": [
+      "S01",
+      "S28"
+    ]
+  },
+  {
+    "id": "e_e3239ca4826a4553",
+    "label": "Class",
+    "entity_type": "Mention",
+    "aliases": [
+      "Class"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_dfd2e098a96fa540",
+    "label": "Confidentiality",
+    "entity_type": "Mention",
+    "aliases": [
+      "Confidentiality"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S50",
+      "S51",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_3332b20efeafa93a",
+    "label": "Confidentiality Authentication metrics",
+    "entity_type": "Mention",
+    "aliases": [
+      "Confidentiality Authentication metrics"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42"
+    ]
+  },
+  {
+    "id": "e_4c8d801d68302e5b",
+    "label": "Confidentiality Integrity and Authentication metrics",
+    "entity_type": "Mention",
+    "aliases": [
+      "Confidentiality Integrity and Authentication metrics"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42"
+    ]
+  },
+  {
+    "id": "e_dc1a92928d8fd579",
+    "label": "Customers",
+    "entity_type": "Mention",
+    "aliases": [
+      "Customers"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S41",
+      "S42"
+    ]
+  },
+  {
+    "id": "e_90cde5114c5028dc",
+    "label": "Deserialize method run",
+    "entity_type": "Mention",
+    "aliases": [
+      "Deserialize method run"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_a0a9de6a6e355942",
+    "label": "EPSS observation for CVE-2026-55040 on 2026-08-28",
+    "entity_type": "EPSS observation",
+    "aliases": [
+      "EPSS observation for CVE-2026-55040 on 2026-08-28"
+    ],
+    "source_ids": [
+      "S22"
+    ]
+  },
+  {
+    "id": "e_4e866fe10e574ddd",
+    "label": "EPSS observation for CVE-2026-63520 on 2026-08-28",
+    "entity_type": "EPSS observation",
+    "aliases": [
+      "EPSS observation for CVE-2026-63520 on 2026-08-28"
+    ],
+    "source_ids": [
+      "S25"
+    ]
+  },
+  {
+    "id": "e_dc85d1ac213f8d99",
+    "label": "Exploitation More Likely",
+    "entity_type": "Value",
+    "aliases": [
+      "Exploitation More Likely"
+    ],
+    "source_ids": [
+      "S39",
+      "S42"
+    ]
+  },
+  {
+    "id": "e_d76f0b71c9538da5",
+    "label": "Exploiting vulnerability",
+    "entity_type": "Mention",
+    "aliases": [
+      "Exploiting vulnerability"
+    ],
+    "source_ids": [
+      "S18",
+      "S39"
+    ]
+  },
+  {
+    "id": "e_b08ea7e3d08237a2",
+    "label": "Files",
+    "entity_type": "Mention",
+    "aliases": [
+      "Files"
+    ],
+    "source_ids": [
+      "S10",
+      "S48"
+    ]
+  },
+  {
+    "id": "e_d72508b1b551ad60",
+    "label": "Finder",
+    "entity_type": "Mention",
+    "aliases": [
+      "Finder"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_cde567bbb92959b5",
+    "label": "HIGH",
+    "entity_type": "Metric",
+    "aliases": [
+      "HIGH"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06"
+    ]
+  },
+  {
+    "id": "e_ad16450d4d7b98f8",
+    "label": "IT",
+    "entity_type": "Mention",
+    "aliases": [
+      "IT"
+    ],
+    "source_ids": [
+      "S17",
+      "S51"
+    ]
+  },
+  {
+    "id": "e_cd7624b2d511df5b",
+    "label": "Improper input validation in Microsoft Office SharePoint allows an unauthorized attacker to execute code over a network",
+    "entity_type": "Description",
+    "aliases": [
+      "Improper input validation in Microsoft Office SharePoint allows an unauthorized attacker to execute code over a network"
+    ],
+    "source_ids": [
+      "S06"
+    ]
+  },
+  {
+    "id": "e_ad16450d4d7b98f8",
+    "label": "It",
+    "entity_type": "Mention",
+    "aliases": [
+      "It"
+    ],
+    "source_ids": [
+      "S07",
+      "S12",
+      "S16",
+      "S17",
+      "S19",
+      "S39",
+      "S42",
+      "S48",
+      "S49",
+      "S50",
+      "S51",
+      "S52",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_aebb4773a6d42313",
+    "label": "July 31",
+    "entity_type": "Mention",
+    "aliases": [
+      "July 31"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_c8762019020c6b4f",
+    "label": "Just",
+    "entity_type": "Mention",
+    "aliases": [
+      "Just"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_e369abd4a6e4d1df",
+    "label": "KB5002882 - Microsoft SharePoint Server Subscription Edition (version 16.0.19725.20434)",
+    "entity_type": "Advisory",
+    "aliases": [
+      "KB5002882 - Microsoft SharePoint Server Subscription Edition (version 16.0.19725.20434)"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_21419d779b2f0018",
+    "label": "KB5002883 - Microsoft SharePoint Server 2019 (version 16.0.10417.20175)",
+    "entity_type": "Advisory",
+    "aliases": [
+      "KB5002883 - Microsoft SharePoint Server 2019 (version 16.0.10417.20175)"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_76792c02ecb89b6a",
+    "label": "KB5002891 - Microsoft SharePoint Enterprise Server 2016 (version 16.0.5561.1001)",
+    "entity_type": "Advisory",
+    "aliases": [
+      "KB5002891 - Microsoft SharePoint Enterprise Server 2016 (version 16.0.5561.1001)"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_dd1258719fc5c1bf",
+    "label": "KB5002893 - Microsoft SharePoint Server Subscription Edition (version 16.0.19725.20522)",
+    "entity_type": "Advisory",
+    "aliases": [
+      "KB5002893 - Microsoft SharePoint Server Subscription Edition (version 16.0.19725.20522)"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_a007c4169b3c8f78",
+    "label": "KB5002894 - Microsoft SharePoint Server 2019 (version 16.0.10417.20198)",
+    "entity_type": "Advisory",
+    "aliases": [
+      "KB5002894 - Microsoft SharePoint Server 2019 (version 16.0.10417.20198)"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_eb00efccdb2e7e3b",
+    "label": "KB5002896 - Microsoft SharePoint Server 2019 (version 16.0.10417.20198)",
+    "entity_type": "Advisory",
+    "aliases": [
+      "KB5002896 - Microsoft SharePoint Server 2019 (version 16.0.10417.20198)"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_4972724bb1ff5c11",
+    "label": "KB5002905 - Microsoft SharePoint Enterprise Server 2016 (version 16.0.5565.1001)",
+    "entity_type": "Advisory",
+    "aliases": [
+      "KB5002905 - Microsoft SharePoint Enterprise Server 2016 (version 16.0.5565.1001)"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_6c3736a70215d9db",
+    "label": "KB5002906 - Microsoft SharePoint Enterprise Server 2016 (version 16.0.5565.1001)",
+    "entity_type": "Advisory",
+    "aliases": [
+      "KB5002906 - Microsoft SharePoint Enterprise Server 2016 (version 16.0.5565.1001)"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_e720fdd5cc03ee4b",
+    "label": "KEV Catalog",
+    "entity_type": "Mention",
+    "aliases": [
+      "KEV Catalog"
+    ],
+    "source_ids": [
+      "S01",
+      "S19",
+      "S58"
+    ]
+  },
+  {
+    "id": "e_e720fdd5cc03ee4b",
+    "label": "KEV catalog",
+    "entity_type": "Mention",
+    "aliases": [
+      "KEV catalog"
+    ],
+    "source_ids": [
+      "S28",
+      "S41",
+      "S58"
+    ]
+  },
+  {
+    "id": "e_09fb2b50bcbaadeb",
+    "label": "Known Exploited Vulnerabilities",
+    "entity_type": "Mention",
+    "aliases": [
+      "Known Exploited Vulnerabilities"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_09fb2b50bcbaadeb",
+    "label": "Known exploited vulnerabilities",
+    "entity_type": "Mention",
+    "aliases": [
+      "Known exploited vulnerabilities"
+    ],
+    "source_ids": [
+      "S19"
+    ]
+  },
+  {
+    "id": "e_15cc2127b698fe6f",
+    "label": "LOW",
+    "entity_type": "Metric",
+    "aliases": [
+      "LOW"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05"
+    ]
+  },
+  {
+    "id": "e_422ecd83d8fd548b",
+    "label": "MSRC Security Update Guide",
+    "entity_type": "Mention",
+    "aliases": [
+      "MSRC Security Update Guide"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42"
+    ]
+  },
+  {
+    "id": "e_333716f10a881b90",
+    "label": "Method",
+    "entity_type": "Mention",
+    "aliases": [
+      "Method"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_a1ed22474b9f1586",
+    "label": "MethodInstance",
+    "entity_type": "Mention",
+    "aliases": [
+      "MethodInstance"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_89fcb3c941a9d73f",
+    "label": "MethodInstance inside Deserialize method",
+    "entity_type": "Mention",
+    "aliases": [
+      "MethodInstance inside Deserialize method"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_8e81ce852cc92461",
+    "label": "Microsoft",
+    "entity_type": "Vendor",
+    "aliases": [
+      "Microsoft"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S06"
+    ]
+  },
+  {
+    "id": "e_b3236965bf6a9e18",
+    "label": "Microsoft SharePoint Enterprise Server 2016",
+    "entity_type": "Product",
+    "aliases": [
+      "Microsoft SharePoint Enterprise Server 2016"
+    ],
+    "source_ids": [
+      "S03",
+      "S06"
+    ]
+  },
+  {
+    "id": "e_85ef496ce9d86e9e",
+    "label": "Microsoft SharePoint Server 2019",
+    "entity_type": "Product",
+    "aliases": [
+      "Microsoft SharePoint Server 2019"
+    ],
+    "source_ids": [
+      "S03",
+      "S06"
+    ]
+  },
+  {
+    "id": "e_9b3002789cdfdcb4",
+    "label": "Microsoft SharePoint Server Subscription Edition",
+    "entity_type": "Product",
+    "aliases": [
+      "Microsoft SharePoint Server Subscription Edition"
+    ],
+    "source_ids": [
+      "S03",
+      "S06"
+    ]
+  },
+  {
+    "id": "e_b27373d9a9c4626d",
+    "label": "Microsoft.SharePoint / /",
+    "entity_type": "Organization",
+    "aliases": [
+      "Microsoft.SharePoint / /"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_83af7d9153bfe2b1",
+    "label": "NET assemblies used",
+    "entity_type": "Mention",
+    "aliases": [
+      "NET assemblies used"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_05efe0da27589031",
+    "label": "NET gadget chain",
+    "entity_type": "Mention",
+    "aliases": [
+      "NET gadget chain"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_2d8bb99b976a6c94",
+    "label": "NET type",
+    "entity_type": "Mention",
+    "aliases": [
+      "NET type"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_41e517acc2965ff0",
+    "label": "NET types",
+    "entity_type": "Mention",
+    "aliases": [
+      "NET types"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_b38c00946601f6fc",
+    "label": "NETWORK",
+    "entity_type": "Metric",
+    "aliases": [
+      "NETWORK"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06"
+    ]
+  },
+  {
+    "id": "e_9945c84322dfce3d",
+    "label": "NONE",
+    "entity_type": "Metric",
+    "aliases": [
+      "NONE"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06"
+    ]
+  },
+  {
+    "id": "e_571bc10d653316b8",
+    "label": "Network",
+    "entity_type": "Mention",
+    "aliases": [
+      "Network"
+    ],
+    "source_ids": [
+      "S50",
+      "S51"
+    ]
+  },
+  {
+    "id": "e_35af36d9d0c14b57",
+    "label": "No",
+    "entity_type": "Value",
+    "aliases": [
+      "No"
+    ],
+    "source_ids": [
+      "S39",
+      "S42"
+    ]
+  },
+  {
+    "id": "e_2c7f52ae71073c01",
+    "label": "Our",
+    "entity_type": "Mention",
+    "aliases": [
+      "Our"
+    ],
+    "source_ids": [
+      "S10",
+      "S16",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_00aa21a5955e6baa",
+    "label": "PSIRT teams",
+    "entity_type": "Mention",
+    "aliases": [
+      "PSIRT teams"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_05a359b3cdf8c0f2",
+    "label": "Parameter",
+    "entity_type": "Mention",
+    "aliases": [
+      "Parameter"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_07e3f5f44581db13",
+    "label": "Patching CVE-2026-55040",
+    "entity_type": "CVE",
+    "aliases": [
+      "Patching CVE-2026-55040"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_1b50c049dec6c218",
+    "label": "Privileges",
+    "entity_type": "Mention",
+    "aliases": [
+      "Privileges"
+    ],
+    "source_ids": [
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_bebdf23dc9b18acb",
+    "label": "Proof-of-Concept",
+    "entity_type": "Mention",
+    "aliases": [
+      "Proof-of-Concept"
+    ],
+    "source_ids": [
+      "S51"
+    ]
+  },
+  {
+    "id": "e_78b456fbfbf7a2f4",
+    "label": "RCE",
+    "entity_type": "Mention",
+    "aliases": [
+      "RCE"
+    ],
+    "source_ids": [
+      "S09",
+      "S10"
+    ]
+  },
+  {
+    "id": "e_f537ed160d33281a",
+    "label": "RCE component of exploit chain",
+    "entity_type": "Mention",
+    "aliases": [
+      "RCE component of exploit chain"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_6f86ae8844c3ae87",
+    "label": "Rapid7",
+    "entity_type": "Organization",
+    "aliases": [
+      "Rapid7"
+    ],
+    "source_ids": [
+      "S10",
+      "S18",
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_5c3f7c04d20e26be",
+    "label": "Rapid7 's Stephen Fewer",
+    "entity_type": "Product",
+    "aliases": [
+      "Rapid7 's Stephen Fewer"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_000fbfcccde57e07",
+    "label": "Rapid7 's disclosure for CVE-2026-63520",
+    "entity_type": "CVE",
+    "aliases": [
+      "Rapid7 's disclosure for CVE-2026-63520"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_a46852212f0950f8",
+    "label": "Rapid7 Labs ' continued effort",
+    "entity_type": "Product",
+    "aliases": [
+      "Rapid7 Labs ' continued effort"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_3ad6428f27807baf",
+    "label": "Rapid7 for responsibly reporting issue through coordinated vulnerability disclosure",
+    "entity_type": "Product",
+    "aliases": [
+      "Rapid7 for responsibly reporting issue through coordinated vulnerability disclosure"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_232532f46e5dc355",
+    "label": "Rapid7 requests",
+    "entity_type": "Organization",
+    "aliases": [
+      "Rapid7 requests"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_527c56c7674a26dd",
+    "label": "Remediation Level of vulnerability",
+    "entity_type": "Mention",
+    "aliases": [
+      "Remediation Level of vulnerability"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_791de43fccfd7f2f",
+    "label": "SharePoint",
+    "entity_type": "Mention",
+    "aliases": [
+      "SharePoint"
+    ],
+    "source_ids": [
+      "S08",
+      "S09",
+      "S10",
+      "S17",
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_6203f55027291b6a",
+    "label": "SharePoint RCE chain",
+    "entity_type": "Mention",
+    "aliases": [
+      "SharePoint RCE chain"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_5c98df2cf5f4f642",
+    "label": "SharePoint site user",
+    "entity_type": "Mention",
+    "aliases": [
+      "SharePoint site user"
+    ],
+    "source_ids": [
+      "S18"
+    ]
+  },
+  {
+    "id": "e_e676ec664a2d737c",
+    "label": "Software",
+    "entity_type": "Mention",
+    "aliases": [
+      "Software"
+    ],
+    "source_ids": [
+      "S38"
+    ]
+  },
+  {
+    "id": "e_39103e9a67affb14",
+    "label": "Solutions",
+    "entity_type": "Mention",
+    "aliases": [
+      "Solutions"
+    ],
+    "source_ids": [
+      "S51"
+    ]
+  },
+  {
+    "id": "e_5523a40f730ea7d6",
+    "label": "Start",
+    "entity_type": "Mention",
+    "aliases": [
+      "Start"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_92755c59eb5d2a5b",
+    "label": "Stephen Fewer",
+    "entity_type": "Mention",
+    "aliases": [
+      "Stephen Fewer"
+    ],
+    "source_ids": [
+      "S18",
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_16ea76003b3fd67e",
+    "label": "Successful exploitation",
+    "entity_type": "Mention",
+    "aliases": [
+      "Successful exploitation"
+    ],
+    "source_ids": [
+      "S46"
+    ]
+  },
+  {
+    "id": "e_d10f040039249e07",
+    "label": "Successful exploitation of vulnerability",
+    "entity_type": "Mention",
+    "aliases": [
+      "Successful exploitation of vulnerability"
+    ],
+    "source_ids": [
+      "S51"
+    ]
+  },
+  {
+    "id": "e_556b627b7c43e3ef",
+    "label": "Systems",
+    "entity_type": "Mention",
+    "aliases": [
+      "Systems"
+    ],
+    "source_ids": [
+      "S46"
+    ]
+  },
+  {
+    "id": "e_290d8da624d84fb0",
+    "label": "They",
+    "entity_type": "Mention",
+    "aliases": [
+      "They"
+    ],
+    "source_ids": [
+      "S16",
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_e163460c91338b08",
+    "label": "This",
+    "entity_type": "Mention",
+    "aliases": [
+      "This"
+    ],
+    "source_ids": [
+      "S08",
+      "S09",
+      "S10",
+      "S16",
+      "S17",
+      "S20",
+      "S38",
+      "S41",
+      "S50",
+      "S51",
+      "S52",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_4676679afd99eed0",
+    "label": "This metric",
+    "entity_type": "Mention",
+    "aliases": [
+      "This metric"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_ff0251d80d2ce1d2",
+    "label": "Threat actors",
+    "entity_type": "Mention",
+    "aliases": [
+      "Threat actors"
+    ],
+    "source_ids": [
+      "S16",
+      "S18"
+    ]
+  },
+  {
+    "id": "e_dd588144aef2f2e5",
+    "label": "Threat intelligence firm",
+    "entity_type": "Mention",
+    "aliases": [
+      "Threat intelligence firm"
+    ],
+    "source_ids": [
+      "S18"
+    ]
+  },
+  {
+    "id": "e_6528b59578cac1f9",
+    "label": "TypeDescriptor",
+    "entity_type": "Mention",
+    "aliases": [
+      "TypeDescriptor"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_6eac2ea8015cf2cc",
+    "label": "Types",
+    "entity_type": "Mention",
+    "aliases": [
+      "Types"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_fc2bb3dba4c5b2a3",
+    "label": "UNCHANGED",
+    "entity_type": "Metric",
+    "aliases": [
+      "UNCHANGED"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06"
+    ]
+  },
+  {
+    "id": "e_3cf7563b65c90e7c",
+    "label": "Using LosFormatted TypeConfuseDelegate",
+    "entity_type": "Mention",
+    "aliases": [
+      "Using LosFormatted TypeConfuseDelegate"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_7423a302db281969",
+    "label": "VulnCheck",
+    "entity_type": "Mention",
+    "aliases": [
+      "VulnCheck"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_d25c4acdb633e913",
+    "label": "VulnCheck KEV",
+    "entity_type": "Mention",
+    "aliases": [
+      "VulnCheck KEV"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_eaac4a62d949ee42",
+    "label": "Vulnerability Intelligence",
+    "entity_type": "Mention",
+    "aliases": [
+      "Vulnerability Intelligence"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_be74ffef073dc8d3",
+    "label": "We",
+    "entity_type": "Mention",
+    "aliases": [
+      "We"
+    ],
+    "source_ids": [
+      "S08",
+      "S09",
+      "S10",
+      "S16",
+      "S40",
+      "S41",
+      "S45"
+    ]
+  },
+  {
+    "id": "e_80dc2d137eea46f1",
+    "label": "Weak authentication in Microsoft Office SharePoint",
+    "entity_type": "Product",
+    "aliases": [
+      "Weak authentication in Microsoft Office SharePoint"
+    ],
+    "source_ids": [
+      "S34",
+      "S39"
+    ]
+  },
+  {
+    "id": "e_b9ece713bff4ae86",
+    "label": "Weak authentication in Microsoft Office SharePoint allows an unauthorized attacker to bypass a security feature over a network",
+    "entity_type": "Description",
+    "aliases": [
+      "Weak authentication in Microsoft Office SharePoint allows an unauthorized attacker to bypass a security feature over a network"
+    ],
+    "source_ids": [
+      "S03"
+    ]
+  },
+  {
+    "id": "e_0f586834d567b0aa",
+    "label": "Weekly Initial Access Intelligence exploits",
+    "entity_type": "Mention",
+    "aliases": [
+      "Weekly Initial Access Intelligence exploits"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_d86bf1362e24a929",
+    "label": "When we examined the decompiled",
+    "entity_type": "Mention",
+    "aliases": [
+      "When we examined the decompiled"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_b82be424e7d21f94",
+    "label": "Which",
+    "entity_type": "Mention",
+    "aliases": [
+      "Which"
+    ],
+    "source_ids": [
+      "S08"
+    ]
+  },
+  {
+    "id": "e_5c980ac08d8e06db",
+    "label": "You",
+    "entity_type": "Mention",
+    "aliases": [
+      "You"
+    ],
+    "source_ids": [
+      "S10",
+      "S28",
+      "S48"
+    ]
+  },
+  {
+    "id": "e_5e292bb4b4cb9ad4",
+    "label": "a lack of proper validation in SharePoint's JWT handling allows an unauthenticated attacker to forge JWT tokens and access the web application as a privileged account",
+    "entity_type": "Description",
+    "aliases": [
+      "a lack of proper validation in SharePoint's JWT handling allows an unauthenticated attacker to forge JWT tokens and access the web application as a privileged account"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_d322780a4a3f2bc1",
+    "label": "a minute",
+    "entity_type": "Mention",
+    "aliases": [
+      "a minute"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_9005adc286dd64cf",
+    "label": "above",
+    "entity_type": "Mention",
+    "aliases": [
+      "above"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_bbb2e1c7733acd5c",
+    "label": "accelerated",
+    "entity_type": "Mention",
+    "aliases": [
+      "accelerated"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_b1d71ecff3a572ce",
+    "label": "account running SharePoint Site instance",
+    "entity_type": "Mention",
+    "aliases": [
+      "account running SharePoint Site instance"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_4afa43d7d3737287",
+    "label": "active",
+    "entity_type": "Observation",
+    "aliases": [
+      "active"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05"
+    ]
+  },
+  {
+    "id": "e_d3df058ff984d927",
+    "label": "active directories",
+    "entity_type": "Mention",
+    "aliases": [
+      "active directories"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_2e00ee038b7f0c0d",
+    "label": "active exploitation",
+    "entity_type": "Mention",
+    "aliases": [
+      "active exploitation"
+    ],
+    "source_ids": [
+      "S01",
+      "S28",
+      "S40",
+      "S41",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_e088c37503846acb",
+    "label": "additional context",
+    "entity_type": "Mention",
+    "aliases": [
+      "additional context"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_2b8f65d605e5dd2c",
+    "label": "additional vulnerabilities within authenticated attack surface of target site",
+    "entity_type": "Mention",
+    "aliases": [
+      "additional vulnerabilities within authenticated attack surface of target site"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_3b3d0e812f84d35c",
+    "label": "administrator",
+    "entity_type": "Mention",
+    "aliases": [
+      "administrator"
+    ],
+    "source_ids": [
+      "S18",
+      "S51"
+    ]
+  },
+  {
+    "id": "e_859fc6e159badad8",
+    "label": "advance user",
+    "entity_type": "Mention",
+    "aliases": [
+      "advance user"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_4d3493bc35552b87",
+    "label": "agent",
+    "entity_type": "Mention",
+    "aliases": [
+      "agent"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_0b9e91684b381b29",
+    "label": "agentic work",
+    "entity_type": "Mention",
+    "aliases": [
+      "agentic work"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_5e5c40ee6210030c",
+    "label": "anonymous connection",
+    "entity_type": "Mention",
+    "aliases": [
+      "anonymous connection"
+    ],
+    "source_ids": [
+      "S39"
+    ]
+  },
+  {
+    "id": "e_d2b630e61129d09b",
+    "label": "any/all files",
+    "entity_type": "Mention",
+    "aliases": [
+      "any/all files"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_c5571af9c192ceba",
+    "label": "application in useful ways such as more specifically via BDC to achieve RCE",
+    "entity_type": "Mention",
+    "aliases": [
+      "application in useful ways such as more specifically via BDC to achieve RCE"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_0a5137e8983f8adf",
+    "label": "application in useful ways such as to make changes to application via Business Connectivity Services",
+    "entity_type": "Mention",
+    "aliases": [
+      "application in useful ways such as to make changes to application via Business Connectivity Services"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_c5113045e509f6bd",
+    "label": "are using Rapid7 POC",
+    "entity_type": "Product",
+    "aliases": [
+      "are using Rapid7 POC"
+    ],
+    "source_ids": [
+      "S18"
+    ]
+  },
+  {
+    "id": "e_1e5d732d0d50eff6",
+    "label": "are using Rapid7 POC for CVE-2026-55040 against SharePoint honeypots",
+    "entity_type": "CVE",
+    "aliases": [
+      "are using Rapid7 POC for CVE-2026-55040 against SharePoint honeypots"
+    ],
+    "source_ids": [
+      "S18"
+    ]
+  },
+  {
+    "id": "e_69dc0e72f1389d3f",
+    "label": "are using now Rapid7 POC",
+    "entity_type": "Product",
+    "aliases": [
+      "are using now Rapid7 POC"
+    ],
+    "source_ids": [
+      "S18"
+    ]
+  },
+  {
+    "id": "e_105e1f9e7fc2fc5b",
+    "label": "argument for return type for Method",
+    "entity_type": "Mention",
+    "aliases": [
+      "argument for return type for Method"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_412e09614a52166e",
+    "label": "arguments",
+    "entity_type": "Mention",
+    "aliases": [
+      "arguments"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_9bf6ead54114b2ce",
+    "label": "attack",
+    "entity_type": "Mention",
+    "aliases": [
+      "attack"
+    ],
+    "source_ids": [
+      "S07",
+      "S16",
+      "S39",
+      "S42",
+      "S50",
+      "S51",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_537e6ab50e8f2e44",
+    "label": "attacker",
+    "entity_type": "Mention",
+    "aliases": [
+      "attacker"
+    ],
+    "source_ids": [
+      "S07",
+      "S08",
+      "S09",
+      "S11",
+      "S12",
+      "S16",
+      "S17",
+      "S18",
+      "S39",
+      "S40",
+      "S42",
+      "S46",
+      "S50",
+      "S51",
+      "S52",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_17d9e7d2f2eada95",
+    "label": "attacker 's arbitrary code",
+    "entity_type": "Mention",
+    "aliases": [
+      "attacker 's arbitrary code"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_6222cbe778251f55",
+    "label": "attacker 's control",
+    "entity_type": "Mention",
+    "aliases": [
+      "attacker 's control"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_22e800482ee5b5fd",
+    "label": "attacks",
+    "entity_type": "Mention",
+    "aliases": [
+      "attacks"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S45",
+      "S47",
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_98419d6c0bf73fb9",
+    "label": "authentication",
+    "entity_type": "Mention",
+    "aliases": [
+      "authentication"
+    ],
+    "source_ids": [
+      "S17",
+      "S18",
+      "S39",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_1bb0bfedc1e44926",
+    "label": "authentication bypass",
+    "entity_type": "Mention",
+    "aliases": [
+      "authentication bypass"
+    ],
+    "source_ids": [
+      "S08",
+      "S09",
+      "S40"
+    ]
+  },
+  {
+    "id": "e_056762b3f0d13b70",
+    "label": "authentication bypass vulnerability",
+    "entity_type": "Mention",
+    "aliases": [
+      "authentication bypass vulnerability"
+    ],
+    "source_ids": [
+      "S08",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_420d83e7a647c63c",
+    "label": "automatically moment",
+    "entity_type": "Mention",
+    "aliases": [
+      "automatically moment"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_e56e3d4771ca46d9",
+    "label": "availability",
+    "entity_type": "Mention",
+    "aliases": [
+      "availability"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S50",
+      "S51",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_acd4d41d34c97940",
+    "label": "being added to CISA KEV on August 18",
+    "entity_type": "Product",
+    "aliases": [
+      "being added to CISA KEV on August 18"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_01326512763d0754",
+    "label": "blog",
+    "entity_type": "Mention",
+    "aliases": [
+      "blog"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_22d8a27b5ffe2dfd",
+    "label": "both",
+    "entity_type": "Mention",
+    "aliases": [
+      "both"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S51"
+    ]
+  },
+  {
+    "id": "e_0ffe14191fe8d97f",
+    "label": "bug",
+    "entity_type": "Mention",
+    "aliases": [
+      "bug"
+    ],
+    "source_ids": [
+      "S18"
+    ]
+  },
+  {
+    "id": "e_fabb36a448bb30b7",
+    "label": "but the",
+    "entity_type": "Mention",
+    "aliases": [
+      "but the"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_41977bbb956fd210",
+    "label": "case",
+    "entity_type": "Mention",
+    "aliases": [
+      "case"
+    ],
+    "source_ids": [
+      "S07",
+      "S10",
+      "S39",
+      "S42",
+      "S51"
+    ]
+  },
+  {
+    "id": "e_1715e8b099b1a820",
+    "label": "catalog",
+    "entity_type": "Mention",
+    "aliases": [
+      "catalog"
+    ],
+    "source_ids": [
+      "S01",
+      "S28",
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_cf4606d100a09d0c",
+    "label": "certainty",
+    "entity_type": "Mention",
+    "aliases": [
+      "certainty"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_e3239ca4826a4553",
+    "label": "class",
+    "entity_type": "Mention",
+    "aliases": [
+      "class"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_6902a7680a7319ed",
+    "label": "cloud infrastructure",
+    "entity_type": "Mention",
+    "aliases": [
+      "cloud infrastructure"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_2d3885aa4dbbb2cf",
+    "label": "code, we found that the new validation function was being called in at least 16 locations, which gave us a reasonable roadmap for further investigation since they are all likely gu",
+    "entity_type": "Mention",
+    "aliases": [
+      "code, we found that the new validation function was being called in at least 16 locations, which gave us a reasonable roadmap for further investigation since they are all likely gu"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_7c9c1b4b7f88a6e8",
+    "label": "collection",
+    "entity_type": "Mention",
+    "aliases": [
+      "collection"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_2aed1b71146e3126",
+    "label": "committed to surfacing critical intelligence on vulnerability exploitation",
+    "entity_type": "Mention",
+    "aliases": [
+      "committed to surfacing critical intelligence on vulnerability exploitation"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_a32995c20401aafe",
+    "label": "complete RCE",
+    "entity_type": "Mention",
+    "aliases": [
+      "complete RCE"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_8ba6761f97d67f7c",
+    "label": "complex",
+    "entity_type": "Mention",
+    "aliases": [
+      "complex"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_218a3c77a2b65233",
+    "label": "concept",
+    "entity_type": "Mention",
+    "aliases": [
+      "concept"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_dfd2e098a96fa540",
+    "label": "confidentiality",
+    "entity_type": "Mention",
+    "aliases": [
+      "confidentiality"
+    ],
+    "source_ids": [
+      "S39"
+    ]
+  },
+  {
+    "id": "e_a3f531ace96a3b4e",
+    "label": "convention",
+    "entity_type": "Mention",
+    "aliases": [
+      "convention"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_15c6d0b1e60c9c9a",
+    "label": "coordinated vulnerability disclosure",
+    "entity_type": "Mention",
+    "aliases": [
+      "coordinated vulnerability disclosure"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42"
+    ]
+  },
+  {
+    "id": "e_4881fab2f9c9099c",
+    "label": "cs",
+    "entity_type": "Mention",
+    "aliases": [
+      "cs"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_dc1a92928d8fd579",
+    "label": "customers",
+    "entity_type": "Mention",
+    "aliases": [
+      "customers"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S45"
+    ]
+  },
+  {
+    "id": "e_a3d4b867b8260945",
+    "label": "dataset",
+    "entity_type": "Mention",
+    "aliases": [
+      "dataset"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_a20dd191299ea97d",
+    "label": "deeply",
+    "entity_type": "Mention",
+    "aliases": [
+      "deeply"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_162dedc06540de52",
+    "label": "details",
+    "entity_type": "Mention",
+    "aliases": [
+      "details"
+    ],
+    "source_ids": [
+      "S41",
+      "S51"
+    ]
+  },
+  {
+    "id": "e_1613da5b179dd0f4",
+    "label": "detections",
+    "entity_type": "Mention",
+    "aliases": [
+      "detections"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_2558f91aff09f210",
+    "label": "different route",
+    "entity_type": "Mention",
+    "aliases": [
+      "different route"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_10c0749f7978a237",
+    "label": "digest value",
+    "entity_type": "Mention",
+    "aliases": [
+      "digest value"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_1cef96ef35b5e3d6",
+    "label": "disclosure blog",
+    "entity_type": "Mention",
+    "aliases": [
+      "disclosure blog"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_db0bf8cc9271eb72",
+    "label": "disclosure schedule",
+    "entity_type": "Mention",
+    "aliases": [
+      "disclosure schedule"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_5488ed963ae57722",
+    "label": "disclosure the same day",
+    "entity_type": "Mention",
+    "aliases": [
+      "disclosure the same day"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_d37e8eb9896152d1",
+    "label": "disk space",
+    "entity_type": "Mention",
+    "aliases": [
+      "disk space"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_77070ae0c105017e",
+    "label": "document management platform",
+    "entity_type": "Mention",
+    "aliases": [
+      "document management platform"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_534c943c598a31b3",
+    "label": "earlier",
+    "entity_type": "Mention",
+    "aliases": [
+      "earlier"
+    ],
+    "source_ids": [
+      "S10",
+      "S40",
+      "S41",
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_84268809b8f931f7",
+    "label": "efforts of those in security community",
+    "entity_type": "Mention",
+    "aliases": [
+      "efforts of those in security community"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42"
+    ]
+  },
+  {
+    "id": "e_439cc8762872a084",
+    "label": "encrypted PCAPs",
+    "entity_type": "Mention",
+    "aliases": [
+      "encrypted PCAPs"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_fdaf805853b98a7b",
+    "label": "engineering",
+    "entity_type": "Mention",
+    "aliases": [
+      "engineering"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_ea78c12aa97286d0",
+    "label": "entire blog post about intricacies of BDC spec",
+    "entity_type": "Mention",
+    "aliases": [
+      "entire blog post about intricacies of BDC spec"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_27db1066555565aa",
+    "label": "entity 's rows method",
+    "entity_type": "Mention",
+    "aliases": [
+      "entity 's rows method"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_106a49c8576bc28c",
+    "label": "environment",
+    "entity_type": "Mention",
+    "aliases": [
+      "environment"
+    ],
+    "source_ids": [
+      "S17",
+      "S42",
+      "S46",
+      "S51"
+    ]
+  },
+  {
+    "id": "e_83f09256e9e71bb6",
+    "label": "executing attacker-controlled OS command",
+    "entity_type": "Mention",
+    "aliases": [
+      "executing attacker-controlled OS command"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_2f2483ca9ac5ab40",
+    "label": "exploit",
+    "entity_type": "Mention",
+    "aliases": [
+      "exploit"
+    ],
+    "source_ids": [
+      "S10",
+      "S17",
+      "S19",
+      "S51",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_79e97526fe049cc1",
+    "label": "exploit chain",
+    "entity_type": "Mention",
+    "aliases": [
+      "exploit chain"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_7b826dc049dd54e3",
+    "label": "exploitation in-the-wild publication of details",
+    "entity_type": "Mention",
+    "aliases": [
+      "exploitation in-the-wild publication of details"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_fc0ddeea3a1544b3",
+    "label": "exploitation third-party publication of details",
+    "entity_type": "Mention",
+    "aliases": [
+      "exploitation third-party publication of details"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_2342efcf51e3086d",
+    "label": "exploiting critical Microsoft SharePoint flaw",
+    "entity_type": "Product",
+    "aliases": [
+      "exploiting critical Microsoft SharePoint flaw"
+    ],
+    "source_ids": [
+      "S18"
+    ]
+  },
+  {
+    "id": "e_d76f0b71c9538da5",
+    "label": "exploiting vulnerability",
+    "entity_type": "Mention",
+    "aliases": [
+      "exploiting vulnerability"
+    ],
+    "source_ids": [
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_f0e3798d5b1a489d",
+    "label": "exposure to authentication bypass vulnerability with authenticated vulnerability checks available in July 15 content release",
+    "entity_type": "Mention",
+    "aliases": [
+      "exposure to authentication bypass vulnerability with authenticated vulnerability checks available in July 15 content release"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_37381ef939a12f17",
+    "label": "familiar",
+    "entity_type": "Mention",
+    "aliases": [
+      "familiar"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_b08ea7e3d08237a2",
+    "label": "files",
+    "entity_type": "Mention",
+    "aliases": [
+      "files"
+    ],
+    "source_ids": [
+      "S18",
+      "S39",
+      "S51"
+    ]
+  },
+  {
+    "id": "e_a568574ebde0ab4b",
+    "label": "final",
+    "entity_type": "Mention",
+    "aliases": [
+      "final"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_855a19bc23e9e737",
+    "label": "flaw",
+    "entity_type": "Mention",
+    "aliases": [
+      "flaw"
+    ],
+    "source_ids": [
+      "S10",
+      "S11"
+    ]
+  },
+  {
+    "id": "e_543de26306ffec16",
+    "label": "following statement",
+    "entity_type": "Mention",
+    "aliases": [
+      "following statement"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_c8dfaccf2a582233",
+    "label": "forged JWT",
+    "entity_type": "Mention",
+    "aliases": [
+      "forged JWT"
+    ],
+    "source_ids": [
+      "S08",
+      "S10"
+    ]
+  },
+  {
+    "id": "e_a8d6efd59893e0d8",
+    "label": "fully authenticated deserialization",
+    "entity_type": "Mention",
+    "aliases": [
+      "fully authenticated deserialization"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_9bbe75e9c910e585",
+    "label": "function signature",
+    "entity_type": "Mention",
+    "aliases": [
+      "function signature"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_211561b194ad87a9",
+    "label": "here",
+    "entity_type": "Mention",
+    "aliases": [
+      "here"
+    ],
+    "source_ids": [
+      "S10",
+      "S16",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_673011daa181069a",
+    "label": "hey",
+    "entity_type": "Mention",
+    "aliases": [
+      "hey"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_ee5239d4dbedaa3e",
+    "label": "high-impact",
+    "entity_type": "Mention",
+    "aliases": [
+      "high-impact"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_f542cc4e5d0f0f20",
+    "label": "high-precision operations",
+    "entity_type": "Mention",
+    "aliases": [
+      "high-precision operations"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_49b527f23c5de11a",
+    "label": "https://github.com/sfewer-r7/CVE-2026-55040",
+    "entity_type": "URL",
+    "aliases": [
+      "https://github.com/sfewer-r7/CVE-2026-55040"
+    ],
+    "source_ids": [
+      "S03"
+    ]
+  },
+  {
+    "id": "e_b0570101be2c1983",
+    "label": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55040",
+    "entity_type": "URL",
+    "aliases": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-55040"
+    ],
+    "source_ids": [
+      "S03"
+    ]
+  },
+  {
+    "id": "e_7d08fb4bb4c2e039",
+    "label": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63520",
+    "entity_type": "URL",
+    "aliases": [
+      "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-63520"
+    ],
+    "source_ids": [
+      "S06"
+    ]
+  },
+  {
+    "id": "e_e7ed7092aca33108",
+    "label": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-55040",
+    "entity_type": "URL",
+    "aliases": [
+      "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-55040"
+    ],
+    "source_ids": [
+      "S03"
+    ]
+  },
+  {
+    "id": "e_c8d1c1159281ae50",
+    "label": "https://www.rapid7.com/blog/post/ra-microsoft-sharepoint-jwt-token-authentication-bypass-cve-2026-55040/",
+    "entity_type": "URL",
+    "aliases": [
+      "https://www.rapid7.com/blog/post/ra-microsoft-sharepoint-jwt-token-authentication-bypass-cve-2026-55040/"
+    ],
+    "source_ids": [
+      "S03"
+    ]
+  },
+  {
+    "id": "e_332fd4a216e1c401",
+    "label": "impact to availability of impacted component",
+    "entity_type": "Mention",
+    "aliases": [
+      "impact to availability of impacted component"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_26e0466f06957bd3",
+    "label": "impacted component",
+    "entity_type": "Mention",
+    "aliases": [
+      "impacted component"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_2aeff3eb69ca7874",
+    "label": "impersonation",
+    "entity_type": "Mention",
+    "aliases": [
+      "impersonation"
+    ],
+    "source_ids": [
+      "S18",
+      "S39"
+    ]
+  },
+  {
+    "id": "e_e6d6e7369c1cdeb1",
+    "label": "implementing 2023 flaw as part of CVE-2023-29357 RCE chain",
+    "entity_type": "CVE",
+    "aliases": [
+      "implementing 2023 flaw as part of CVE-2023-29357 RCE chain"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_759453b03e46f7eb",
+    "label": "in our own SharePoint environment, our team diffed KB5002893 to see what changed",
+    "entity_type": "Patch/update",
+    "aliases": [
+      "in our own SharePoint environment, our team diffed KB5002893 to see what changed"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_002d4ae604c02a2b",
+    "label": "in-depth technical analysis of flaw",
+    "entity_type": "Mention",
+    "aliases": [
+      "in-depth technical analysis of flaw"
+    ],
+    "source_ids": [
+      "S18"
+    ]
+  },
+  {
+    "id": "e_f4c7a51b3f72d902",
+    "label": "infinite efficiency",
+    "entity_type": "Mention",
+    "aliases": [
+      "infinite efficiency"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_2079f7f0585a6a0c",
+    "label": "information",
+    "entity_type": "Mention",
+    "aliases": [
+      "information"
+    ],
+    "source_ids": [
+      "S07",
+      "S14",
+      "S19",
+      "S38",
+      "S39",
+      "S40",
+      "S41",
+      "S42",
+      "S50",
+      "S51",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_eb1797b298a230c0",
+    "label": "information presents a direct, serious impact",
+    "entity_type": "Mention",
+    "aliases": [
+      "information presents a direct, serious impact"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_841d5cae83210039",
+    "label": "information resources",
+    "entity_type": "Mention",
+    "aliases": [
+      "information resources"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_98c110f1e21aa4eb",
+    "label": "initially published",
+    "entity_type": "Mention",
+    "aliases": [
+      "initially published"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_e6e90eb94c09e808",
+    "label": "internal users",
+    "entity_type": "Mention",
+    "aliases": [
+      "internal users"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_ad16450d4d7b98f8",
+    "label": "it",
+    "entity_type": "Mention",
+    "aliases": [
+      "it"
+    ],
+    "source_ids": [
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S16",
+      "S17",
+      "S19",
+      "S40",
+      "S41",
+      "S44",
+      "S45",
+      "S46",
+      "S48",
+      "S50",
+      "S51",
+      "S52",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_da5a25a5e9f92b5a",
+    "label": "it for us just by querying list",
+    "entity_type": "Mention",
+    "aliases": [
+      "it for us just by querying list"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_cc8e0f2c7e3a5b7e",
+    "label": "last request",
+    "entity_type": "Mention",
+    "aliases": [
+      "last request"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_077bb703d76c8bd6",
+    "label": "layout more importantly",
+    "entity_type": "Mention",
+    "aliases": [
+      "layout more importantly"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_3655237b10b88be1",
+    "label": "level of technical knowledge available to would-be attackers",
+    "entity_type": "Mention",
+    "aliases": [
+      "level of technical knowledge available to would-be attackers"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_129849b27c5af74b",
+    "label": "leveraging unique dataset",
+    "entity_type": "Mention",
+    "aliases": [
+      "leveraging unique dataset"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_de19160fd565574b",
+    "label": "leveraging unique dataset to support practitioner community",
+    "entity_type": "Mention",
+    "aliases": [
+      "leveraging unique dataset to support practitioner community"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_f4957eaadf1d8c5f",
+    "label": "list",
+    "entity_type": "Mention",
+    "aliases": [
+      "list"
+    ],
+    "source_ids": [
+      "S10",
+      "S19",
+      "S44"
+    ]
+  },
+  {
+    "id": "e_6cb7ff05f23b7da1",
+    "label": "logical code object",
+    "entity_type": "Mention",
+    "aliases": [
+      "logical code object"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_af26fda364ba9e72",
+    "label": "look",
+    "entity_type": "Mention",
+    "aliases": [
+      "look"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_af2c306df490a529",
+    "label": "manual code review",
+    "entity_type": "Mention",
+    "aliases": [
+      "manual code review"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_9b633395bd776e65",
+    "label": "manual source code review",
+    "entity_type": "Mention",
+    "aliases": [
+      "manual source code review"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_e0ffef6d40d805ca",
+    "label": "medium severity",
+    "entity_type": "Mention",
+    "aliases": [
+      "medium severity"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_333716f10a881b90",
+    "label": "method",
+    "entity_type": "Mention",
+    "aliases": [
+      "method"
+    ],
+    "source_ids": [
+      "S08",
+      "S09",
+      "S10",
+      "S50"
+    ]
+  },
+  {
+    "id": "e_2bf53cd61f9bd4ff",
+    "label": "model",
+    "entity_type": "Mention",
+    "aliases": [
+      "model"
+    ],
+    "source_ids": [
+      "S10",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_7e30da1dff7161e8",
+    "label": "moment",
+    "entity_type": "Mention",
+    "aliases": [
+      "moment"
+    ],
+    "source_ids": [
+      "S10",
+      "S17"
+    ]
+  },
+  {
+    "id": "e_63682437049c7097",
+    "label": "more specifically via BDC",
+    "entity_type": "Mention",
+    "aliases": [
+      "more specifically via BDC"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_571bc10d653316b8",
+    "label": "network",
+    "entity_type": "Mention",
+    "aliases": [
+      "network"
+    ],
+    "source_ids": [
+      "S20",
+      "S30",
+      "S33",
+      "S34",
+      "S35",
+      "S39",
+      "S42",
+      "S45",
+      "S50",
+      "S51",
+      "S52",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_4058f076b2d4719d",
+    "label": "network bandwidth",
+    "entity_type": "Mention",
+    "aliases": [
+      "network bandwidth"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_725367bf832fa264",
+    "label": "new function",
+    "entity_type": "Mention",
+    "aliases": [
+      "new function"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_e4eb28530b63ceef",
+    "label": "no",
+    "entity_type": "Observation",
+    "aliases": [
+      "no"
+    ],
+    "source_ids": [
+      "S06"
+    ]
+  },
+  {
+    "id": "e_e16ded5c4085232c",
+    "label": "none",
+    "entity_type": "Observation",
+    "aliases": [
+      "none"
+    ],
+    "source_ids": [
+      "S06"
+    ]
+  },
+  {
+    "id": "e_56cf49120d554e7e",
+    "label": "object",
+    "entity_type": "Mention",
+    "aliases": [
+      "object"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_3b1f2c268c6ccf12",
+    "label": "official SharePoint GitHub docs",
+    "entity_type": "Mention",
+    "aliases": [
+      "official SharePoint GitHub docs"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_34cf20183f45e324",
+    "label": "official patch",
+    "entity_type": "Mention",
+    "aliases": [
+      "official patch"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_935bce6bb24baa30",
+    "label": "only argument",
+    "entity_type": "Mention",
+    "aliases": [
+      "only argument"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_9406eba23a6a9858",
+    "label": "operations",
+    "entity_type": "Mention",
+    "aliases": [
+      "operations"
+    ],
+    "source_ids": [
+      "S19",
+      "S40"
+    ]
+  },
+  {
+    "id": "e_2c7f52ae71073c01",
+    "label": "our",
+    "entity_type": "Mention",
+    "aliases": [
+      "our"
+    ],
+    "source_ids": [
+      "S09",
+      "S10",
+      "S16",
+      "S19"
+    ]
+  },
+  {
+    "id": "e_85c4c9586691083e",
+    "label": "overload",
+    "entity_type": "Mention",
+    "aliases": [
+      "overload"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_c66500e1c2101a13",
+    "label": "pairing with CVE-2026-55040 authentication bypass",
+    "entity_type": "CVE",
+    "aliases": [
+      "pairing with CVE-2026-55040 authentication bypass"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_05a359b3cdf8c0f2",
+    "label": "parameter",
+    "entity_type": "Mention",
+    "aliases": [
+      "parameter"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_04e845d79fb1f65f",
+    "label": "parent-child hierarchy",
+    "entity_type": "Mention",
+    "aliases": [
+      "parent-child hierarchy"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_71ed5a488ff96e7e",
+    "label": "potentially unsafe type usage",
+    "entity_type": "Mention",
+    "aliases": [
+      "potentially unsafe type usage"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_708e47675118392e",
+    "label": "practitioner community",
+    "entity_type": "Mention",
+    "aliases": [
+      "practitioner community"
+    ],
+    "source_ids": [
+      "S10",
+      "S47"
+    ]
+  },
+  {
+    "id": "e_d9ee29dced85e1d9",
+    "label": "prerequisite",
+    "entity_type": "Mention",
+    "aliases": [
+      "prerequisite"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_667187e9699b6e23",
+    "label": "previous request",
+    "entity_type": "Mention",
+    "aliases": [
+      "previous request"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_904da0b4f3960fb3",
+    "label": "prioritization",
+    "entity_type": "Mention",
+    "aliases": [
+      "prioritization"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S50",
+      "S51",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_1b50c049dec6c218",
+    "label": "privileges",
+    "entity_type": "Mention",
+    "aliases": [
+      "privileges"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S45",
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_bf0bee0969a73481",
+    "label": "processor cycles",
+    "entity_type": "Mention",
+    "aliases": [
+      "processor cycles"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_97beff3c788acc24",
+    "label": "product managers",
+    "entity_type": "Mention",
+    "aliases": [
+      "product managers"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_bebdf23dc9b18acb",
+    "label": "proof-of-concept",
+    "entity_type": "Mention",
+    "aliases": [
+      "proof-of-concept"
+    ],
+    "source_ids": [
+      "S17",
+      "S18"
+    ]
+  },
+  {
+    "id": "e_60027c99540d3940",
+    "label": "proviso",
+    "entity_type": "Mention",
+    "aliases": [
+      "proviso"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_c2c7b769717ba7d1",
+    "label": "recent Pwn2Own Berlin hacking competition",
+    "entity_type": "Mention",
+    "aliases": [
+      "recent Pwn2Own Berlin hacking competition"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_3fba628e91443cb6",
+    "label": "relative to impacted component",
+    "entity_type": "Mention",
+    "aliases": [
+      "relative to impacted component"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42"
+    ]
+  },
+  {
+    "id": "e_edf56b768b8904e2",
+    "label": "remediation",
+    "entity_type": "Mention",
+    "aliases": [
+      "remediation"
+    ],
+    "source_ids": [
+      "S07",
+      "S19",
+      "S39",
+      "S42",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_c39c1bc3165ef1ae",
+    "label": "remote unauthenticated attacker can leverage CVE-2026-55040 perform",
+    "entity_type": "CVE",
+    "aliases": [
+      "remote unauthenticated attacker can leverage CVE-2026-55040 perform"
+    ],
+    "source_ids": [
+      "S18"
+    ]
+  },
+  {
+    "id": "e_9fd153b4fabae734",
+    "label": "remote unauthenticated attacker can leverage CVE-2026-55040 perform operations as SharePoint site user",
+    "entity_type": "CVE",
+    "aliases": [
+      "remote unauthenticated attacker can leverage CVE-2026-55040 perform operations as SharePoint site user"
+    ],
+    "source_ids": [
+      "S18"
+    ]
+  },
+  {
+    "id": "e_c6709c4d1aa6b953",
+    "label": "remote unauthenticated attacker can leverage CVE-2026-55040 perform operations as administrator",
+    "entity_type": "CVE",
+    "aliases": [
+      "remote unauthenticated attacker can leverage CVE-2026-55040 perform operations as administrator"
+    ],
+    "source_ids": [
+      "S18"
+    ]
+  },
+  {
+    "id": "e_76a5b17823bcf140",
+    "label": "request",
+    "entity_type": "Mention",
+    "aliases": [
+      "request"
+    ],
+    "source_ids": [
+      "S10",
+      "S16",
+      "S48"
+    ]
+  },
+  {
+    "id": "e_f96a1cdeac1045fc",
+    "label": "requests",
+    "entity_type": "Mention",
+    "aliases": [
+      "requests"
+    ],
+    "source_ids": [
+      "S10",
+      "S16",
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_952e27bcc860be0b",
+    "label": "requests supporting information",
+    "entity_type": "Mention",
+    "aliases": [
+      "requests supporting information"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_4497e5a74874f13b",
+    "label": "requiring precise conditions for attacker to reliably exploit vulnerability",
+    "entity_type": "Mention",
+    "aliases": [
+      "requiring precise conditions for attacker to reliably exploit vulnerability"
+    ],
+    "source_ids": [
+      "S42"
+    ]
+  },
+  {
+    "id": "e_4feadd173f2fc2de",
+    "label": "requiring significant effort for attacker to reliably exploit vulnerability",
+    "entity_type": "Mention",
+    "aliases": [
+      "requiring significant effort for attacker to reliably exploit vulnerability"
+    ],
+    "source_ids": [
+      "S42"
+    ]
+  },
+  {
+    "id": "e_c4631f903e1159e5",
+    "label": "resources",
+    "entity_type": "Mention",
+    "aliases": [
+      "resources"
+    ],
+    "source_ids": [
+      "S07",
+      "S17",
+      "S39",
+      "S42",
+      "S50",
+      "S51"
+    ]
+  },
+  {
+    "id": "e_61c59219f51b481d",
+    "label": "return value",
+    "entity_type": "Mention",
+    "aliases": [
+      "return value"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_cbbe081eadcf9d6d",
+    "label": "reverse engineering steering to model",
+    "entity_type": "Mention",
+    "aliases": [
+      "reverse engineering steering to model"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_c7bbd6f495adf548",
+    "label": "same security authority",
+    "entity_type": "Mention",
+    "aliases": [
+      "same security authority"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42"
+    ]
+  },
+  {
+    "id": "e_fd64a59f9817f7d1",
+    "label": "secure@microsoft.com",
+    "entity_type": "Value",
+    "aliases": [
+      "secure@microsoft.com"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S06"
+    ]
+  },
+  {
+    "id": "e_d098afd82f814fa4",
+    "label": "similar structure to CVE-2026-63520",
+    "entity_type": "CVE",
+    "aliases": [
+      "similar structure to CVE-2026-63520"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_1e808dd568a942dd",
+    "label": "so",
+    "entity_type": "Mention",
+    "aliases": [
+      "so"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42"
+    ]
+  },
+  {
+    "id": "e_e676ec664a2d737c",
+    "label": "software",
+    "entity_type": "Mention",
+    "aliases": [
+      "software"
+    ],
+    "source_ids": [
+      "S19",
+      "S42",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_c1b8569aebaf6353",
+    "label": "software component due to successfully exploited vulnerability",
+    "entity_type": "Mention",
+    "aliases": [
+      "software component due to successfully exploited vulnerability"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_39103e9a67affb14",
+    "label": "solutions",
+    "entity_type": "Mention",
+    "aliases": [
+      "solutions"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_aa82b47092bf3bff",
+    "label": "someone",
+    "entity_type": "Mention",
+    "aliases": [
+      "someone"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_ea8cac09369b3110",
+    "label": "something like get specific value from database",
+    "entity_type": "Mention",
+    "aliases": [
+      "something like get specific value from database"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_f029fff869749ffb",
+    "label": "sprints",
+    "entity_type": "Mention",
+    "aliases": [
+      "sprints"
+    ],
+    "source_ids": [
+      "S40"
+    ]
+  },
+  {
+    "id": "e_855cf0240c68c215",
+    "label": "static method",
+    "entity_type": "Mention",
+    "aliases": [
+      "static method"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_60992c6628dd7335",
+    "label": "submitting BDC",
+    "entity_type": "Mention",
+    "aliases": [
+      "submitting BDC"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_16ea76003b3fd67e",
+    "label": "successful exploitation",
+    "entity_type": "Mention",
+    "aliases": [
+      "successful exploitation"
+    ],
+    "source_ids": [
+      "S42",
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_d10f040039249e07",
+    "label": "successful exploitation of vulnerability",
+    "entity_type": "Mention",
+    "aliases": [
+      "successful exploitation of vulnerability"
+    ],
+    "source_ids": [
+      "S39"
+    ]
+  },
+  {
+    "id": "e_2228b2b192c550b5",
+    "label": "successfully exploited vulnerability",
+    "entity_type": "Mention",
+    "aliases": [
+      "successfully exploited vulnerability"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S50",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_a0fccee1e3a14e5f",
+    "label": "suite of solutions",
+    "entity_type": "Mention",
+    "aliases": [
+      "suite of solutions"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_c94372d6e82dc60c",
+    "label": "supporting information to Rapid7",
+    "entity_type": "Product",
+    "aliases": [
+      "supporting information to Rapid7"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_93d8650fe6b85a54",
+    "label": "system",
+    "entity_type": "Mention",
+    "aliases": [
+      "system"
+    ],
+    "source_ids": [
+      "S16",
+      "S18",
+      "S20",
+      "S39",
+      "S50",
+      "S51"
+    ]
+  },
+  {
+    "id": "e_556b627b7c43e3ef",
+    "label": "systems",
+    "entity_type": "Mention",
+    "aliases": [
+      "systems"
+    ],
+    "source_ids": [
+      "S07",
+      "S11",
+      "S19",
+      "S42",
+      "S45",
+      "S46"
+    ]
+  },
+  {
+    "id": "e_7f1f6c82d4c24b3a",
+    "label": "team",
+    "entity_type": "Mention",
+    "aliases": [
+      "team"
+    ],
+    "source_ids": [
+      "S10",
+      "S16",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_dc576b7e1d7a71f5",
+    "label": "technical details",
+    "entity_type": "Mention",
+    "aliases": [
+      "technical details"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_82d77a759d87d5b6",
+    "label": "technical details for CVE-2026-63520 ahead of schedule",
+    "entity_type": "CVE",
+    "aliases": [
+      "technical details for CVE-2026-63520 ahead of schedule"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_f8b520c0a0b6460f",
+    "label": "them",
+    "entity_type": "Mention",
+    "aliases": [
+      "them"
+    ],
+    "source_ids": [
+      "S10",
+      "S50",
+      "S51"
+    ]
+  },
+  {
+    "id": "e_21b08d533d49d334",
+    "label": "them as arguments to method",
+    "entity_type": "Mention",
+    "aliases": [
+      "them as arguments to method"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_290d8da624d84fb0",
+    "label": "they",
+    "entity_type": "Mention",
+    "aliases": [
+      "they"
+    ],
+    "source_ids": [
+      "S11",
+      "S16",
+      "S17",
+      "S20",
+      "S38",
+      "S40",
+      "S50",
+      "S51",
+      "S52",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_87eee21844f2b349",
+    "label": "third-party",
+    "entity_type": "Mention",
+    "aliases": [
+      "third-party"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_e163460c91338b08",
+    "label": "this",
+    "entity_type": "Mention",
+    "aliases": [
+      "this"
+    ],
+    "source_ids": [
+      "S08",
+      "S09",
+      "S10",
+      "S16",
+      "S20",
+      "S40",
+      "S41",
+      "S45",
+      "S46",
+      "S51",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_4676679afd99eed0",
+    "label": "this metric",
+    "entity_type": "Mention",
+    "aliases": [
+      "this metric"
+    ],
+    "source_ids": [
+      "S50",
+      "S51",
+      "S52",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_c69d823c1803b35a",
+    "label": "this year 's Pwn2Own Berlin hacking competition",
+    "entity_type": "Mention",
+    "aliases": [
+      "this year 's Pwn2Own Berlin hacking competition"
+    ],
+    "source_ids": [
+      "S41"
+    ]
+  },
+  {
+    "id": "e_ff0251d80d2ce1d2",
+    "label": "threat actors",
+    "entity_type": "Mention",
+    "aliases": [
+      "threat actors"
+    ],
+    "source_ids": [
+      "S16"
+    ]
+  },
+  {
+    "id": "e_f0ec636ebfd30472",
+    "label": "threat hunters",
+    "entity_type": "Mention",
+    "aliases": [
+      "threat hunters"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_14c4edbe6aa901b1",
+    "label": "to publish",
+    "entity_type": "Mention",
+    "aliases": [
+      "to publish"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_cb1ff57fe888ca98",
+    "label": "tools",
+    "entity_type": "Mention",
+    "aliases": [
+      "tools"
+    ],
+    "source_ids": [
+      "S10",
+      "S16"
+    ]
+  },
+  {
+    "id": "e_e1a9f7ccafbb5ef8",
+    "label": "total",
+    "entity_type": "Observation",
+    "aliases": [
+      "total"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06"
+    ]
+  },
+  {
+    "id": "e_4228490cbf8a6d91",
+    "label": "typical vulnerability",
+    "entity_type": "Mention",
+    "aliases": [
+      "typical vulnerability"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_e34c73ce7cdf1ddd",
+    "label": "unauthenticated attacker",
+    "entity_type": "Mention",
+    "aliases": [
+      "unauthenticated attacker"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S45"
+    ]
+  },
+  {
+    "id": "e_5ba564fd51e2957e",
+    "label": "unencrypted PCAPs and ASM queries",
+    "entity_type": "Mention",
+    "aliases": [
+      "unencrypted PCAPs and ASM queries"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_2d31e1284f8f402d",
+    "label": "unsafe",
+    "entity_type": "Mention",
+    "aliases": [
+      "unsafe"
+    ],
+    "source_ids": [
+      "S09",
+      "S10",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_436b9e63838b931a",
+    "label": "upcoming disclosure",
+    "entity_type": "Mention",
+    "aliases": [
+      "upcoming disclosure"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_3d8c93e609b395bb",
+    "label": "updates",
+    "entity_type": "Mention",
+    "aliases": [
+      "updates"
+    ],
+    "source_ids": [
+      "S19",
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_d068a0aa82ac3043",
+    "label": "upgrade",
+    "entity_type": "Mention",
+    "aliases": [
+      "upgrade"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S42"
+    ]
+  },
+  {
+    "id": "e_a1dcdd289f57b065",
+    "label": "us",
+    "entity_type": "Mention",
+    "aliases": [
+      "us"
+    ],
+    "source_ids": [
+      "S07",
+      "S10",
+      "S39",
+      "S41",
+      "S42",
+      "S51"
+    ]
+  },
+  {
+    "id": "e_9e944eacda2bda8d",
+    "label": "useful Instance Method",
+    "entity_type": "Mention",
+    "aliases": [
+      "useful Instance Method"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_dda76eeedb5c35a4",
+    "label": "user",
+    "entity_type": "Mention",
+    "aliases": [
+      "user"
+    ],
+    "source_ids": [
+      "S40",
+      "S50",
+      "S51",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_273431069120d1d4",
+    "label": "valid BDCM model instantiate System.Object visible in debugger",
+    "entity_type": "Mention",
+    "aliases": [
+      "valid BDCM model instantiate System.Object visible in debugger"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_298a9593b67b7b1f",
+    "label": "vendor",
+    "entity_type": "Mention",
+    "aliases": [
+      "vendor"
+    ],
+    "source_ids": [
+      "S07",
+      "S39",
+      "S40",
+      "S41",
+      "S42",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_57c45a346543d062",
+    "label": "vulnerabilities within architecture",
+    "entity_type": "Mention",
+    "aliases": [
+      "vulnerabilities within architecture"
+    ],
+    "source_ids": [
+      "S40",
+      "S41"
+    ]
+  },
+  {
+    "id": "e_dbd1ba0cc63988dc",
+    "label": "vulnerability",
+    "entity_type": "Mention",
+    "aliases": [
+      "vulnerability"
+    ],
+    "source_ids": [
+      "S07",
+      "S08",
+      "S12",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S37",
+      "S39",
+      "S40",
+      "S41",
+      "S42",
+      "S43",
+      "S45",
+      "S46",
+      "S49",
+      "S50",
+      "S51",
+      "S52",
+      "S53",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_b1c5225d4016cd6c",
+    "label": "vulnerability prioritization",
+    "entity_type": "Mention",
+    "aliases": [
+      "vulnerability prioritization"
+    ],
+    "source_ids": [
+      "S10"
+    ]
+  },
+  {
+    "id": "e_0ca0f00333e5caf7",
+    "label": "vulnerable SharePoint server",
+    "entity_type": "Mention",
+    "aliases": [
+      "vulnerable SharePoint server"
+    ],
+    "source_ids": [
+      "S09",
+      "S10",
+      "S18"
+    ]
+  },
+  {
+    "id": "e_0651ca14b1e582f2",
+    "label": "vulnerable component",
+    "entity_type": "Mention",
+    "aliases": [
+      "vulnerable component"
+    ],
+    "source_ids": [
+      "S07",
+      "S19",
+      "S39",
+      "S42",
+      "S51",
+      "S52",
+      "S54"
+    ]
+  },
+  {
+    "id": "e_8ed91b82735ab1f6",
+    "label": "vulnerable target/component",
+    "entity_type": "Mention",
+    "aliases": [
+      "vulnerable target/component"
+    ],
+    "source_ids": [
+      "S42"
+    ]
+  },
+  {
+    "id": "e_be74ffef073dc8d3",
+    "label": "we",
+    "entity_type": "Mention",
+    "aliases": [
+      "we"
+    ],
+    "source_ids": [
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S16",
+      "S19",
+      "S41",
+      "S44",
+      "S50",
+      "S51",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_142989eed857e8d9",
+    "label": "what",
+    "entity_type": "Mention",
+    "aliases": [
+      "what"
+    ],
+    "source_ids": [
+      "S10",
+      "S11",
+      "S17",
+      "S45",
+      "S49"
+    ]
+  },
+  {
+    "id": "e_b82be424e7d21f94",
+    "label": "which",
+    "entity_type": "Mention",
+    "aliases": [
+      "which"
+    ],
+    "source_ids": [
+      "S07",
+      "S08",
+      "S40",
+      "S43",
+      "S45",
+      "S46",
+      "S51",
+      "S52"
+    ]
+  },
+  {
+    "id": "e_da59e58134436c3a",
+    "label": "wild",
+    "entity_type": "Mention",
+    "aliases": [
+      "wild"
+    ],
+    "source_ids": [
+      "S10",
+      "S18",
+      "S47",
+      "S58"
+    ]
+  },
+  {
+    "id": "e_5a64cb80b239712e",
+    "label": "work",
+    "entity_type": "Mention",
+    "aliases": [
+      "work"
+    ],
+    "source_ids": [
+      "S40",
+      "S51"
+    ]
+  },
+  {
+    "id": "e_3f0c93a1792b279e",
+    "label": "yes",
+    "entity_type": "Observation",
+    "aliases": [
+      "yes"
+    ],
+    "source_ids": [
+      "S02",
+      "S03",
+      "S04",
+      "S05"
+    ]
+  },
+  {
+    "id": "e_5c980ac08d8e06db",
+    "label": "you",
+    "entity_type": "Mention",
+    "aliases": [
+      "you"
+    ],
+    "source_ids": [
+      "S07",
+      "S08",
+      "S10",
+      "S16",
+      "S39",
+      "S42",
+      "S47",
+      "S48",
+      "S58"
+    ]
+  }
+]

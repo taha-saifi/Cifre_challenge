@@ -108,6 +108,55 @@ cette baseline : c'est une limite du travail, et le premier comparatif de la roa
 
 ---
 
+**11. Pourquoi la cybersécurité et pas la santé, le droit ou la finance ?**
+
+Parce que décider y mobilise cinq mécanismes relationnels simultanés qu'aucun document
+isolé ne porte : une relation (le chaînage 55040 → 63520), une condition (l'exposition de
+l'actif), une échéance datée (CISA, 2026-08-21), une contradiction entre signaux
+concurrents (CVE-2026-63520 : CVSS 8,1 mais EPSS 0,029) et une absence (aucun contournement
+vCenter documenté). Le domaine offre aussi une fraîcheur extrême et des sources qui se
+contredisent en quelques jours. Ce n'est pas le sujet, c'est le terrain : la méthode ne
+présuppose aucun schéma et se transpose telle quelle.
+
+---
+
+**12. Quelle source est la plus fiable ? La plus fragile ?**
+
+Les plus fiables sont NVD et FIRST EPSS — 12/12 dans notre grille : officielles, primaires,
+accessibles par API versionnée, donc reproductibles. Les plus fragiles sont les deux
+sources DIESEC (S17, S44), seules classées `commercial`, score le plus bas en autorité. Et
+ce n'est pas théorique : c'est précisément S17 qui porte la date de PoC contredisant
+VulnCheck, et c'est aussi S17 qui énonce le correctif vCenter que notre pipeline n'a pas
+su extraire. La source la plus fragile est celle sur laquelle nous dépendons le plus pour
+les faits que le graphe rate.
+
+---
+
+**13. Que feriez-vous pendant les 90 premiers jours ?**
+
+Généraliser le décompte de porteurs en une métrique de complétude indépendante du domaine —
+aujourd'hui il s'appuie sur le texte-preuve d'un corpus cyber, ce qui n'est pas une
+définition transposable. En parallèle, corriger la résolution d'entités, qui est la limite
+bloquante (2 fusions sur 3 699 mentions) et qui est la raison même pour laquelle le
+décompte doit passer par le texte plutôt que par la structure du graphe. Et formaliser le
+protocole d'ablation comme méthode reproductible, avec son pré-enregistrement, plutôt que
+comme un montage propre à ce cas.
+
+---
+
+**14. Après la démonstration interactive : « vos configurations 5 et 8 donnent des réponses opposées, non ? »**
+
+Oui, et c'est à double tranchant. Elles reçoivent un contexte identique à une seule phrase
+près — le signalement d'incomplétude — et aboutissent à « urgent » contre « peut attendre ».
+Côté positif, c'est la preuve directe que le modèle **lit le contexte** au lieu de réciter
+une réponse mémorisée : une phrase change la décision. Côté honnête, cela veut dire que
+**la formulation du signalement est elle-même une variable qui influence la décision, et
+nous ne l'avons jamais mesurée comme telle** — nous avons testé la présence du signalement,
+pas sa formulation. C'est une limite découverte en construisant l'outil de démonstration,
+pas un résultat du protocole des 45 cellules.
+
+---
+
 ## Réserve à trois autres questions probables
 
 **« Le LLM valide-t-il une vérité ou une plausibilité ? »** — Une plausibilité. C'est

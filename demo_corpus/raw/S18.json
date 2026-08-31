@@ -1,0 +1,24 @@
+{
+  "source_id": "S18",
+  "cve_ids": [
+    "CVE-2026-55040"
+  ],
+  "source_name": "Help Net Security: SharePoint CVE-2026-55040 PoC",
+  "url": "https://www.helpnetsecurity.com/2026/08/13/microsoft-sharepoint-cve-2026-55040-poc-exploit/",
+  "source_type": {
+    "primary_secondary": "secondary",
+    "category": "journalistic"
+  },
+  "date_accessed": "2026-08-28T16:01:21.381997+00:00",
+  "extraction_method": "html_trafilatura",
+  "extraction_method_used": "requests_trafilatura",
+  "extraction_status": "success",
+  "raw_text": "Attackers exploit critical SharePoint flaw after PoC goes public (CVE-2026-55040)\nThreat actors have begun exploiting a critical Microsoft SharePoint flaw following the release of proof-of-concept (PoC) exploit code by Rapid7.\nAbout CVE-2026-55040\nTracked as CVE-2026-55040, the vulnerability was patched by Microsoft as part of its July 2026 Patch Tuesday updates.\n“The authentication feature could be bypassed as this vulnerability allows impersonation,” Microsoft said. “Exploiting this vulnerability could allow an attacker to disclose files and modify data, but the attacker cannot impact the availability of the system.”\nRapid7 researcher Stephen Fewer has published an in-depth technical analysis of the flaw, accompanied by proof-of-concept exploit code.\n“A remote unauthenticated attacker can leverage CVE-2026-55040 to bypass authentication on a vulnerable SharePoint server, and perform operations as a SharePoint site user or administrator. The vulnerability is due to several issues in the JWT token validation pipeline,” Fewer explained.\nThreat intelligence firm Defused warned on X that attackers are now using the Rapid7 POC for CVE-2026-55040 against its SharePoint honeypots.\nMicrosoft has yet to confirm the bug has been exploited in the wild, even as it flags the flaw as a likely target.\nWhen paired with another vulnerability, CVE-2026-63520, CVE-2026-55040 “could lead to unauthenticated remote code execution against a vulnerable SharePoint server”, according to NHS England Digital.\nCISA is warning administrators to harden their SharePoint deployments, citing active exploitation of several other vulnerabilities in the platform.\nDefenders were also urged to follow Microsoft’s official SharePoint hardening documentation.\n“Avoid exposing SharePoint Servers directly to the internet unless necessary; and if necessary, only configure a SharePoint Server behind a Layer 7 reverse proxy or equivalent application-layer security control that requires authentication and can inspect and filter requests,” CISA wrote.",
+  "http_status": 200,
+  "fallback_used": false,
+  "original_url": null,
+  "replacement_url": null,
+  "replacement_reason": null,
+  "search_query_used": null,
+  "notes": ""
+}

@@ -1,0 +1,40 @@
+{
+  "_note": "PROJECTION of extraction_pipeline/canonical_kg onto the demo corpus. NOT a pipeline re-run -- see the module docstring of build_demo_kg.py for why a re-run is impossible here and what it would break.",
+  "demo_sources": [
+    "S03",
+    "S06",
+    "S10",
+    "S18",
+    "S22",
+    "S25",
+    "S39",
+    "S40",
+    "S41",
+    "S42"
+  ],
+  "edges": 406,
+  "node_rows": 366,
+  "distinct_node_ids": 335,
+  "distinct_predicates": 216,
+  "edges_by_source": {
+    "S10": 117,
+    "S41": 49,
+    "S42": 49,
+    "S40": 47,
+    "S39": 46,
+    "S03": 38,
+    "S06": 32,
+    "S18": 20,
+    "S22": 4,
+    "S25": 4
+  },
+  "extraction_methods": {
+    "structured": 94,
+    "minie": 308,
+    "heuristic": 4
+  },
+  "full_graph_for_comparison": {
+    "edges": 2123,
+    "node_rows": 1956
+  }
+}

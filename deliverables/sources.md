@@ -47,6 +47,28 @@ Deux sources n'ont pas produit de contenu exploitable. Elles sont **enregistrée
 
 Le cas S58 mérite d'être défendu explicitement : la page KEV de CVE-2026-63520 a répondu 200 mais sans données par-CVE, si bien que le graphe ne contient aucune échéance CISA pour cette vulnérabilité. On pourrait y voir une lacune de collecte qui fausserait la tâche T5. Ce n'est pas le cas : l'enregistrement NVD de cette même CVE (S06) ne contient **aucun** champ `cisa*`, alors que S02–S05 en contiennent quatre chacun. Deux sources indépendantes concordent — CVE-2026-63520 n'est pas au catalogue KEV. C'est une **preuve d'absence**, pas une **absence de preuve**.
 
+## Corroboration et contradiction entre sources
+
+Le §14.1 attend une dimension « cohérence avec d'autres sources ». Elle n'est pas calculable par règle — deux sources peuvent diverger sans qu'aucune ne soit fautive — mais les divergences réellement constatées dans le corpus sont consignées ici plutôt que résolues d'autorité.
+
+**Contradiction conservée telle quelle — date de publication du PoC de CVE-2026-55040.** Deux sources donnent deux dates différentes pour le même événement :
+
+| Source | Rang | Affirmation |
+|---|---|---|
+| **S10** — VulnCheck | primary, researcher | « published a PoC for CVE-2026-55040 (the first part of the chain) **on August 11** » |
+| **S17** — DIESEC | secondary, commercial | « **On August 13**, a proof-of-concept exploit for CVE-2026-55040 […] was made publicly available » |
+
+Écart de deux jours sur un fait daté et vérifiable. Elle **n'est pas arbitrée** : la source la mieux placée (S10, chercheur ayant publié le PoC, primaire) est aussi la plus crédible selon la règle de scoring ci-dessus, mais rien dans les données ne permet d'exclure que S17 date la reprise publique plutôt que la publication initiale. La divergence est donc gardée comme **donnée expérimentale** — c'est exactement le cas de figure que le §7.1 du brief désigne sous « une source contredit une autre source mais la contradiction n'est pas identifiée ».
+
+**Ce que le graphe en a fait — le point le plus instructif, et il n'est pas à notre avantage.** Les deux dates ont été extraites par OpenIE, mais une seule a survécu :
+
+- S10 → arête canonique `Rapid7 's Stephen Fewer published_PoC_for_CVE-2026-55040_on August 11` ;
+- S17 → 3 assertions extraites (`proof-of-concept | exploit was made available O | August 13`) **restées dans `open_kg`**, jamais promues, leur cluster de relation n'ayant pas été accepté.
+
+La contradiction a donc été **arbitrée par le silence** : la formulation qui s'est trouvée regroupée dans un cluster accepté est passée, l'autre est restée en attente. Personne n'a constaté le conflit ni tranché — le graphe affirme aujourd'hui « August 11 » sans aucune trace qu'une seconde date existait dans le corpus. C'est une limite de conception réelle : **la porte de validation humaine protège contre les fausses relations, pas contre l'arbitrage involontaire d'un désaccord factuel**, parce qu'elle statue sur des étiquettes de relation et jamais sur la cohérence des valeurs. Aucun mécanisme de détection de contradiction n'existe dans le pipeline.
+
+**Concordance vérifiée, à ne pas confondre avec une contradiction.** S11 (« 361 victim IPs by August 7 ») et S17 (« By August 14 […] 361 compromised vCenter servers ») annoncent le **même nombre, 361**, à deux dates d'observation différentes. Ce sont deux instantanés concordants, pas un écart — le noter évite de présenter à tort une corroboration comme un désaccord.
+
 ## Limite structurelle : la crédibilité n'atteint pas le graphe
 
 Les champs de rang et de catégorie utilisés ci-dessus vivent dans `corpus/raw/`. `preprocess_corpus.py` ne les propage pas vers `corpus/clean/`, qui est pourtant le seul répertoire lu par le pipeline d'extraction. **Conséquence : une affirmation issue d'un billet commercial et une affirmation issue du NVD entrent dans le KG avec exactement le même poids.** Aucune pondération par fiabilité n'existe aujourd'hui. C'est une extension naturelle de la méthode, et l'une des premières à mener.

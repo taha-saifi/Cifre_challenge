@@ -27,3 +27,11 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Local secrets (OpenRouter API key) - never commit
+.env
+
+# Demo server: embedding cache and runtime log (regenerable, not source)
+demo_server/rag_index.json
+demo_server/server.log
+demo_server/__pycache__/

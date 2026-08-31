@@ -37,10 +37,15 @@ recommandation quand le graphe qui la nourrit est incomplet.
   stabilité — le seul champ temporel est un horodatage de collecte.
 - **Deux lacunes de source documentées** : S27 (login éditeur requis, délibérément non
   tentée), S58 (page KEV sans données par-CVE).
+- **Une contradiction inter-sources conservée** : date du PoC de CVE-2026-55040, 11 août
+  (S10, VulnCheck) contre 13 août (S17, DIESEC) — non arbitrée.
 
 ### À dire
 La règle tenue de bout en bout : rien n'est inventé, rien n'est remplacé. Une source
-inaccessible est enregistrée comme inaccessible.
+inaccessible est enregistrée comme inaccessible. Et sur la contradiction : les deux dates
+ont été extraites, une seule a survécu à la validation — le graphe affirme « 11 août » sans
+trace qu'une autre date existait. La porte humaine statue sur des étiquettes de relation,
+jamais sur la cohérence des valeurs. C'est une limite découverte, pas un choix.
 
 ---
 
@@ -156,27 +161,38 @@ dans le temps imparti. C'est la première validation de la roadmap.
 ## Slide 8 — Roadmap CIFRE, risques et limites
 
 ### Titre
-**Ce qui est mesuré, ce qui ne l'est pas, et dans quel ordre le traiter**
+**De la mesure d'un cas à une méthode d'évaluation de la complétude**
 
-### Corps — roadmap
-- **0–6 mois** : état de l'art, formalisation de la redondance relationnelle, reprise du
-  cas à l'échelle complète (32 tâches), correction de la résolution d'entités.
-- **6–12 mois** : second domaine, benchmark RAG / GraphRAG / KG-aware, première
-  publication méthodologique.
-- **12–24 mois** : prédire les relations à porteur unique sans exécuter l'ablation.
-- **24–36 mois** : passage à l'échelle, intégration métier, thèse.
+### Corps
+- **0–6 mois** — généraliser le décompte de porteurs en **métrique de complétude
+  indépendante du domaine** ; formaliser l'ablation comme méthode reproductible.
+- **6–12 mois** — **second domaine, idéalement un cas SpotworkAI** ; benchmark
+  RAG / GraphRAG / KG-aware ; première publication méthodologique.
+- **12–24 mois** — du **rétrospectif au prédictif** : repérer les faits fragiles avant
+  génération ; confrontation à GraphRAG, à la complétion de graphe, et au LLM-as-a-Judge.
+- **24–36 mois** — validation sur cas et bases réels SpotworkAI ; composant intégré à la
+  plateforme ; thèse.
+- **Limites** — résolution d'entités quasi inopérante (3 699 → 3 697) · 1 154 clusters
+  non revus sur 2 111 · précision 0,026 du gold set, artefact d'annotation éparse ·
+  crédibilité des sources non propagée au graphe · aucune couche actif/exposition dans le
+  graphe · une contradiction inter-sources arbitrée par le silence.
+- **Outil de démonstration** — même template de prompt que les 45 cellules, **transport et
+  modèle différents** (API OpenRouter, modèles gratuits) : illustre le mécanisme, non
+  comparable en exactitude à `resultats.md`.
+- **Risque principal** — que la redondance relationnelle soit propre aux extractions
+  ouvertes et non aux graphes sur schéma.
 
-### Corps — limites assumées
-1. **Résolution d'entités quasi inopérante** — 3 699 mentions → 3 697 entités.
-2. **1 154 groupes de relations sur 2 111 jamais revus.**
-3. **Jeu d'évaluation brouillon** — sa précision de 0,026 est un artefact d'annotation
-   éparse, pas un échec : la métrique qui donnerait un faux sentiment de fiabilité.
-4. **La crédibilité des sources n'atteint pas le graphe.**
-5. Couche actif/exposition **synthétique**, signalée comme telle dans le contexte.
-
-### Risque principal
-Que la redondance relationnelle soit propre aux extractions ouvertes et non aux graphes
-sur schéma. C'est ce que la comparaison multi-domaines doit trancher.
+### À dire
+La trajectoire remonte les cinq niveaux : cas d'usage, décision métier, problème
+expérimental, question scientifique, question de thèse. Le décompte de porteurs est
+l'amorce empirique, pas le point d'arrivée — la thèse commence là où il devient une
+métrique de complétude indépendante du domaine. Sur les limites, deux méritent d'être
+dites avant qu'on les trouve : la précision de 0,026 est un artefact d'annotation éparse
+et non un échec, et la contradiction sur la date du PoC montre que la validation humaine
+statue sur des étiquettes de relation, jamais sur la cohérence des valeurs. Enfin, si la
+démo interactive est montrée : configurations 5 et 8, contexte identique à une phrase
+près, décisions opposées — le modèle lit bien le contexte, mais la formulation du
+signalement est une variable que nous n'avons jamais mesurée.
 
 ---
 

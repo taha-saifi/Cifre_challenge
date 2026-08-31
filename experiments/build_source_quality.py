@@ -209,6 +209,58 @@ def main() -> int:
         "**preuve d'absence**, pas une **absence de preuve**.")
     add("")
 
+    add("## Corroboration et contradiction entre sources")
+    add("")
+    add("Le §14.1 attend une dimension « cohérence avec d'autres sources ». Elle n'est pas "
+        "calculable par règle — deux sources peuvent diverger sans qu'aucune ne soit "
+        "fautive — mais les divergences réellement constatées dans le corpus sont "
+        "consignées ici plutôt que résolues d'autorité.")
+    add("")
+    add("**Contradiction conservée telle quelle — date de publication du PoC de "
+        "CVE-2026-55040.** Deux sources donnent deux dates différentes pour le même "
+        "événement :")
+    add("")
+    add("| Source | Rang | Affirmation |")
+    add("|---|---|---|")
+    add("| **S10** — VulnCheck | primary, researcher | « published a PoC for CVE-2026-55040 "
+        "(the first part of the chain) **on August 11** » |")
+    add("| **S17** — DIESEC | secondary, commercial | « **On August 13**, a proof-of-concept "
+        "exploit for CVE-2026-55040 […] was made publicly available » |")
+    add("")
+    add("Écart de deux jours sur un fait daté et vérifiable. Elle **n'est pas arbitrée** : "
+        "la source la mieux placée (S10, chercheur ayant publié le PoC, primaire) est aussi "
+        "la plus crédible selon la règle de scoring ci-dessus, mais rien dans les données ne "
+        "permet d'exclure que S17 date la reprise publique plutôt que la publication "
+        "initiale. La divergence est donc gardée comme **donnée expérimentale** — c'est "
+        "exactement le cas de figure que le §7.1 du brief désigne sous « une source "
+        "contredit une autre source mais la contradiction n'est pas identifiée ».")
+    add("")
+    add("**Ce que le graphe en a fait — le point le plus instructif, et il n'est pas à notre "
+        "avantage.** Les deux dates ont été extraites par OpenIE, mais une seule a survécu :")
+    add("")
+    add("- S10 → arête canonique `Rapid7 's Stephen Fewer published_PoC_for_CVE-2026-55040_on "
+        "August 11` ;")
+    add("- S17 → 3 assertions extraites (`proof-of-concept | exploit was made available O | "
+        "August 13`) **restées dans `open_kg`**, jamais promues, leur cluster de relation "
+        "n'ayant pas été accepté.")
+    add("")
+    add("La contradiction a donc été **arbitrée par le silence** : la formulation qui s'est "
+        "trouvée regroupée dans un cluster accepté est passée, l'autre est restée en "
+        "attente. Personne n'a constaté le conflit ni tranché — le graphe affirme "
+        "aujourd'hui « August 11 » sans aucune trace qu'une seconde date existait dans le "
+        "corpus. C'est une limite de conception réelle : **la porte de validation humaine "
+        "protège contre les fausses relations, pas contre l'arbitrage involontaire d'un "
+        "désaccord factuel**, parce qu'elle statue sur des étiquettes de relation et jamais "
+        "sur la cohérence des valeurs. Aucun mécanisme de détection de contradiction "
+        "n'existe dans le pipeline.")
+    add("")
+    add("**Concordance vérifiée, à ne pas confondre avec une contradiction.** S11 "
+        "(« 361 victim IPs by August 7 ») et S17 (« By August 14 […] 361 compromised vCenter "
+        "servers ») annoncent le **même nombre, 361**, à deux dates d'observation "
+        "différentes. Ce sont deux instantanés concordants, pas un écart — le noter évite "
+        "de présenter à tort une corroboration comme un désaccord.")
+    add("")
+
     add("## Limite structurelle : la crédibilité n'atteint pas le graphe")
     add("")
     add("Les champs de rang et de catégorie utilisés ci-dessus vivent dans "
