@@ -26,11 +26,13 @@
   .lede{color:var(--muted);max-width:74ch;margin:0}
   a{color:var(--accent)}
 
-  /* The heuristic notice is a headline condition, not fine print. */
+  /* The backend notice is a headline condition, not fine print. */
   .banner{border:2px solid var(--warn);background:var(--warn-soft);border-radius:10px;
           padding:1rem 1.15rem;display:flex;flex-direction:column;gap:.4rem}
   .banner strong{font-family:Archivo,sans-serif;font-size:1.12rem;color:var(--warn)}
   .banner p{margin:0;font-size:.95rem}
+  .banner.ok{border-color:var(--accent);background:var(--accent-soft)}
+  .banner.ok strong{color:var(--accent)}
 
   form{background:var(--surface);border:1px solid var(--line);border-radius:10px;
        padding:1.1rem;display:flex;flex-direction:column;gap:.9rem}
@@ -106,19 +108,16 @@
     <a href="/">l'explorateur</a>.</p>
   </header>
 
-  <div class="banner">
-    <strong>⚠ Extraction en mode heuristique — MinIE indisponible</strong>
-    <p>Le graphe figé du projet a été extrait avec <strong>MinIE</strong> (3 246 assertions
-    sur 3 651). MinIE exige Java et un JAR construit, absents de cette machine : rien
-    n'écoute sur <code>127.0.0.1:8080</code>. Ce que vous allez voir est donc produit par
-    <strong>l'extracteur heuristique de repli</strong>, plus grossier — même phrase, il rend
-    <code>(« Patching CVE-2026-55040 will successfully break this », « exploit », « chain »)</code>
-    là où MinIE rend <code>(« Patching CVE-2026-55040 », « break », « exploit chain »)</code>.
-    Les triplets ci-dessous sont donc réels mais de qualité inférieure au graphe de la note.</p>
-    <p>Second point, aussi important : le graphe affiché est le <strong>graphe ouvert
-    (pré-validation)</strong>. Dans ce projet, aucune arête ne devient canonique sans qu'un
-    humain accepte son cluster de relation ; cette étape n'est pas dans cet outil, donc le
-    graphe canonique serait vide. Ce qui s'affiche est l'état <em>avant</em> validation.</p>
+  <div class="banner" id="minieBanner">
+    <strong>Vérification du backend d'extraction…</strong>
+    <p>Sondage de <code>127.0.0.1:8080</code> en cours.</p>
+  </div>
+
+  <div class="banner ok">
+    <strong>ℹ Le graphe affiché est le graphe ouvert (pré-validation)</strong>
+    <p>Dans ce projet, aucune arête ne devient canonique sans qu'un humain accepte son
+    cluster de relation ; cette étape n'est pas dans cet outil, donc le graphe canonique
+    serait vide. Ce qui s'affiche ci-dessous est l'état <em>avant</em> validation.</p>
   </div>
 
   <form id="f">
@@ -191,6 +190,37 @@
 const esc = t => String(t == null ? "" : t).replace(/[<>&]/g, c => ({"<":"&lt;",">":"&gt;","&":"&amp;"}[c]));
 let network = null, edgeIndex = {};
 let canonNetwork = null, CANDIDATES = [], DECISIONS = {};
+
+async function checkMinieStatus(){
+  const box = document.getElementById("minieBanner");
+  try{
+    const res = await fetch("/api/minie_status");
+    const data = await res.json();
+    if (data.available){
+      box.className = "banner ok";
+      box.innerHTML = `<strong>✓ MinIE disponible — extraction en mode MinIE</strong>
+        <p>Le service MinIE répond sur <code>127.0.0.1:8080</code> : l'ingestion ci-dessous
+        utilisera <strong>MinIE</strong>, le même extracteur que le graphe figé de la note
+        (3 246 assertions sur 3 651).</p>`;
+    } else {
+      box.className = "banner";
+      box.innerHTML = `<strong>⚠ Extraction en mode heuristique — MinIE indisponible</strong>
+        <p>Le graphe figé du projet a été extrait avec <strong>MinIE</strong> (3 246 assertions
+        sur 3 651). MinIE exige Java et un JAR construit ; rien ne répond actuellement sur
+        <code>127.0.0.1:8080</code>. Ce que vous allez voir est donc produit par
+        <strong>l'extracteur heuristique de repli</strong>, plus grossier — même phrase, il rend
+        <code>(« Patching CVE-2026-55040 will successfully break this », « exploit », « chain »)</code>
+        là où MinIE rend <code>(« Patching CVE-2026-55040 », « break », « exploit chain »)</code>.
+        Les triplets obtenus sont donc réels mais de qualité inférieure au graphe de la note.</p>`;
+    }
+  } catch(e){
+    box.className = "banner";
+    box.innerHTML = `<strong>⚠ Statut MinIE inconnu</strong>
+      <p>Impossible de sonder <code>127.0.0.1:8080</code> (${esc(e.message)}). Le backend
+      réellement utilisé sera indiqué après une première ingestion.</p>`;
+  }
+}
+checkMinieStatus();
 
 function renderSources(list){
   const rows = ['<tr><th>ID</th><th>Statut</th><th>Origine</th><th>Méthode</th><th>Caractères</th><th>Détail</th></tr>'];

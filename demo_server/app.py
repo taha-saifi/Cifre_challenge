@@ -141,6 +141,13 @@ def live_graph():
     return jsonify(live_pipeline.graph_payload())
 
 
+@app.get("/api/minie_status")
+def minie_status():
+    """One live probe so the /live banner reflects the machine it's actually running on,
+    instead of the hardcoded 'unavailable' text written when this demo had no MinIE."""
+    return jsonify({"available": live_pipeline.minie_available()})
+
+
 @app.get("/api/pivots")
 def pivots():
     """Entities that actually anchor edges in demo_kg, most connected first."""
