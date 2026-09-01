@@ -21,6 +21,8 @@ import sys
 import threading
 from pathlib import Path
 
+import graph_view
+
 ROOT = Path(__file__).resolve().parent.parent
 PIPELINE_SCRIPTS = ROOT / "extraction_pipeline" / "scripts"
 sys.path.insert(0, str(PIPELINE_SCRIPTS))
@@ -120,41 +122,5 @@ def graph_payload(max_edges: int = 400, stage: str = "open_kg") -> dict:
     with nodes_path.open(encoding="utf-8") as handle:
         raw_nodes = json.load(handle)
 
-    labels = {n["entity_id"] if "entity_id" in n else n["id"]:
-              n.get("canonical_label") or n.get("label", "") for n in raw_nodes}
-    types = {n["entity_id"] if "entity_id" in n else n["id"]:
-             n.get("entity_type", "") for n in raw_nodes}
-
-    kept = raw_edges[:max_edges]
-    used = {e["source"] for e in kept} | {e["target"] for e in kept}
-    degree: dict[str, int] = {}
-    for edge in kept:
-        for endpoint in (edge["source"], edge["target"]):
-            degree[endpoint] = degree.get(endpoint, 0) + 1
-
-    nodes = [{
-        "id": node_id,
-        "label": (labels.get(node_id) or "")[:42],
-        "title": f"{labels.get(node_id, '')}\n[{types.get(node_id, '')}]",
-        "value": degree.get(node_id, 1),
-        "group": types.get(node_id, "Mention"),
-    } for node_id in used]
-
-    edges = [{
-        "id": edge["edge_id"],
-        "from": edge["source"],
-        "to": edge["target"],
-        "label": (edge.get("predicate_canonical") or edge["predicate_raw"])[:34],
-        # Provenance travels to the click handler: source id, method and evidence text.
-        "source_id": edge["source_id"],
-        "source_url": edge.get("source_url") or "",
-        "method": edge.get("extraction_method", ""),
-        "evidence": edge.get("evidence", ""),
-        "predicate": edge.get("predicate_canonical") or edge["predicate_raw"],
-        "predicate_raw": edge["predicate_raw"],
-        "subject": labels.get(edge["source"], ""),
-        "object": labels.get(edge["target"], ""),
-    } for edge in kept]
-
-    return {"nodes": nodes, "edges": edges, "stage": stage,
-            "truncated": len(raw_edges) > max_edges, "total_edges": len(raw_edges)}
+    # Shaping lives in graph_view so this view and the demo_kg view cannot drift apart.
+    return graph_view.shape(raw_edges, raw_nodes, max_edges=max_edges, stage=stage)

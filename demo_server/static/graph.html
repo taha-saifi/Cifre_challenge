@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graphe existant — demo_kg / live_kg</title>
+<script src="/static/vendor/vis-network.min.js"></script>
+<style>
+  :root { --bg:#0f1115; --panel:#171a21; --line:#2a2f3a; --ink:#e6e8ee; --dim:#9aa3b2;
+          --accent:#6aa9ff; --warn:#e8a33d; }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:14px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  header { padding:.8rem 1rem; border-bottom:1px solid var(--line); display:flex;
+           gap:1rem; align-items:baseline; flex-wrap:wrap }
+  h1 { font-size:1rem; margin:0; font-weight:650 }
+  nav a { color:var(--accent); text-decoration:none; margin-right:.9rem }
+  /* grid-template-rows + min-height:0 are load-bearing: without them the tallest
+     column (the controls) stretches the row past main's height and the canvas is sized
+     to that overflow instead of to the visible area. */
+  main { display:grid; grid-template-columns:280px 1fr 320px; grid-template-rows:1fr;
+         height:calc(100vh - 53px); overflow:hidden }
+  main > * { min-height:0 }
+  aside { padding:.9rem; border-right:1px solid var(--line); overflow:auto }
+  #detail { border-right:0; border-left:1px solid var(--line) }
+  #net { background:#0b0d11; position:relative; min-width:0 }
+  #diag { position:absolute; inset:auto .6rem .6rem .6rem; background:#2a1d10;
+          border:1px solid var(--warn); color:#f2d3a0; border-radius:6px; padding:.6rem;
+          font-size:.82rem; display:none }
+  fieldset { border:1px solid var(--line); border-radius:6px; margin:0 0 .9rem; padding:.6rem }
+  legend { color:var(--dim); font-size:.78rem; text-transform:uppercase; letter-spacing:.04em }
+  label { display:block; margin:.25rem 0 }
+  select[multiple] { width:100%; background:#0e1116; color:var(--ink);
+                     border:1px solid var(--line); border-radius:4px; padding:.3rem }
+  button { background:var(--accent); color:#08111f; border:0; border-radius:5px;
+           padding:.5rem .9rem; font-weight:650; cursor:pointer; width:100% }
+  button.ghost { background:transparent; color:var(--accent); border:1px solid var(--line) }
+  .stat { display:flex; justify-content:space-between; gap:.5rem; padding:.15rem 0;
+          border-bottom:1px dotted var(--line) }
+  .stat b { font-variant-numeric:tabular-nums }
+  .muted { color:var(--dim); font-size:.85rem }
+  .warn { color:var(--warn) }
+  code { background:#0e1116; padding:.1rem .3rem; border-radius:3px; font-size:.85em }
+  .ev { background:#0e1116; border:1px solid var(--line); border-radius:5px;
+        padding:.5rem; white-space:pre-wrap; font-size:.85rem; max-height:9rem; overflow:auto }
+  .pill { display:inline-block; border:1px solid var(--line); border-radius:99px;
+          padding:.05rem .5rem; font-size:.78rem; color:var(--dim) }
+</style>
+</head>
+<body>
+<header>
+  <h1>Graphe existant</h1>
+  <nav>
+    <a href="/">← Comparateur</a><a href="/live">Ingestion live</a>
+  </nav>
+  <span class="muted" id="hint">lecture seule — aucune ingestion, aucune écriture</span>
+</header>
+
+<main>
+  <aside>
+    <fieldset>
+      <legend>Graphe</legend>
+      <div id="srcpick"></div>
+      <p class="muted" id="srcnote"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Pivots (filtre de contexte)</legend>
+      <select id="pivot" multiple size="12"></select>
+      <p class="muted">Aucun pivot sélectionné = graphe entier (plafonné). Le filtre est
+        celui de <code>build_contexts.py</code> : ce qui est dessiné est exactement ce
+        qu'une configuration KG-aware recevrait.</p>
+      <button id="go">Dessiner</button>
+      <button id="clear" class="ghost" style="margin-top:.4rem">Tout le graphe</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>État</legend>
+      <div id="stats"></div>
+    </fieldset>
+  </aside>
+
+  <div id="net"><div id="diag"></div></div>
+
+  <aside id="detail">
+    <fieldset>
+      <legend>Arête sélectionnée</legend>
+      <div id="edgeinfo" class="muted">Cliquez une arête pour voir sa provenance.</div>
+    </fieldset>
+  </aside>
+</main>
+
+<script>
+let network = null, DATA = null;
+const $ = id => document.getElementById(id);
+
+function currentSource(){
+  const el = document.querySelector('input[name="src"]:checked');
+  return el ? el.value : "demo_kg";
+}
+
+function drawStats(d){
+  const rows = [
+    ["arêtes dessinées", (d.edges || []).length],
+    ["nœuds dessinés", (d.nodes || []).length],
+    ["arêtes du graphe", d.graph_total_edges ?? d.total_edges ?? 0],
+  ];
+  if (d.pivots && d.pivots.length) rows.push(["après filtre pivots", d.total_edges]);
+  $("stats").innerHTML = rows.map(r =>
+    `<div class="stat"><span>${r[0]}</span><b>${r[1]}</b></div>`).join("")
+    + (d.truncated ? `<p class="warn">Tronqué au plafond d'affichage : ${d.total_edges}
+       arêtes correspondent, toutes ne sont pas dessinées. Filtrez par pivot plutôt que
+       de lire un graphe incomplet.</p>` : "")
+    + (d.note ? `<p class="warn">${d.note}</p>` : "");
+}
+
+function drawEdgeInfo(edge){
+  if (!edge){ $("edgeinfo").className = "muted";
+              $("edgeinfo").textContent = "Cliquez une arête pour voir sa provenance."; return; }
+  const auth = edge.authority_score === null || edge.authority_score === undefined
+    ? `<span class="pill">autorité : inconnue</span>`
+    : `<span class="pill">autorité ${edge.authority_score}/12 —
+        ${edge.authority_category || "?"} / ${edge.authority_tier || "?"}</span>`;
+  const url = edge.source_url
+    ? `<p class="muted" style="word-break:break-all">${edge.source_url}</p>` : "";
+  $("edgeinfo").className = "";
+  $("edgeinfo").innerHTML = `
+    <p><b>${edge.subject}</b> — <i>${edge.predicate}</i> → <b>${edge.object}</b></p>
+    <p><span class="pill">source ${edge.source_id}</span>
+       <span class="pill">extraction : ${edge.method || "?"}</span> ${auth}</p>
+    ${edge.predicate_raw && edge.predicate_raw !== edge.predicate
+      ? `<p class="muted">prédicat brut : <code>${edge.predicate_raw}</code></p>` : ""}
+    <p class="muted" style="margin-bottom:.2rem">Texte-preuve verbatim :</p>
+    <div class="ev">${(edge.evidence || "(aucun)").replace(/</g,"&lt;")}</div>
+    ${url}`;
+}
+
+function frame(){
+  try { network.redraw(); network.fit({animation:false}); } catch (e) {}
+}
+
+/* A blank canvas must explain itself. Sample the canvas: if nothing was painted while
+   nodes do have positions, the layout worked and only the paint failed -- which is a
+   different problem from "no data", and the reader should not have to guess which. */
+function selfCheck(){
+  const box = $("diag");
+  try {
+    const cvs = $("net").querySelector("canvas");
+    if (!cvs){ box.style.display = "block";
+               box.textContent = "vis-network n'a pas créé de canevas."; return; }
+    const ctx = cvs.getContext("2d");
+    const px = ctx.getImageData(0, 0, cvs.width, cvs.height).data;
+    let painted = 0;
+    for (let i = 3; i < px.length; i += 4 * 41) if (px[i] !== 0) painted++;
+    const positioned = Object.keys(network.getPositions()).length;
+    if (painted > 0){ box.style.display = "none"; return; }
+    box.style.display = "block";
+    box.innerHTML = `<b>Canevas vide alors que les données sont là.</b><br>
+      ${(DATA.edges || []).length} arêtes reçues · ${positioned} nœuds positionnés ·
+      canevas ${cvs.width}×${cvs.height} px · 0 pixel peint.<br>
+      Le calcul de disposition a fonctionné, seul le dessin a échoué — souvent un onglet
+      en arrière-plan (le rendu passe par requestAnimationFrame). Revenez sur l'onglet, ou
+      <a href="#" id="forceRedraw" style="color:#f2d3a0">forcez un redessin</a>.`;
+    const link = document.getElementById("forceRedraw");
+    if (link) link.addEventListener("click", ev => { ev.preventDefault(); frame();
+                                                    setTimeout(selfCheck, 600); });
+  } catch (e) {
+    box.style.display = "block";
+    box.textContent = "Auto-diagnostic impossible : " + e.message;
+  }
+}
+
+function render(d){
+  DATA = d;
+  drawStats(d);
+  drawEdgeInfo(null);
+  const nodes = new vis.DataSet(d.nodes);
+  const edges = new vis.DataSet((d.edges || []).map(e => ({
+    id:e.id, from:e.from, to:e.to, label:e.label, arrows:"to", title:e.evidence || ""})));
+  if (network) network.destroy();
+  // network.destroy() empties the container, taking the diagnostic box with it.
+  if (!$("diag")){ const b = document.createElement("div"); b.id = "diag";
+                   $("net").appendChild(b); }
+  network = new vis.Network($("net"), {nodes, edges}, {
+    nodes:{shape:"dot", scaling:{min:6, max:26}, font:{color:"#e6e8ee", size:12}},
+    edges:{color:{color:"#3d4759", highlight:"#6aa9ff"}, font:{color:"#9aa3b2", size:10,
+           strokeWidth:0}, smooth:{type:"continuous"}},
+    // improvedLayout gives up above ~400 edges and leaves the network unpositioned
+    // (it says so in the console). demo_kg has 406, so it must stay off.
+    layout:{improvedLayout:false},
+    physics:{stabilization:{iterations:180}, barnesHut:{gravitationalConstant:-9000,
+             springLength:130}},
+    interaction:{hover:true, tooltipDelay:180},
+  });
+  // With improvedLayout off, initial positions can land far outside the viewport, so the
+  // canvas looks empty until the view is framed. Fit once stabilised, and again on a
+  // timer in case stabilisation never reports done on a large graph.
+  network.once("stabilizationIterationsDone", () => frame());
+  setTimeout(frame, 1200);
+  // Painting goes through requestAnimationFrame, which a background or hidden tab
+  // suspends -- physics still runs, so positions exist while nothing is drawn. Redraw
+  // when the tab becomes visible again rather than leaving a blank canvas.
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) frame(); });
+  new ResizeObserver(() => { try { network.redraw(); } catch (e) {} }).observe($("net"));
+  setTimeout(selfCheck, 2600);
+  network.on("selectEdge", p => {
+    const found = (DATA.edges || []).find(e => e.id === p.edges[0]);
+    drawEdgeInfo(found);
+  });
+  network.on("deselectEdge", () => drawEdgeInfo(null));
+}
+
+function fillSources(sources, active){
+  $("srcpick").innerHTML = Object.entries(sources).map(([k, v]) =>
+    `<label><input type="radio" name="src" value="${k}"
+      ${k === active ? "checked" : ""} ${v.available ? "" : "disabled"}>
+      ${v.label}${v.available ? "" : " — indisponible"}</label>`).join("");
+  document.querySelectorAll('input[name="src"]').forEach(r =>
+    r.addEventListener("change", () => load(currentSource(), [])));
+  $("srcnote").innerHTML = active === "live_kg"
+    ? `<span class="warn"><b>Session en cours, qualité heuristique.</b> Ce graphe vient
+       d'une ingestion de session, pas du graphe figé validé.</span>`
+    : `Projection du graphe canonique figé, restreinte au corpus de démonstration.
+       Chaque arête a franchi la validation humaine des relations.`;
+}
+
+function fillPivots(pivots){
+  $("pivot").innerHTML = pivots.map(p =>
+    `<option value="${p.id}">${p.id} (${p.edges})</option>`).join("");
+}
+
+async function load(source, pivots){
+  $("hint").textContent = "chargement…";
+  const q = new URLSearchParams({source, pivots:(pivots || []).join(",")});
+  const res = await fetch("/api/graph?" + q.toString());
+  const d = await res.json();
+  fillSources(d.sources, source);
+  fillPivots(d.available_pivots || []);
+  (pivots || []).forEach(v => {
+    const opt = [...$("pivot").options].find(o => o.value === v);
+    if (opt) opt.selected = true;
+  });
+  render(d);
+  $("hint").textContent = "lecture seule — aucune ingestion, aucune écriture";
+}
+
+$("go").addEventListener("click", () =>
+  load(currentSource(), [...$("pivot").selectedOptions].map(o => o.value)));
+$("clear").addEventListener("click", () => load(currentSource(), []));
+
+load("demo_kg", []);
+</script>
+</body>
+</html>

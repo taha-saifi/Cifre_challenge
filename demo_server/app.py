@@ -27,6 +27,10 @@ import live_validate  # noqa: E402
 import model_client  # noqa: E402
 
 app = Flask(__name__, static_folder=str(HERE / "static"))
+# No static caching: during a demo the pages get edited between reloads, and a cached
+# copy silently serving old JS wastes minutes chasing a bug that is already fixed
+# (which happened while building the graph viewer).
+app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0
 
 # Each configuration runs in its own thread: five sequential model calls would make the
 # page feel broken during a live discussion.
@@ -42,6 +46,36 @@ def index():
 def live_page():
     """Ingestion + visualisation. Separate page: it does not touch demo_kg."""
     return send_from_directory(app.static_folder, "live.html")
+
+
+@app.get("/graph")
+def graph_page():
+    """Read-only viewer for an EXISTING graph -- demo_kg by default, no ingestion."""
+    return send_from_directory(app.static_folder, "graph.html")
+
+
+@app.get("/api/graph")
+def graph_api():
+    """Draw an existing graph. `pivots` (comma-separated) applies the context filter.
+
+    Distinct from /api/live_graph, which only ever shows the current session's live_kg
+    at a chosen pipeline stage.
+    """
+    source = request.args.get("source", "demo_kg")
+    raw_pivots = request.args.get("pivots", "")
+    pivots = [p for p in (s.strip() for s in raw_pivots.split(",")) if p]
+    try:
+        # 600 so the whole demo_kg projection (406 edges) draws without truncation:
+        # a "tronqué" banner on a graph that actually fits would be a false warning.
+        max_edges = min(int(request.args.get("max_edges", 600)), 2500)
+    except ValueError:
+        max_edges = 600
+    payload = configs.vis_payload(source, pivots, max_edges)
+    payload["sources"] = {k: {"label": v["label"], "available": configs.graph_available(k)}
+                          for k, v in configs.GRAPH_SOURCES.items()}
+    payload["available_pivots"] = configs.available_pivots(source) \
+        if configs.graph_available(source) else []
+    return jsonify(payload)
 
 
 @app.post("/api/ingest")

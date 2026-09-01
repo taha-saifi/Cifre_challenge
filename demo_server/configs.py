@@ -20,6 +20,8 @@ import re
 import sys
 from pathlib import Path
 
+import graph_view
+
 ROOT = Path(__file__).resolve().parent.parent
 DEMO_KG = ROOT / "demo_kg"
 LIVE_CANONICAL = ROOT / "live_kg" / "canonical_kg"
@@ -80,6 +82,33 @@ def load_graph(source: str = "demo_kg"):
     labels = {n.get("id") or n.get("entity_id"):
               n.get("label") or n.get("canonical_label", "") for n in nodes}
     return edges, labels
+
+
+def vis_payload(source: str = "demo_kg", pivots: list | None = None,
+                max_edges: int = 400) -> dict:
+    """Shape a whole graph -- or the subgraph around `pivots` -- for the graph viewer.
+
+    Same `subgraph()` filter the context builder uses, so what you see drawn is exactly
+    the edge set a KG-aware configuration would have been given for those pivots. Reusing
+    the filter is the point: a viewer with its own selection rule would show a graph the
+    experiment never used.
+    """
+    directory = graph_dir(source)
+    if not (directory / "edges.json").exists():
+        return {"nodes": [], "edges": [], "stage": source, "truncated": False,
+                "total_edges": 0,
+                "note": f"{source} n'a pas encore de graphe — ingérez des sources sur /live."}
+    edges = load_json(directory / "edges.json")
+    nodes = load_json(directory / "nodes.json")
+    total_before_filter = len(edges)
+    if pivots:
+        labels = {n.get("id") or n.get("entity_id"):
+                  n.get("label") or n.get("canonical_label", "") for n in nodes}
+        edges = subgraph(edges, labels, pivots)
+    payload = graph_view.shape(edges, nodes, max_edges=max_edges, stage=source)
+    payload["pivots"] = pivots or []
+    payload["graph_total_edges"] = total_before_filter
+    return payload
 
 
 def render_edge(edge: dict, labels: dict) -> str:
