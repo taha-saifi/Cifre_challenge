@@ -62,7 +62,15 @@ indisponible » plutôt que d'inventer une réponse.
 ```
 
 - Comparateur : http://127.0.0.1:5000
-- Ingestion live + graphe interactif : http://127.0.0.1:5000/live
+- **Voir le graphe existant** : http://127.0.0.1:5000/graph
+- Ingestion live + graphe de session : http://127.0.0.1:5000/live
+
+La page `/graph` est en lecture seule : elle dessine `demo_kg` (ou `live_kg`) sans rien
+ingérer. Sélectionner des pivots applique **le filtre de `build_contexts.py`** — ce qui
+est dessiné est donc exactement l'ensemble d'arêtes qu'une configuration KG-aware
+recevrait, et non une sélection propre au viewer. Un clic sur une arête affiche sa
+provenance : source, méthode d'extraction, texte-preuve verbatim et score d'autorité
+(`inconnue` pour une source de session, jamais un score par défaut).
 
 ## Deux exemples à faire tourner
 
